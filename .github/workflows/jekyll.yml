@@ -46,6 +46,7 @@ jobs:
         uses: actions/configure-pages@v3
       - name: Fix Bundle environment
         run:
+          bundle lock --add-platform ruby
           bundle lock --add-platform x86_64-linux
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
