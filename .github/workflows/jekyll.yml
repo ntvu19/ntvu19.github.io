@@ -43,11 +43,8 @@ jobs:
         id: pages
         uses: actions/configure-pages@v3
       - name: Fix Bundle environment
-        run: |
-          bundle lock --add-platform ruby
+        run:
           bundle lock --add-platform x86_64-linux
-          rm -rf Gemfile.lock
-          bundle install
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run:
