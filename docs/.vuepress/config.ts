@@ -7,12 +7,9 @@ export default defineUserConfig({
   theme: defaultTheme({
     // Find methods in `DefaultThemeLocaleData.ts`
     navbar: [
-      { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/" },
       {
         text: "Programming",
         children: [
-          // {text: 'C++', link: '/programming/cpp/'},
           {
             text: "C++",
             children: [
@@ -31,11 +28,11 @@ export default defineUserConfig({
             children: [
               {
                 text: "Basic Java",
-                link: "programming/java/basic/",
+                link: "/programming/java/basic/",
               },
               {
                 text: "Advanced Java",
-                link: "programming/java/advanced/",
+                link: "/programming/java/advanced/",
               },
             ],
           },
@@ -56,8 +53,8 @@ export default defineUserConfig({
       {
         text: "Others",
         children: [
-          { text: "Other A", link: "/other/a/" },
-          { text: "Other B", link: "/other/b/" },
+          { text: "Other A", link: "/others/a/" },
+          { text: "Other B", link: "/others/b/" },
         ],
       },
       {
@@ -65,7 +62,10 @@ export default defineUserConfig({
         link: "/about/",
       },
     ],
+    contributors: false,
+    lastUpdated: false,
   }),
+  base: "/",
   lang: "en-US",
   title: "Vu T. Nguyen",
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],
