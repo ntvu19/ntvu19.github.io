@@ -31,7 +31,11 @@ jobs:
           # choose node.js version to use
           node-version: 20
           # cache deps for pnpm
-          # cache: pnpm
+          cache: ""
+
+      # install vuepress globally
+      - name: Install VuePress Globally (for troubleshooting)
+        run: npm install -g vuepress
 
       # run build script
       - name: Build VuePress site
