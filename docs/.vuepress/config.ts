@@ -46,9 +46,13 @@ export default defineUserConfig({
         text: "Networking",
         link: "/networking/",
       },
+      // {
+      //   text: "Machine Learning",
+      //   link: "/machine-learning/",
+      // },
       {
-        text: "Machine Learning",
-        link: "/machine-learning/",
+        text: "Books",
+        link: "/books/",
       },
       {
         text: "Others",
