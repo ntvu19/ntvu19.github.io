@@ -55,6 +55,10 @@ export default defineUserConfig({
         link: "/books/",
       },
       {
+        text: "References",
+        link: "/references/",
+      },
+      {
         text: "Others",
         children: [
           { text: "Other A", link: "/others/a/" },
