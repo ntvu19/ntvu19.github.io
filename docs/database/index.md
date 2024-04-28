@@ -1,7 +1,6 @@
 ---
 lang: en-US
 title: Database
-description: route - /database/
 ---
 
 <!-- [[toc]] -->

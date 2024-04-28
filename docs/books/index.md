@@ -1,7 +1,6 @@
 ---
 lang: en-US
 title: Books
-description: route - /books/
 sidebar: false
 ---
 

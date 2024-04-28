@@ -1,7 +1,6 @@
 ---
 lang: en-US
 title: About
-description: route - /about/
 sidebar: false
 ---
 

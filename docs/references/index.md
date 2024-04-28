@@ -1,7 +1,6 @@
 ---
 lang: en-US
 title: References
-description: route - /references/
 sidebar: false
 ---
 
