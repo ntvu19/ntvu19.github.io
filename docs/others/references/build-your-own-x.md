@@ -1,6 +1,6 @@
 ---
 title: Build your own X
-permalink: /references/build-your-own-x
+permalink: /others/references/build-your-own-x
 sidebar: false
 ---
 

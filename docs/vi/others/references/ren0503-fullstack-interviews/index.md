@@ -1,6 +1,6 @@
 ---
 title: Fullstack Interviews
-permalink: /vi/references/ren0503-fullstack-interviews/
+permalink: /vi/others/references/ren0503-fullstack-interviews/
 sidebar: false
 ---
 

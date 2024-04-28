@@ -55,18 +55,10 @@ export default defineUserConfig({
             link: "/operating-system/",
           },
           {
-            text: "Books",
-            link: "/books/",
-          },
-          {
-            text: "References",
-            link: "/references/",
-          },
-          {
             text: "Others",
             children: [
-              { text: "Other A", link: "/others/a/" },
-              { text: "Other B", link: "/others/b/" },
+              { text: "Books", link: "/others/books/" },
+              { text: "References", link: "/others/references/" },
             ],
           },
           {
@@ -122,19 +114,12 @@ export default defineUserConfig({
             text: "Hệ điều hành",
             link: "/vi/operating-system/",
           },
-          {
-            text: "Tài liệu",
-            link: "/vi/books/",
-          },
-          {
-            text: "Tham khảo",
-            link: "/vi/references/",
-          },
+
           {
             text: "Khác",
             children: [
-              { text: "Other A", link: "/vi/others/a/" },
-              { text: "Other B", link: "/vi/others/b/" },
+              { text: "Tài liệu", link: "/vi/others/books/" },
+              { text: "Tham khảo", link: "/vi/others/references/" },
             ],
           },
           {

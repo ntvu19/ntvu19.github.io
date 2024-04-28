@@ -1,6 +1,6 @@
 ---
 title: Project Based Learning
-permalink: /references/project-based-learning
+permalink: /others/references/project-based-learning
 sidebar: false
 ---
 
