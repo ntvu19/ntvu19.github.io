@@ -10,3 +10,6 @@ bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 heroText: VuePress Theme Hope
 tagline: A VuePress theme with tons of features✨
 ---
+
+<Welcome/>
+<Contact/>
