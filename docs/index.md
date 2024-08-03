@@ -8,10 +8,6 @@ sidebar: false
 ---
 
 <Welcome/>
+<Experience/>
+<Project/>
 <Contact/>
-
-<!-- <style>
-    .page .theme-default-content {
-        max-width: 1440px;
-    }
-</style> -->

@@ -3,7 +3,17 @@ import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 
 export default defineUserConfig({
-  bundler: viteBundler(),
+  bundler: viteBundler({
+    viteOptions: {
+      css: {
+        preprocessorOptions: {
+          scss: {
+            quiteDeps: true, // Suppress deprecation warnings
+          },
+        },
+      },
+    },
+  }),
   theme: defaultTheme({
     // Find methods in `DefaultThemeLocaleData.ts`
     locales: {

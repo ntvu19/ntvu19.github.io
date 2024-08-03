@@ -1,0 +1,19 @@
+.home-contact {
+    .header {
+        padding: 20px 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        border-top: 1px #ccc solid;
+        border-bottom: 1px #ccc solid;
+
+        #contact-header {
+            font-size: xx-large;
+            color: gray;
+        }
+    }
+
+    .content {
+        padding: 100px 0;
+    }
+}

@@ -1,0 +1,51 @@
+$content-width: 1200px;
+$avatar-size: $content-width * 0.25;
+
+// * {
+//     border: 1px solid black;
+// }
+
+.home-welcome {
+    .header {
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px #ccc solid;
+
+        #welcome-header {
+            font-size: xx-large;
+            color: gray;
+        }
+    }
+
+    .content {
+        display: flex;
+
+        .summary {
+            width: $content-width - $avatar-size;
+        }
+        
+        .master-container {
+            margin: 0 30px;
+            display: flex;
+            align-items: center;
+            
+            .avatar-container {
+                width: $avatar-size;
+                height: $avatar-size;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                
+                img.avatar {
+                    width: 100%;
+                    height: auto;
+                    object-position: center;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

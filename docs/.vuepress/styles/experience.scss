@@ -1,0 +1,49 @@
+// * {
+//     border: 1px black solid;
+// }
+
+.home-experience {
+    .header {
+        padding: 20px 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        border-top: 1px #ccc solid;
+        border-bottom: 1px #ccc solid;
+
+        #experience-header {
+            font-size: xx-large;
+            color: gray;
+        }
+    }
+
+    .content {
+
+        .opswat {
+            display: flex;
+
+            .logo-container {
+                $logoContainerMinSize: 250px;
+
+                min-width: $logoContainerMinSize;
+                height: $logoContainerMinSize;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img.logo {
+                    $logoSize: 200px;
+
+                    width: $logoSize;
+                    height: $logoSize;
+                }
+            }
+
+            .work-description {
+                width: 100%;
+                padding-left: 30px;
+                padding-top: 10px;
+            }
+        }
+    }
+}
