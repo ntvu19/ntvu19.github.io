@@ -14,6 +14,30 @@
     }
 
     .content {
-        padding: 100px 0;
+        display: flex;
+        justify-content: center;
+        
+        a {
+            &::after {
+                content: none !important;
+            }
+            
+            img {
+                $contact-icon-size: 30px;
+                
+                margin: 30px 10px;
+                width: $contact-icon-size;
+                height: $contact-icon-size;
+                transition: transform .3s ease-in-out;
+                
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
     }
+}
+
+.dark img#icon-github {
+    filter: invert(1) brightness(2);
 }
