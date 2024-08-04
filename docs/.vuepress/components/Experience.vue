@@ -38,14 +38,20 @@ export default {
     },
     mounted() {
         const btnDarkMode = document.querySelector('.toggle-color-mode-button');
+        const btnVpDarkMode = document.querySelector('.vp-toggle-color-mode-button');
 
         // Change OPSWAT logo on start
         setTimeout(() => {
             this.opswatLogoUrl = this.isDarkMode() === true ? '/opswat-dark.svg' : '/opswat-light.svg';
         }, 0);
         
-        // Change OPSWAT logo dark/light mode
+        // Change OPSWAT logo dark/light mode (on local)
         btnDarkMode?.addEventListener('click', () => {
+            this.opswatLogoUrl = this.isDarkMode() === true ? '/opswat-dark.svg' : '/opswat-light.svg';
+        })
+
+        // Change OPWAT logo dark/light mode (on cloud)
+        btnVpDarkMode?.addEventListener('click', () => {
             this.opswatLogoUrl = this.isDarkMode() === true ? '/opswat-dark.svg' : '/opswat-light.svg';
         })
     }
