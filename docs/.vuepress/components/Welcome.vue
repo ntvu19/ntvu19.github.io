@@ -6,7 +6,6 @@
         
         <div class="content">
             <div class="summany">
-                <p>Hi!</p>
                 <p>My name is Thanh-Vu Nguyen, I have completed my bachelor's degree at University of Science (Ho Chi Minh City, Vietnam). During my academic journey, I earned the respect of my professors due to my diligent and delicated approach to learning.</p>
                 <p>I have a strong passion for acquiring new knowledge, particularly in the field of back-end software development. However, I am not limited to one area of expertise and find great fascination in exploring various domains such as DevOps, Software Architecture, and Artificial Intelligence, with a particular focus on Computer Vision.</p>
                 <p>I enjoy pushing myself by tackling challenging software development and system architecture problems. I have gained some practical experience in web application development through university projects.</p>

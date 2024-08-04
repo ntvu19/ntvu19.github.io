@@ -10,6 +10,7 @@
             <a href="https://github.com/ntvu19" target="_blank"><img id="icon-github" src="/icon/contact/logos--github-icon.svg" alt="GitHub" draggable="false"></a>
             <a href="mailto:msc.thanhvu@gmail.com" target="_blank"><img id="icon-gmail" src="/icon/contact/logos--google-gmail.svg" alt="Gmail" draggable="false"></a>
             <a href="https://linkedin.com/in/nguyenthanhvu" target="_blank"><img id="icon-linked" src="/icon/contact/logos--linkedin-icon.svg" alt="LinkedIn" draggable="false"></a>
+            <a href="https://t.me/ntvu19" target="_blank"><img id="icon-telegram" src="/icon/contact/logos--telegram.svg" alt="Telegram" draggable="false"></a>
         </div>
     </div>
     

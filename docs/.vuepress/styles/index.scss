@@ -1,3 +1,35 @@
 :root {
     --content-width: 1200px;
 }
+
+html.dark {
+    body {
+        #app {
+            .theme-container {
+                header.navbar {
+                    position: fixed;
+                    background: rgba($color: #22272e, $alpha: .7); // Semi-transparent background
+                    box-shadow: 0 4px 30px rgba($color: #999, $alpha: .1);  // Soft shadow
+                    backdrop-filter: blur(10px);    // Glass effect
+                    border-bottom: 1px solid rgba($color: #22272e, $alpha: .3);
+                }
+            }
+        }
+    }
+}
+
+html {
+    body {
+        #app {
+            .theme-container {
+                header.navbar {
+                    position: fixed;
+                    background: rgba($color: #fff, $alpha: .7); // Semi-transparent background
+                    box-shadow: 0 4px 30px rgba($color: #000, $alpha: .1);  // Soft shadow
+                    backdrop-filter: blur(10px);    // Glass effect
+                    border-bottom: 1px solid rgba($color: #fff, $alpha: .3);
+                }
+            }
+        }
+    }
+}
