@@ -11,6 +11,7 @@
                     <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="logo">
                 </div>
                 <!-- TODO: Use table format instead -->
+                <!-- TODO: Custom the list icon -->
                 <ul class="work-description">
                     <li>Product: (Name of product)</li>
                     <li>Team Structure: (Team structure)</li>

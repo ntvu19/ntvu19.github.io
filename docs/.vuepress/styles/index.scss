@@ -15,6 +15,10 @@ html.dark {
                     backdrop-filter: blur(10px);    // Glass effect
                     border-bottom: 1px solid rgba($color: #22272e, $alpha: .3);
                 }
+
+                img.logo {
+                    filter: invert(1);
+                }
             }
         }
     }

@@ -4,7 +4,12 @@ import Experience from "./components/Experience.vue";
 import Project from "./components/Project.vue";
 import Contact from "./components/Contact.vue";
 
+import Layout from "./layouts/Layout.vue";
+
 export default defineClientConfig({
+  layouts: {
+    Layout,
+  },
   enhance({ app }) {
     app
       .component("Welcome", Welcome)

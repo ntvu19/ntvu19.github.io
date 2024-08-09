@@ -139,19 +139,18 @@ export default defineUserConfig({
         ],
       },
     },
+    pageNavbarLabel: null,
+    logo: "/signature.svg",
+    logoDark: "/signature.svg",
     contributors: false,
     lastUpdated: false,
   }),
   locales: {
     "/": {
       lang: "en-US",
-      title: "Vu T. Nguyen",
-      description: "This is my blog",
     },
     "/vi/": {
       lang: "vi-VN",
-      title: "Vu T. Nguyen",
-      description: "Đây là blog của tôi",
     },
   },
   pagePatterns: ["**/*.md", "!**/README.md", "!.vuepress", "!node_modules"],
