@@ -8,7 +8,7 @@
         <div class="content">
             <div class="opswat">
                 <div class="logo-container">
-                    <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="logo">
+                    <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="company-logo">
                 </div>
                 <!-- TODO: Use table format instead -->
                 <!-- TODO: Custom the list icon -->
