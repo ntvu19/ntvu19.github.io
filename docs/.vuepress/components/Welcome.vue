@@ -14,7 +14,7 @@
             </div>
             <div class="master-container">
                 <div class="avatar-container">
-                    <img class="avatar" src="../public/avatar.jfif" alt="Avatar">
+                    <img class="avatar" src="/avatar.jfif" alt="Avatar">
                 </div>
             </div>
         </div>
