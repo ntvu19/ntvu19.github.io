@@ -3,10 +3,23 @@
     <div class="logo-container">
       <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="company-logo" />
     </div>
+
+    <div class="career-dev">
+      <div
+        v-for="careerEl in opswatData.careerDevs.slice().reverse()"
+        class="timestone"
+      >
+        <div class="timeline">
+          <span>{{ careerEl.timeline }}</span>
+        </div>
+        <div class="title">{{ careerEl.title }}</div>
+      </div>
+    </div>
+
     <!-- TODO: Use table format instead -->
     <!-- TODO: Custom the list icon -->
     <ul class="work-description">
-      <b>{{ opswatData.title }}</b>
+      <!-- <b>{{ opswatData.title }}</b> -->
       <li>Product: {{ opswatData.product }}</li>
       <li>Team Structure: {{ opswatData.teamStructure }}</li>
       <li>Description: {{ opswatData.description }}</li>
