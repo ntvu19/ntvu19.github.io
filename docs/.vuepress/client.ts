@@ -2,7 +2,6 @@ import { defineClientConfig } from "vuepress/client";
 import Welcome from "./components/Welcome.vue";
 import Experience from "./components/Experience.vue";
 import Project from "./components/Project.vue";
-import Contact from "./components/Contact.vue";
 
 import Layout from "./layouts/Layout.vue";
 
@@ -14,7 +13,6 @@ export default defineClientConfig({
     app
       .component("Welcome", Welcome)
       .component("Experience", Experience)
-      .component("Project", Project)
-      .component("Contact", Contact);
+      .component("Project", Project);
   },
 });

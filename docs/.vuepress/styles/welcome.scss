@@ -24,16 +24,16 @@ $avatar-size: $content-width * 0.25;
         .master-container {
             margin: 0 30px;
             display: flex;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
             
-            .avatar-container {
+            .avatar-wrapper {
                 width: $avatar-size;
                 height: $avatar-size;
                 overflow: hidden;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 border-radius: 50%;
+                margin-bottom: 30px;
                 
                 img.avatar {
                     width: 100%;
@@ -42,6 +42,31 @@ $avatar-size: $content-width * 0.25;
                     object-fit: cover;
                 }
             }
+
+            .contact {
+                a {
+                    &::after {
+                        content: none !important;
+                    }
+                    
+                    img {
+                        $contact-icon-size: 30px;
+                        
+                        margin: 0 10px;
+                        width: $contact-icon-size;
+                        height: $contact-icon-size;
+                        transition: transform .3s ease-in-out;
+                        
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
         }
     }
+}
+
+.dark img#icon-github {
+    filter: invert(1) brightness(2);
 }
