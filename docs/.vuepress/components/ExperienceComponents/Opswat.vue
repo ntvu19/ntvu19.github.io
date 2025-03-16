@@ -8,13 +8,31 @@
       <Timeline :items="timelineItems" />
     </div>
 
-    <ul class="work-description">
-      <li>Product: {{ opswatData.product }}</li>
-      <li>Team Structure: {{ opswatData.teamStructure }}</li>
-      <li>Description: {{ opswatData.description }}</li>
-      <li>Technical Stack: {{ opswatData.technicalStacks }}</li>
-      <li>Resolved Problems: {{ opswatData.problemsResolve }}</li>
-    </ul>
+    <div class="work-description">
+      <div class="product-name">
+        <span class="product-name-text">{{ opswatData.product }}</span>
+      </div>
+      <div class="description">
+        <span class="description-text">{{ opswatData.description }}</span>
+      </div>
+      <div class="technical-stacks">
+        <div v-if="opswatData.technicalStacks && opswatData.technicalStacks.length > 0" class="tech-stack-list">
+          <div v-for="(tech, index) in opswatData.technicalStacks" :key="index" class="tech-item">
+            <img v-if="tech.iconUrl" :src="tech.iconUrl" :alt="tech.name" class="tech-icon" />
+          </div>
+        </div>
+      </div>
+      <div class="problem-resolve">
+        <div class="tag-container">
+          <div v-if="opswatData.problemsResolve && opswatData.problemsResolve.length > 0" class="tags-list">
+            <span v-for="(tag, index) in opswatData.problemsResolve" :key="index" class="tag">
+              {{ tag }}
+            </span>
+          </div>
+          <div v-else class="no-tags">No problems/solutions listed</div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

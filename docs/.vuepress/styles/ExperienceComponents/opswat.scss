@@ -1,8 +1,10 @@
 $logoContainerMinSize: 200px;
 $logoSize: 175px;
+$techSkillLogoSize: 40px;
 
 .opswat {
     display: flex;
+    padding: 10px 0;
 
     .overview {
         .logo-container {
@@ -11,6 +13,7 @@ $logoSize: 175px;
             display: flex;
             justify-content: center;
             align-items: center;
+            border: 1px solid #aaa;
             
             img.company-logo {
                 width: $logoSize;
@@ -28,5 +31,65 @@ $logoSize: 175px;
         margin: 0;
         padding-left: 30px;
         padding-top: 10px;
+
+        .product-name {
+            font-weight: bold;
+        }
+
+        .description {
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .technical-stacks {
+            .tech-stack-list {
+                .tech-item {
+                    display: inline-block;
+
+                    img.tech-icon {
+                        user-select: none;
+                        margin: 0 10px;
+                        width: $techSkillLogoSize;
+                        height: $techSkillLogoSize;
+                    }
+                }
+            }
+        }
+
+        .problem-resolve {
+            margin: 20px 0;
+
+            .tag-container {
+                .tags-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    
+                    .tag {
+                        display: inline-block;
+                        padding: 4px 10px;
+                        border-radius: 16px;
+                        background-color: #e6f7ef;
+                        color: #3eaf7c;
+                        font-size: 12px;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        cursor: default;
+                        transition: all 0.2s ease;
+                        border: 1px solid #3eaf7c;
+                        
+                        &:hover {
+                            background-color: #3eaf7c;
+                            color: white;
+                        }
+                    }
+                }
+                
+                .no-tags {
+                    font-style: italic;
+                    color: #999;
+                }
+            }
+        }
     }
 }

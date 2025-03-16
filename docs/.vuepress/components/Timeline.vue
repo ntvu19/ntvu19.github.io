@@ -98,6 +98,7 @@ $before-item-size: 32px;
             width: $dot-size;
             height: $dot-size;
             background-color: #3eaf7c;
+            border: 5px solid white;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
