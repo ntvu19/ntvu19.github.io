@@ -107,6 +107,7 @@ $before-item-size: 32px;
         .timeline-content {
             width: 100%;
             font-size: 12px;
+            user-select: none;
 
             .timeline-text {
                 font-weight: bold;
