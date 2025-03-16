@@ -30,13 +30,13 @@ export default {
         problemsResolve: "(Problems resolved includes: ...)",
         careerDevs: [
           {
-            timeline: "01/2024 - Present",
+            timeline: "01/2025 - Present",
+            title: "Software Engineer",
+          },
+          {
+            timeline: "01/2024 - 12/2024",
             title: "Associate Software Engineer",
           },
-          // {
-          //   timeline: "12/2024 - Present",
-          //   title: "Software Engineer",
-          // },
         ],
       },
     };

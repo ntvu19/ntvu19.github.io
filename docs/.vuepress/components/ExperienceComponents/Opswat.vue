@@ -1,25 +1,14 @@
 <template>
   <div class="opswat">
-    <div class="logo-container">
-      <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="company-logo" />
-    </div>
-
-    <div class="career-dev">
-      <div
-        v-for="careerEl in opswatData.careerDevs.slice().reverse()"
-        class="timestone"
-      >
-        <div class="timeline">
-          <span>{{ careerEl.timeline }}</span>
-        </div>
-        <div class="title">{{ careerEl.title }}</div>
+    <div class="overview">
+      <div class="logo-container">
+        <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="company-logo" />
       </div>
+
+      <Timeline :items="timelineItems" />
     </div>
 
-    <!-- TODO: Use table format instead -->
-    <!-- TODO: Custom the list icon -->
     <ul class="work-description">
-      <!-- <b>{{ opswatData.title }}</b> -->
       <li>Product: {{ opswatData.product }}</li>
       <li>Team Structure: {{ opswatData.teamStructure }}</li>
       <li>Description: {{ opswatData.description }}</li>
@@ -30,10 +19,16 @@
 </template>
 
 <script>
+import Timeline from '../Timeline.vue';
+
 export default {
+  components: {
+    Timeline
+  },
   data() {
     return {
       opswatLogoUrl: "/opswat-light.svg",
+      timelineItems: []
     };
   },
   props: {
@@ -46,6 +41,13 @@ export default {
     isDarkMode() {
       return document.documentElement.classList.contains("dark");
     },
+  },
+  created() {
+    // Transform career development data into timeline items format
+    this.timelineItems = this.opswatData.careerDevs.map(career => ({
+      timeRange: career.timeline,
+      content: career.title
+    }));
   },
   mounted() {
     const btnDarkMode = document.querySelector(".toggle-color-mode-button");

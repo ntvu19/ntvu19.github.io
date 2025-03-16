@@ -1,77 +1,31 @@
+$logoContainerMinSize: 200px;
+$logoSize: 175px;
+
 .opswat {
     display: flex;
 
-    .career-dev {
-        min-width: 150px;
-        font-size: small;
-        
-        .timestone {
+    .overview {
+        .logo-container {
+            min-width: $logoContainerMinSize;
+            height: $logoContainerMinSize;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            margin: 10px 0px 40px;
-            padding: 5px 0;
-            transition: transform .3s ease-in-out;
-
-            margin-top: 35px;   // Temporary
-
-            &:hover {
-                transform: scale(1.1);
-            }
-
-            .timeline {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background-color: #50c787;
-
-                span {
-                    font-size: x-small;
-                    color: #fff;
-                    max-width: 40px;
-                    word-wrap: break-word;
-                    white-space: normal;
-                    text-align: center;
-                    font-weight: bold;
-                }
-            }
-
-            .title {
-                font-size: x-small;
-                font-weight: bold;
-                text-align: center;
-                margin: 5px 0;
+            
+            img.company-logo {
+                width: $logoSize;
+                height: $logoSize;
             }
         }
 
-        .timestone:last-child {
-            margin-bottom: 10px;
-        }
-    }
-
-    .logo-container {
-        $logoContainerMinSize: 200px;
-
-        min-width: $logoContainerMinSize;
-        height: $logoContainerMinSize;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img.company-logo {
-            $logoSize: 150px;
-
-            width: $logoSize;
-            height: $logoSize;
+        .timeline-container {
+            $timelineWidth: 2px;
         }
     }
 
     .work-description {
         width: 100%;
+        margin: 0;
         padding-left: 30px;
         padding-top: 10px;
     }
