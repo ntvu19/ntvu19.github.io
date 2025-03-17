@@ -139,6 +139,8 @@ export default defineUserConfig({
         ],
       },
     },
+    colorMode: "light",
+    colorModeSwitch: false,
     pageNavbarLabel: null,
     logo: "/signature.svg",
     logoDark: "/signature.svg",
