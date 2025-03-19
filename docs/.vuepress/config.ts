@@ -14,6 +14,7 @@ export default defineUserConfig({
       },
     },
   }),
+  head: [["link", { rel: "icon", href: "/icon/main/icon.png" }]],
   theme: defaultTheme({
     // Find methods in `DefaultThemeLocaleData.ts`
     locales: {
@@ -71,10 +72,10 @@ export default defineUserConfig({
               { text: "References", link: "/others/references/" },
             ],
           },
-          {
-            text: "About",
-            link: "/about/",
-          },
+          // {
+          //   text: "About",
+          //   link: "/about/",
+          // },
         ],
       },
       "/vi/": {
@@ -132,10 +133,10 @@ export default defineUserConfig({
               { text: "Tham khảo", link: "/vi/others/references/" },
             ],
           },
-          {
-            text: "Giới thiệu",
-            link: "/vi/about/",
-          },
+          // {
+          //   text: "Giới thiệu",
+          //   link: "/vi/about/",
+          // },
         ],
       },
     },
