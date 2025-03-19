@@ -1,6 +1,6 @@
 ---
 lang: en-US
-title: Home
+title: Software Engineer
 description: route - /
 sidebar: false
 # home: true

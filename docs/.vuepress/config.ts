@@ -14,6 +14,15 @@ export default defineUserConfig({
       },
     },
   }),
+  extendsPage: (page) => {
+    const postfix = " - Vu T. Nguyen";
+    if (page.title) {
+      page.title = `${page.title}${postfix}`;
+    }
+
+    page.frontmatter.head = page.frontmatter.head || [];
+    page.frontmatter.head.push(["title", {}, page.title]);
+  },
   head: [["link", { rel: "icon", href: "/icon/main/icon.png" }]],
   theme: defaultTheme({
     // Find methods in `DefaultThemeLocaleData.ts`
