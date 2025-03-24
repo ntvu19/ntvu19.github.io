@@ -12,6 +12,7 @@ export default defineClientConfig({
     let intervalId: number;
 
     onMounted(() => {
+      // TODO: Fix the icon change every 15 minutes
       const icons = [
         "/icon/main/icon.png",
         "/icon/main/icon1.png",
@@ -21,10 +22,8 @@ export default defineClientConfig({
         "/icon/main/icon5.png",
       ];
 
-      const updateIcon = () => {
-        const iconUrl = icons[iconIndex];
-        iconIndex = (iconIndex + 1) % icons.length;
-
+      const setIcon = (index: number) => {
+        const iconUrl = icons[index];
         let link = document.querySelector(
           'link[rel~="icon"]'
         ) as HTMLLinkElement;
@@ -33,15 +32,33 @@ export default defineClientConfig({
           link.rel = "icon";
           document.head.appendChild(link);
         }
-
         link.href = iconUrl;
       };
 
+      const updateIcon = () => {
+        setIcon(iconIndex);
+        iconIndex = (iconIndex + 1) % icons.length;
+        
+        // Save current state to localStorage
+        localStorage.setItem('lastIconIndex', iconIndex.toString());
+        localStorage.setItem('lastIconUpdate', Date.now().toString());
+      };
+
+      // Calculate initial icon index based on stored state
+      const lastIconIndex = localStorage.getItem('lastIconIndex');
+      const lastIconUpdate = localStorage.getItem('lastIconUpdate');
+      
+      if (lastIconIndex && lastIconUpdate) {
+        const timePassed = Date.now() - parseInt(lastIconUpdate);
+        const intervalsPassed = Math.floor(timePassed / (15 * 60 * 1000));
+        iconIndex = (parseInt(lastIconIndex) + intervalsPassed) % icons.length;
+      }
+
+      // Set the initial icon without incrementing
+      setIcon(iconIndex);
+
       // Change the icon every 15 minutes
       intervalId = window.setInterval(updateIcon, 15 * 60 * 1000);
-
-      // Set the initial icon
-      updateIcon();
     });
 
     onUnmounted(() => {

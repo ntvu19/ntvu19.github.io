@@ -1,40 +1,51 @@
 <template>
   <div class="home-welcome">
     <div class="header">
-      <span id="welcome-header">ABOUT ME</span>
+      <span id="welcome-header">🖼️ Vu T. Nguyen 🎨</span>
     </div>
 
     <div class="content">
       <div class="summary">
-        <p>
-          My name is Thanh-Vu Nguyen, I have completed my bachelor's degree at
-          University of Science (Ho Chi Minh City, Vietnam). During my academic
-          journey, I earned the respect of my professors due to my diligent and
-          dedicated approach to learning.
-        </p>
-        <p>
-          I have a strong passion for acquiring new knowledge, particularly in
-          the field of back-end software development. However, I am not limited
-          to one area of expertise and find great fascination in exploring
-          various domains such as DevOps, Software Architecture, and Artificial
-          Intelligence, with a particular focus on Computer Vision.
-        </p>
-        <p>
-          I enjoy pushing myself by tackling challenging software development
-          and system architecture problems. I have gained some practical
-          experience in web application development through university projects.
-        </p>
-        <p>
-          My primary areas of interest include building highly practical
-          software, honing problem solving skills, writing maintainable and
-          scalable code, optimizing systems through source code and databases,
-          ensuring user data security, and more.
-        </p>
-        <p>
-          During my free time, I like brainstorming ideas for software
-          applications that cater to essential user needs and continually
-          expanding my knowledge in these areas.
-        </p>
+        <h3>Welcome!</h3>
+        <div class="intro-text">
+          <p>I'm a software engineer with a passion for:</p>
+          <div class="highlight-points">
+            <span>🔹 Building scalable systems</span>
+            <span>🔹 Optimizing databases</span>
+            <span>🔹 Designing robust architectures</span>
+          </div>
+          <p>I dive deep into the essence of technology to refine solutions and push innovation forward.</p>
+        </div>
+        <ul class="skills-list">
+          <li>
+            <span class="icon">🚀</span>
+            <div class="skill-content">
+              <span class="skill-title">Software Engineer</span>
+              <span class="skill-desc">Crafting scalable and efficient solutions</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon">💾</span>
+            <div class="skill-content">
+              <span class="skill-title">Database Optimization</span>
+              <span class="skill-desc">Maximizing performance and reliability</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon">🏗</span>
+            <div class="skill-content">
+              <span class="skill-title">System Architecture</span>
+              <span class="skill-desc">Designing robust and adaptable systems</span>
+            </div>
+          </li>
+          <li>
+            <span class="icon">🔍</span>
+            <div class="skill-content">
+              <span class="skill-title">Technology Researcher</span>
+              <span class="skill-desc">Exploring the essence of technology</span>
+            </div>
+          </li>
+        </ul>
       </div>
       <div class="master-container">
         <div class="avatar-wrapper">
@@ -71,4 +82,43 @@ export default {
 
 <style scoped>
 @import "../styles/welcome.scss";
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+
+  & li {
+    display: flex;
+    align-items: center;
+    margin-bottom: .25rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .skill-content {
+      display: flex;
+      flex-direction: column;
+
+      .skill-title {
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .skill-desc {
+        color: #666;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
 </style>

@@ -8,7 +8,7 @@ export default defineUserConfig({
       css: {
         preprocessorOptions: {
           scss: {
-            quiteDeps: true, // Suppress deprecation warnings
+            quietDeps: true, // Suppress deprecation warnings
           },
         },
       },
