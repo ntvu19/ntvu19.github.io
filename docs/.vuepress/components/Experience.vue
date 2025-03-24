@@ -2,7 +2,7 @@
 <template>
   <div class="home-experience">
     <div class="header">
-      <span id="experience-header">WORK EXPERIENCE</span>
+      <span id="experience-header">Work Experience</span>
     </div>
 
     <div class="content">

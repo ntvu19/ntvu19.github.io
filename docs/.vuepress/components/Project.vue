@@ -2,7 +2,7 @@
 <template>
     <div class="home-project">
         <div class="header">
-            <span id="project-header">TECHNICAL PROJECT</span>
+            <span id="project-header">Technical Projects</span>
         </div>
         <div class="content">
             <p>This is the technical project section</p>
