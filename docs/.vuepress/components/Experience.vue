@@ -25,7 +25,8 @@ export default {
       // Collect icons here: https://techicons.dev/
       opswat: {
         product: "MetaDefender ICAP Server",
-        description: "Working on an ICAP Server project that integrates with ICAP-supported proxies to inspect requests for malware and sensitive data, determine appropriate verdict for each request. Responsibilities include integrating with central management and antivirus scan servers, enhancing scanning rule (such as file type, request info, encryption/decryption), designing scalable and maintainable software architecture, and optimizing database performance. Developing high-quality software using test-driven development and domain-driven development to minimize user-impacting issues.",
+        description:
+          "Working on an ICAP Server project that integrates with ICAP-supported proxies to inspect requests for malware and sensitive data, determine appropriate verdict for each request. Responsibilities include integrating with central management and antivirus scan servers, enhancing scanning rule (such as file type, request info, encryption/decryption), designing scalable and maintainable software architecture, and optimizing database performance. Developing high-quality software using test-driven development and domain-driven development to minimize user-impacting issues.",
         technicalStacks: [
           { name: "C++", iconUrl: "/icon/skill/cpp.svg" },
           { name: "Qt", iconUrl: "/icon/skill/qt.svg" },
