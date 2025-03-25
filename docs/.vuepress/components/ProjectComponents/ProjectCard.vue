@@ -79,7 +79,7 @@
           <div class="demo-container">
             <div v-if="currentProject.demoVideoUrl" class="video-wrapper">
               <iframe
-                :src="currentProject.demoVideoUrl"
+                :src="getEmbedUrl(currentProject.demoVideoUrl)"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
@@ -126,6 +126,15 @@ export default {
     const currentProject = ref<Project | null>(null);
     const modalType = ref<"details" | "demo">("details");
 
+    const getEmbedUrl = (url: string) => {
+      if (!url) return "";
+      // Convert YouTube URL to embed format
+      const videoId = url.match(
+        /(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^?&]+)/
+      )?.[1];
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : "";
+    };
+
     const showModal = (project: Project, type: "details" | "demo") => {
       currentProject.value = project;
       modalType.value = type;
@@ -153,6 +162,7 @@ export default {
       modalType,
       showModal,
       closeModal,
+      getEmbedUrl,
     };
   },
 };
