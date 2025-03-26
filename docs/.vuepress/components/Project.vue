@@ -46,23 +46,23 @@ export default {
           techStack: [
             {
               name: "NestJS",
-              icon: "",
+              icon: "/icon/skill/nestjs.svg",
             },
             {
               name: "PostgreSQL",
-              icon: "",
+              icon: "/icon/skill/postgresql.svg",
             },
             {
               name: "Redis",
-              icon: "",
+              icon: "/icon/skill/redis.svg",
             },
             {
               name: "Docker",
-              icon: "",
+              icon: "/icon/skill/docker.svg",
             },
             {
               name: "Kubernetes",
-              icon: "",
+              icon: "/icon/skill/kubernetes.svg",
             },
             {
               name: "NATS Streaming",
@@ -70,11 +70,11 @@ export default {
             },
             {
               name: "Swagger",
-              icon: "",
+              icon: "/icon/skill/swagger.svg",
             },
             {
               name: "AWS S3",
-              icon: "",
+              icon: "/icon/skill/aws.svg",
             },
           ],
           problemResolves: [
@@ -98,23 +98,23 @@ export default {
           techStack: [
             {
               name: "C++",
-              icon: "",
+              icon: "/icon/skill/cpp.svg",
             },
             {
               name: "Linux",
-              icon: "",
+              icon: "/icon/skill/linux.svg",
             },
             {
               name: "PostgreSQL",
-              icon: "",
+              icon: "/icon/skill/postgresql.svg",
             },
             {
               name: "Docker",
-              icon: "",
+              icon: "/icon/skill/docker.svg",
             },
             {
               name: "CMake",
-              icon: "",
+              icon: "/icon/skill/cmake.svg",
             },
           ],
           problemResolves: [
@@ -137,27 +137,27 @@ export default {
           techStack: [
             {
               name: "Java Spring",
-              icon: "",
+              icon: "/icon/skill/spring.svg",
             },
             {
               name: "Vue.js",
-              icon: "",
+              icon: "/icon/skill/vuejs.svg",
             },
             {
               name: "PostgreSQL",
-              icon: "",
+              icon: "/icon/skill/postgresql.svg",
             },
             {
               name: "Kubernetes",
-              icon: "",
+              icon: "/icon/skill/kubernetes.svg",
             },
             {
               name: "AWS S3",
-              icon: "",
+              icon: "/icon/skill/aws.svg",
             },
             {
               name: "Redis",
-              icon: "",
+              icon: "/icon/skill/redis.svg",
             },
           ],
           problemResolves: [
