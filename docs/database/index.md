@@ -1,6 +1,7 @@
 ---
 lang: en-US
 title: Database
+sidebar: false
 ---
 
 <!-- [[toc]] -->

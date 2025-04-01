@@ -41,7 +41,7 @@ export default {
           name: "HCMUS Event Management",
           description:
             "This is my university-level graduation project, it has received an excellent rating at 9.3/10. The project's concept revolves around organizing events and selling tickets to university students within the campus community. With a team of five members, we successfully designed and implement a microservice architecture, resulting in a highly scalable and stale system. My primary role in this project was to develop the back-end software using the NestJS framework.",
-          imageUrl: "/images/project-placeholder.png",
+          imageUrl: "/images/hcmus-event-management.png",
           demoVideoUrl: "https://youtu.be/j01f4toU83A",
           techStack: [
             {
@@ -93,7 +93,7 @@ export default {
           name: "H4 - High Performance Web Server",
           description:
             "A high-performance HTTP web server which is implemented from scratch using C++. It can accept and process a large number of the incoming request, process on-demand and response to the client. This web server support integrate with database, secured communication, logging, and authentication.",
-          imageUrl: "/images/project-placeholder.png",
+          imageUrl: "",
           demoVideoUrl: "",
           techStack: [
             {
@@ -132,7 +132,7 @@ export default {
           name: "Video Streaming Platform",
           description:
             "A platform that allows the moderators to upload the movies and cartoons and allows users to watch them online. The application focuses on high load capacity when there is high concurrent traffic, along with unlimited scaling ability at the lowest possible cost.",
-          imageUrl: "/images/project-placeholder.png",
+          imageUrl: "",
           demoVideoUrl: "",
           techStack: [
             {

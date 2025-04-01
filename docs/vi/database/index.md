@@ -1,6 +1,7 @@
 ---
 lang: vi-VN
 title: Cơ sở dữ liệu
+sidebar: false
 ---
 
 <!-- [[toc]] -->

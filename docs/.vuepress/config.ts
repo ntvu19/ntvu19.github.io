@@ -33,34 +33,7 @@ export default defineUserConfig({
         navbar: [
           {
             text: "Programming",
-            children: [
-              {
-                text: "C++",
-                children: [
-                  {
-                    text: "Basic C++",
-                    link: "/programming/cpp/basic/",
-                  },
-                  {
-                    text: "Advanced C++",
-                    link: "/programming/cpp/advanced/",
-                  },
-                ],
-              },
-              {
-                text: "Java",
-                children: [
-                  {
-                    text: "Basic Java",
-                    link: "/programming/java/basic/",
-                  },
-                  {
-                    text: "Advanced Java",
-                    link: "/programming/java/advanced/",
-                  },
-                ],
-              },
-            ],
+            link: "/programming/",
           },
           {
             text: "Database",
@@ -81,10 +54,6 @@ export default defineUserConfig({
               { text: "References", link: "/others/references/" },
             ],
           },
-          // {
-          //   text: "About",
-          //   link: "/about/",
-          // },
         ],
       },
       "/vi/": {
@@ -93,34 +62,7 @@ export default defineUserConfig({
         navbar: [
           {
             text: "Lập trình",
-            children: [
-              {
-                text: "C++",
-                children: [
-                  {
-                    text: "C++ cơ bản",
-                    link: "/vi/programming/cpp/basic/",
-                  },
-                  {
-                    text: "C++ nâng cao",
-                    link: "/vi/programming/cpp/advanced/",
-                  },
-                ],
-              },
-              {
-                text: "Java",
-                children: [
-                  {
-                    text: "Java cơ bản",
-                    link: "/vi/programming/java/basic/",
-                  },
-                  {
-                    text: "Java nâng cao",
-                    link: "/vi/programming/java/advanced/",
-                  },
-                ],
-              },
-            ],
+            link: "/vi/programming/",
           },
           {
             text: "Cơ sở dữ liệu",
@@ -142,10 +84,6 @@ export default defineUserConfig({
               { text: "Tham khảo", link: "/vi/others/references/" },
             ],
           },
-          // {
-          //   text: "Giới thiệu",
-          //   link: "/vi/about/",
-          // },
         ],
       },
     },

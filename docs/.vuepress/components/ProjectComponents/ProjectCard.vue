@@ -1,14 +1,10 @@
 <template>
   <!-- Project card -->
-  <div
-    v-for="(row, rowIndex) in chunkProjects"
-    :key="rowIndex"
-    class="project-row"
-  >
+  <div v-for="(row, rowIndex) in chunkProjects" :key="rowIndex" class="project-row">
     <div v-for="project in row" :key="project.id" class="project-column">
       <div class="project-card">
-        <div class="project-logo">
-          <img :src="project.imageUrl" alt="Project Logo" />
+        <div class="project-preview">
+          <img :src="project.imageUrl || fallbackImageUrl" alt="Project Preview" />
         </div>
         <h3 class="project-name">{{ project.name }}</h3>
         <p class="project-description">
@@ -27,33 +23,21 @@
   </div>
 
   <!-- Modal -->
-  <div
-    v-if="isModalVisible && currentProject"
-    class="project-modal"
-    @click.self="closeModal"
-  >
+  <div v-if="isModalVisible && currentProject" class="project-modal" @click.self="closeModal">
     <div class="modal-content">
       <span class="close-button" @click="closeModal">&times;</span>
       <h2>{{ currentProject.name }}</h2>
       <div class="modal-body">
         <!-- Details View -->
         <template v-if="modalType === 'details'">
-          <img
-            :src="currentProject.imageUrl"
-            alt="Project Image"
-            class="modal-image"
-          />
+          <img :src="currentProject.imageUrl || fallbackImageUrl" alt="Project Preview" class="modal-image" />
           <p class="modal-description">{{ currentProject.description }}</p>
 
           <!-- Tech Stack -->
           <div class="tech-stack">
             <h3>Technical Stack</h3>
             <div class="tech-tags">
-              <span
-                v-for="tech in currentProject.techStack"
-                :key="tech.name"
-                class="tech-tag"
-              >
+              <span v-for="tech in currentProject.techStack" :key="tech.name" class="tech-tag">
                 {{ tech.name }}
               </span>
             </div>
@@ -63,11 +47,7 @@
           <div class="problem-resolves">
             <h3>Key Features</h3>
             <div class="resolve-tags">
-              <span
-                v-for="problem in currentProject.problemResolves"
-                :key="problem"
-                class="resolve-tag"
-              >
+              <span v-for="problem in currentProject.problemResolves" :key="problem" class="resolve-tag">
                 {{ problem }}
               </span>
             </div>
@@ -78,13 +58,9 @@
         <template v-else>
           <div class="demo-container">
             <div v-if="currentProject.demoVideoUrl" class="video-wrapper">
-              <iframe
-                :src="getEmbedUrl(currentProject.demoVideoUrl)"
-                frameborder="0"
+              <iframe :src="getEmbedUrl(currentProject.demoVideoUrl)" title="HCMUS Event Management Demo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                class="demo-video"
-              ></iframe>
+                allowfullscreen class="demo-video"></iframe>
             </div>
             <div v-else class="no-video">
               <p>No demo video available</p>
@@ -120,11 +96,16 @@ export default {
       type: Array as PropType<Project[]>,
       required: true,
     },
+    fallbackImageUrl: {
+      type: String,
+      default: '/images/image_unavailable.png'
+    }
   },
   setup(props) {
     const isModalVisible = ref(false);
     const currentProject = ref<Project | null>(null);
     const modalType = ref<"details" | "demo">("details");
+    const fallbackImageUrl = ref(props.fallbackImageUrl);
 
     const getEmbedUrl = (url: string) => {
       if (!url) return "";
@@ -163,6 +144,7 @@ export default {
       showModal,
       closeModal,
       getEmbedUrl,
+      fallbackImageUrl,
     };
   },
 };
@@ -190,7 +172,7 @@ export default {
         transform: translateY(-5px);
       }
 
-      .project-logo {
+      .project-preview {
         text-align: center;
         margin-bottom: 15px;
 
@@ -219,7 +201,8 @@ export default {
         line-clamp: 3;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-height: 4.5em; /* Approximately 3 lines of text */
+        max-height: 4.5em;
+        /* Approximately 3 lines of text */
       }
 
       .project-buttons {
