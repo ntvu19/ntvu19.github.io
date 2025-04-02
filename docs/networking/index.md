@@ -4,4 +4,6 @@ title: Networking
 sidebar: false
 ---
 
-Networking page
+<Knowledge 
+  section-name="Network"
+/>

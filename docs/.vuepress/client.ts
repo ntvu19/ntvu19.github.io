@@ -3,6 +3,8 @@ import { defineClientConfig } from "vuepress/client";
 import Welcome from "./components/Welcome.vue";
 import Experience from "./components/Experience.vue";
 import Project from "./components/Project.vue";
+import Article from "./components/Article.vue";
+import Knowledge from "./components/Knowledge.vue";
 
 import Layout from "./layouts/Layout.vue";
 
@@ -38,16 +40,16 @@ export default defineClientConfig({
       const updateIcon = () => {
         setIcon(iconIndex);
         iconIndex = (iconIndex + 1) % icons.length;
-        
+
         // Save current state to localStorage
-        localStorage.setItem('lastIconIndex', iconIndex.toString());
-        localStorage.setItem('lastIconUpdate', Date.now().toString());
+        localStorage.setItem("lastIconIndex", iconIndex.toString());
+        localStorage.setItem("lastIconUpdate", Date.now().toString());
       };
 
       // Calculate initial icon index based on stored state
-      const lastIconIndex = localStorage.getItem('lastIconIndex');
-      const lastIconUpdate = localStorage.getItem('lastIconUpdate');
-      
+      const lastIconIndex = localStorage.getItem("lastIconIndex");
+      const lastIconUpdate = localStorage.getItem("lastIconUpdate");
+
       if (lastIconIndex && lastIconUpdate) {
         const timePassed = Date.now() - parseInt(lastIconUpdate);
         const intervalsPassed = Math.floor(timePassed / (15 * 60 * 1000));
@@ -75,6 +77,8 @@ export default defineClientConfig({
     app
       .component("Welcome", Welcome)
       .component("Experience", Experience)
-      .component("Project", Project);
+      .component("Project", Project)
+      .component("Article", Article)
+      .component("Knowledge", Knowledge);
   },
 });

@@ -4,4 +4,6 @@ title: Mạng máy tính
 sidebar: false
 ---
 
-Networking page
+<Knowledge 
+  section-name="Mạng máy tính"
+/>

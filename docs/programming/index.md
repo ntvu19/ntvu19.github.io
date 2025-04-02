@@ -4,9 +4,18 @@ title: Programming
 sidebar: false
 ---
 
-### Programming Language
+<Knowledge 
+  section-name="C/C++"
+/>
+<!-- Example -->
+<!-- :articles="[
+    {
+      title: 'JavaScript Fundamentals',
+      image: '/images/hcmus-event-management.png',
+      url: '/programming/javascript/'
+    }, ...
+]" -->
 
-
-### Programming Techniques
-
-
+<Knowledge 
+  section-name="Design Pattern"
+/>

@@ -4,4 +4,6 @@ title: Operating System
 sidebar: false
 ---
 
-Operating system page
+<Knowledge 
+  section-name="Operating System"
+/>

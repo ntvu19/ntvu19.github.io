@@ -4,4 +4,6 @@ title: Hệ điều hành
 sidebar: false
 ---
 
-Operating system page
+<Knowledge 
+  section-name="Hệ điều hành"
+/>

@@ -4,9 +4,10 @@ title: Programming
 sidebar: false
 ---
 
-### Ngôn ngữ lập trình
+<Knowledge 
+  section-name="Ngôn ngữ lập trình"
+/>
 
-
-### Kỹ thuật lập trình
-
-
+<Knowledge 
+  section-name="Kỹ thuật lập trình"
+/>
