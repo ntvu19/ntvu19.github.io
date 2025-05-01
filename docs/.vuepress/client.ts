@@ -5,6 +5,7 @@ import Experience from "./components/Experience.vue";
 import Project from "./components/Project.vue";
 import Article from "./components/Article.vue";
 import Knowledge from "./components/Knowledge.vue";
+import GlobalModal from "./components/GlobalModal.vue";
 
 import Layout from "./layouts/Layout.vue";
 
@@ -79,6 +80,7 @@ export default defineClientConfig({
       .component("Experience", Experience)
       .component("Project", Project)
       .component("Article", Article)
-      .component("Knowledge", Knowledge);
+      .component("Knowledge", Knowledge)
+      .component("GlobalModal", GlobalModal);
   },
 });

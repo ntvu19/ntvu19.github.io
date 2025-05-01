@@ -10,4 +10,3 @@ sidebar: false
 <Welcome/>
 <Experience/>
 <Project/>
-<Contact/>
