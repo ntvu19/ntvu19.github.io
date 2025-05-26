@@ -70,13 +70,15 @@ defineExpose({
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    backdrop-filter: blur(4px);
 }
 
 .modal-content {
-    background: var(--c-bg);
+    background: #ffffff;
+    color: #2c3e50;
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 800px;
     max-height: 90vh;
@@ -84,6 +86,15 @@ defineExpose({
     overscroll-behavior: contain;
     touch-action: pan-y;
     -webkit-overflow-scrolling: touch;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support */
+html.dark .modal-content {
+    background: #22272e;
+    color: #f0f6fc;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
 
 /* Transition animations */
@@ -95,5 +106,40 @@ defineExpose({
 .modal-enter-from,
 .modal-leave-to {
     opacity: 0;
+}
+
+/* Improve text readability in modal */
+.modal-content h1,
+.modal-content h2,
+.modal-content h3,
+.modal-content h4,
+.modal-content h5,
+.modal-content h6 {
+    color: inherit;
+    margin-top: 0;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: inherit;
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+
+html.dark .modal-content input,
+html.dark .modal-content textarea,
+html.dark .modal-content select {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+    outline: 2px solid #3eaf7c;
+    outline-offset: 2px;
 }
 </style>
