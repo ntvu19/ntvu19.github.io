@@ -1,5 +1,5 @@
 <template>
-    <Teleport to="body">
+    <Teleport to="body" :disabled="!isMounted">
         <Transition name="modal">
             <div v-if="isOpen" class="modal-overlay" @click="closeModal">
                 <div class="modal-content" @click.stop @wheel.passive @touchstart.passive @touchmove.passive
@@ -15,6 +15,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
+const isMounted = ref(false)
 const triggerKey = 'k' // You can change this to any key you want
 
 const openModal = () => {
@@ -42,10 +43,12 @@ const handleKeyPress = (event) => {
 }
 
 onMounted(() => {
+    isMounted.value = true
     document.addEventListener('keydown', handleKeyPress, { capture: true })
 })
 
 onUnmounted(() => {
+    isMounted.value = false
     document.removeEventListener('keydown', handleKeyPress, { capture: true })
 })
 
