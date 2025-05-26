@@ -2,11 +2,7 @@
   <div class="opswat">
     <div class="overview">
       <div class="logo-container">
-        <img
-          v-bind:src="opswatLogoUrl"
-          alt="OPSWAT Logo"
-          class="company-logo"
-        />
+        <img v-bind:src="opswatLogoUrl" alt="OPSWAT Logo" class="company-logo" />
       </div>
 
       <Timeline :items="timelineItems" />
@@ -20,40 +16,21 @@
         <span class="description-text">{{ opswatData.description }}</span>
       </div>
       <div class="technical-stacks">
-        <div
-          v-if="
-            opswatData.technicalStacks && opswatData.technicalStacks.length > 0
-          "
-          class="tech-stack-list"
-        >
-          <div
-            v-for="(tech, index) in opswatData.technicalStacks"
-            :key="index"
-            class="tech-item"
-          >
-            <img
-              v-if="tech.iconUrl"
-              :src="tech.iconUrl"
-              :alt="tech.name"
-              class="tech-icon"
-            />
+        <div v-if="
+          opswatData.technicalStacks && opswatData.technicalStacks.length > 0
+        " class="tech-stack-list">
+          <div v-for="(tech, index) in opswatData.technicalStacks" :key="index" class="tech-item">
+            <img v-if="tech.iconUrl" :src="tech.iconUrl" :alt="tech.name" class="tech-icon" />
           </div>
         </div>
       </div>
       <div class="problem-resolve">
         <div class="tag-container">
-          <div
-            v-if="
-              opswatData.problemsResolve &&
-              opswatData.problemsResolve.length > 0
-            "
-            class="tags-list"
-          >
-            <span
-              v-for="(tag, index) in opswatData.problemsResolve"
-              :key="index"
-              class="tag"
-            >
+          <div v-if="
+            opswatData.problemsResolve &&
+            opswatData.problemsResolve.length > 0
+          " class="tags-list">
+            <span v-for="(tag, index) in opswatData.problemsResolve" :key="index" class="tag">
               {{ tag }}
             </span>
           </div>
@@ -85,6 +62,9 @@ export default {
   },
   methods: {
     isDarkMode() {
+      if (typeof document === 'undefined') {
+        return false; // Default to light mode during SSR
+      }
       return document.documentElement.classList.contains("dark");
     },
   },

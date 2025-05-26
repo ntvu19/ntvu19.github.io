@@ -42,19 +42,24 @@ export default defineClientConfig({
         setIcon(iconIndex);
         iconIndex = (iconIndex + 1) % icons.length;
 
-        // Save current state to localStorage
-        localStorage.setItem("lastIconIndex", iconIndex.toString());
-        localStorage.setItem("lastIconUpdate", Date.now().toString());
+        // Save current state to localStorage (only in browser)
+        if (typeof window !== "undefined" && window.localStorage) {
+          localStorage.setItem("lastIconIndex", iconIndex.toString());
+          localStorage.setItem("lastIconUpdate", Date.now().toString());
+        }
       };
 
-      // Calculate initial icon index based on stored state
-      const lastIconIndex = localStorage.getItem("lastIconIndex");
-      const lastIconUpdate = localStorage.getItem("lastIconUpdate");
+      // Calculate initial icon index based on stored state (only in browser)
+      if (typeof window !== "undefined" && window.localStorage) {
+        const lastIconIndex = localStorage.getItem("lastIconIndex");
+        const lastIconUpdate = localStorage.getItem("lastIconUpdate");
 
-      if (lastIconIndex && lastIconUpdate) {
-        const timePassed = Date.now() - parseInt(lastIconUpdate);
-        const intervalsPassed = Math.floor(timePassed / (15 * 60 * 1000));
-        iconIndex = (parseInt(lastIconIndex) + intervalsPassed) % icons.length;
+        if (lastIconIndex && lastIconUpdate) {
+          const timePassed = Date.now() - parseInt(lastIconUpdate);
+          const intervalsPassed = Math.floor(timePassed / (15 * 60 * 1000));
+          iconIndex =
+            (parseInt(lastIconIndex) + intervalsPassed) % icons.length;
+        }
       }
 
       // Set the initial icon without incrementing
