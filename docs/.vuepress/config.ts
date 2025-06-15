@@ -2,6 +2,8 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 
+// TODO: Implement test for the file path (images, links, etc. in the markdown files)
+
 export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
@@ -39,6 +41,10 @@ export default defineUserConfig({
         selectLanguageName: "English",
         navbar: [
           {
+            text: "Algorithm",
+            link: "/algorithm/",
+          },
+          {
             text: "Programming",
             link: "/programming/",
           },
@@ -67,6 +73,10 @@ export default defineUserConfig({
         selectLanguageName: "Việt Nam",
         selectLanguageText: "Việt Nam",
         navbar: [
+          {
+            text: "Giải thuật",
+            link: "/vi/algorithm/",
+          },
           {
             text: "Lập trình",
             link: "/vi/programming/",

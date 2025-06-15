@@ -1,3 +1,7 @@
+<!-- TODO: Enhance list -->
+<!-- Default image for the article -->
+<!-- Custom image style for the article (center, full width, etc.) -->
+
 <template>
     <div class="knowledge-section">
         <h2 class="section-title">{{ sectionName }}</h2>
