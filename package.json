@@ -19,6 +19,18 @@
     "vuepress": "^2.0.0-rc.9"
   },
   "dependencies": {
-    "caniuse-lite": "^1.0.30001718"
+    "@codemirror/basic-setup": "^0.20.0",
+    "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-go": "^6.0.1",
+    "@codemirror/lang-java": "^6.0.1",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/lang-json": "^6.0.1",
+    "@codemirror/lang-markdown": "^6.3.3",
+    "@codemirror/lang-python": "^6.2.1",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
+    "@codemirror/view": "^6.37.2",
+    "caniuse-lite": "^1.0.30001718",
+    "codemirror": "^6.0.1"
   }
 }

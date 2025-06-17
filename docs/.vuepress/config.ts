@@ -1,6 +1,7 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
+import type { UserConfig } from "vite";
 
 // TODO: Implement test for the file path (images, links, etc. in the markdown files)
 
@@ -21,7 +22,15 @@ export default defineUserConfig({
         // __VUE_OPTIONS_API__: true,
         // __VUE_PROD_DEVTOOLS__: false,
       },
-    },
+      // Add compiler options for custom elements
+      vue: {
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag.includes("-"),
+          },
+        },
+      },
+    } as UserConfig,
   }),
   extendsPage: (page) => {
     const postfix = " - Vu T. Nguyen";

@@ -5,6 +5,7 @@ import Project from "./components/Project.vue";
 import Article from "./components/Article.vue";
 import Knowledge from "./components/Knowledge.vue";
 import GlobalModal from "./components/GlobalModal.vue";
+import CodeMirror from "./components/editors/CodeMirror.vue";
 
 import Layout from "./layouts/Layout.vue";
 
@@ -24,7 +25,8 @@ export default defineClientConfig({
       .component("Project", Project)
       .component("Article", Article)
       .component("Knowledge", Knowledge)
-      .component("GlobalModal", GlobalModal);
+      .component("GlobalModal", GlobalModal)
+      .component("CodeMirror", CodeMirror);
 
     // Handle icon rotation logic only on client side
     if (typeof window !== "undefined") {
