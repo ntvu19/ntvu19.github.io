@@ -1,16 +1,61 @@
 ---
 lang: en-US
 title: CSES Problem Set
+# Refer to: [CSES Problem Set](https://cses.fi/problemset/)
 ---
 
-- Refer to: [CSES Problem Set](https://cses.fi/problemset/)
+## General
+### Introduction
+something
 
-# This is only a sample data
+## Introductory Problems
 
-| Algorithm | Time Complexity | Space Complexity | Description |
-|-----------|----------------|------------------|-------------|
-| Binary Search | O(log n) | O(1) | Efficient search algorithm for sorted arrays |
-| Quick Sort | O(n log n) | O(log n) | Divide and conquer sorting algorithm |
-| Merge Sort | O(n log n) | O(n) | Stable sorting algorithm using divide and conquer |
-| Bubble Sort | O(n²) | O(1) | Simple but inefficient sorting algorithm |
-| Linear Search | O(n) | O(1) | Basic search algorithm for unsorted arrays |
+## Sorting and Searching
+
+## Dynamic Programming
+
+
+## Graph Algorithms
+
+
+## Range Queries
+
+
+## Tree Algorithms
+
+
+## Mathematics
+
+
+## String Algorithms
+
+
+## Geometry
+
+
+## Advanced Techniques
+
+
+## Sliding Window Problems
+
+
+## Interactive Problems
+
+
+## Bitwise Operations
+
+
+## Construction Problems
+
+
+## Advanced Graph Problems
+
+
+## Counting Problems
+
+
+## Additional Problems I
+
+
+## Additional Problems II
+

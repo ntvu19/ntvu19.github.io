@@ -22,7 +22,7 @@ sidebar: false
     },
     {
       title: 'CSES Problem Set',
-      image: '',
+      image: '/articles/algorithm/cses/cses_logo.png',
       url: '/algorithm/cses/'
     },
     {
