@@ -28,8 +28,8 @@ sidebar: false
       url: '/operating-system/process-management/04-cpu-scheduler-in-multi-process-environment'
     },
     {
-      title: 'Survey and analysis the process creation and management techniques in UNIX and Windows',
-      url: '/operating-system/process-management/05-survey-and-analysis-the-process-creation-and-management-techniques-in-unix-and-windows'
+      title: 'Survey and analyze the process creation and management techniques in UNIX and Windows',
+      url: '/operating-system/process-management/05-survey-and-analyze-the-process-creation-and-management-techniques-in-unix-and-windows'
     },
     {
       title: 'Process management in mobile Operating System: iOS and Android',

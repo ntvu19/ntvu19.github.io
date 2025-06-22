@@ -19,7 +19,7 @@ Architect, implementation, and optimization strategies. Includes:
 ### 1. Introduction
 - Context
 - Problem statement
-- Purpose: Analysis, compare, advantages and disadvantages, propose the optimization strategies
+- Purpose: Analyze, compare, advantages and disadvantages, propose the optimization strategies
 
 ### 2. Background/Theoretical Foundations
 - Definition/Concept

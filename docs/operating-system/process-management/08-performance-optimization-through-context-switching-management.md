@@ -4,7 +4,7 @@ permalink: /operating-system/process-management/08-performance-optimization-thro
 sidebar: false
 ---
 
-Cost analysis, techniques to reduce negative affection to the customers. Includes:
+Cost analyze, techniques to reduce negative affection to the customers. Includes:
 - The essence of Context Switching
 - Overhead
 - Multiple register sets
