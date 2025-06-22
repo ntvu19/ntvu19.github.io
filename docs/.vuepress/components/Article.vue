@@ -68,9 +68,15 @@ export default {
             padding: 12px 16px;
             margin: 0;
             font-size: 1.1rem;
-            white-space: nowrap;
+            white-space: normal;
             overflow: hidden;
-            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            line-height: 1.4;
+            height: auto;
+            max-height: calc(1.4em * 2);
         }
     }
 }

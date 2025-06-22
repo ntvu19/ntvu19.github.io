@@ -77,8 +77,17 @@ export default {
 
     .articles-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
+        width: 100%;
+
+        .article-col {
+            min-width: 0;
+            /* Allows content to shrink below min-content */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
     }
 
     @media (max-width: 768px) {
