@@ -8,4 +8,4 @@ Design, advantages and disadvantages. Includes:
 - Multi-threading model
 - Extended PCB
 - How does the OS manage parallel threads?
-- Reality application (such as Chrome browser)
+- Practical application (such as Chrome browser)

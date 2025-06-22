@@ -4,7 +4,7 @@ permalink: /operating-system/process-management/02-ipc-mechanisms-comparison
 sidebar: false
 ---
 
-Shared Memory and Message Passing - Pros, cons and reality application. Includes overall of IPC:
+Shared Memory and Message Passing - Pros, cons and practical application. Includes overall of IPC:
 - Shared memory
 - Message passing
 - Bounded/Unbounded buffer
