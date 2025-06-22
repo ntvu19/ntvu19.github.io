@@ -2,7 +2,7 @@
     <div class="article-card">
         <a :href="url" class="article-link">
             <div class="article-image">
-                <img :src="image" :alt="title" />
+                <img :src="currentImage" :alt="title" @error="handleImageError" />
             </div>
             <h3 class="article-title">{{ title }}</h3>
         </a>
@@ -19,11 +19,27 @@ export default {
         },
         image: {
             type: String,
-            required: true
+            required: false,
+            default: '/images/image_unavailable.png'
+        },
+        objectFit: {
+            type: String,
+            required: false,
+            default: 'contain'
         },
         url: {
             type: String,
             required: true
+        }
+    },
+    data() {
+        return {
+            currentImage: this.image || '/images/image_unavailable.png'
+        }
+    },
+    methods: {
+        handleImageError() {
+            this.currentImage = '/images/image_unavailable.png'
         }
     }
 }
@@ -60,7 +76,7 @@ export default {
             img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: v-bind('objectFit');
             }
         }
 
