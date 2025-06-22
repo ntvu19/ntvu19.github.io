@@ -1,11 +1,17 @@
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defaultTheme } from "@vuepress/theme-default";
+import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
 import { defineUserConfig } from "vuepress";
 import type { UserConfig } from "vite";
 
 // TODO: Implement test for the file path (images, links, etc. in the markdown files)
 
 export default defineUserConfig({
+  plugins: [
+    mediumZoomPlugin({
+      selector: ".zoomable-images img", // Use this selector to enable zooming for all images with the class "zoomable-images"
+    }),
+  ],
   bundler: viteBundler({
     viteOptions: {
       css: {

@@ -24,36 +24,28 @@
             <span class="icon">🚀</span>
             <div class="skill-content">
               <span class="skill-title">Software Engineer</span>
-              <span class="skill-desc"
-                >Crafting scalable and efficient solutions</span
-              >
+              <span class="skill-desc">Crafting scalable and efficient solutions</span>
             </div>
           </li>
           <li>
             <span class="icon">💾</span>
             <div class="skill-content">
               <span class="skill-title">Database Optimization</span>
-              <span class="skill-desc"
-                >Maximizing performance and reliability</span
-              >
+              <span class="skill-desc">Maximizing performance and reliability</span>
             </div>
           </li>
           <li>
             <span class="icon">🏗</span>
             <div class="skill-content">
               <span class="skill-title">System Architecture</span>
-              <span class="skill-desc"
-                >Designing robust and adaptable systems</span
-              >
+              <span class="skill-desc">Designing robust and adaptable systems</span>
             </div>
           </li>
           <li>
             <span class="icon">🔍</span>
             <div class="skill-content">
               <span class="skill-title">Technology Researcher</span>
-              <span class="skill-desc"
-                >Exploring the essence of technology</span
-              >
+              <span class="skill-desc">Exploring the essence of technology</span>
             </div>
           </li>
         </ul>
@@ -65,44 +57,19 @@
         <div class="contact">
           <!-- https://icon-sets.iconify.design/logos/ -->
           <a href="https://facebook.com/msc.thanhvu" target="_blank">
-            <img
-              id="icon-facebook"
-              src="/icon/contact/logos--facebook.svg"
-              alt="Facebook"
-              draggable="false"
-            />
+            <img id="icon-facebook" src="/icon/contact/logos--facebook.svg" alt="Facebook" draggable="false" />
           </a>
           <a href="https://github.com/ntvu19" target="_blank">
-            <img
-              id="icon-github"
-              src="/icon/contact/logos--github-icon.svg"
-              alt="GitHub"
-              draggable="false"
-            />
+            <img id="icon-github" src="/icon/contact/logos--github-icon.svg" alt="GitHub" draggable="false" />
           </a>
           <a href="mailto:msc.thanhvu@gmail.com" target="_blank">
-            <img
-              id="icon-gmail"
-              src="/icon/contact/logos--google-gmail.svg"
-              alt="Gmail"
-              draggable="false"
-            />
+            <img id="icon-gmail" src="/icon/contact/logos--google-gmail.svg" alt="Gmail" draggable="false" />
           </a>
           <a href="https://linkedin.com/in/nguyenthanhvu" target="_blank">
-            <img
-              id="icon-linked"
-              src="/icon/contact/logos--linkedin-icon.svg"
-              alt="LinkedIn"
-              draggable="false"
-            />
+            <img id="icon-linked" src="/icon/contact/logos--linkedin-icon.svg" alt="LinkedIn" draggable="false" />
           </a>
           <a href="https://t.me/ntvu19" target="_blank">
-            <img
-              id="icon-telegram"
-              src="/icon/contact/logos--telegram.svg"
-              alt="Telegram"
-              draggable="false"
-            />
+            <img id="icon-telegram" src="/icon/contact/logos--telegram.svg" alt="Telegram" draggable="false" />
           </a>
         </div>
       </div>
