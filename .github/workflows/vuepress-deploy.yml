@@ -25,16 +25,17 @@ jobs:
           cache: ""
 
       # install vuepress
-      - name: Install VuePress Globally (for troubleshooting)
-        run: yarn add -D vuepress@next
+      # - name: Install VuePress Globally (for troubleshooting)
+      #   run: yarn add -D vuepress@next
 
-      # install bundler and theme
-      - name: Install Bundler and Theme
-        run: yarn add -D @vuepress/bundler-vite@next @vuepress/theme-default@next
+      # # install bundler and theme
+      # - name: Install Bundler and Theme
+      #   run: yarn add -D @vuepress/bundler-vite@next @vuepress/theme-default@next
 
       # run build script
       - name: Build VuePress site
-        run: yarn && yarn docs:build
+        # run: yarn && yarn docs:build
+        run: npm install --legacy-peer-deps && npm run docs:build
 
       # please check out the docs of the workflow for more details
       # @see https://github.com/crazy-max/ghaction-github-pages
