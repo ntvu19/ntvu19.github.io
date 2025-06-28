@@ -6,6 +6,36 @@ sidebar: false
 
 <Knowledge 
   section-name="Overview"
+  :articles="[
+    {
+      title: 'Modern Operating System Design and Management: Architecture, Principles, and Challenges',
+      url: '/operating-system/overview/01-modern-os-design-and-management'
+    },
+    {
+      title: 'Operating System Performance Optimization in Multiuser and Multiprocessing Environments',
+      url: '/operating-system/overview/02-os-performance-optimization-in-multiuser-and-multiprocessing-environments'
+    },
+    {
+      title: 'Protection and Security Mechanisms in Operating System Design: Theory and Applications',
+      url: '/operating-system/overview/03-protection-and-security-mechanisms-in-os-design'
+    },
+    {
+      title: 'Resource Management in Operating Systems: From Processes to Memory and Storage',
+      url: '/operating-system/overview/04-resource-management-in-os'
+    },
+    {
+      title: 'The Evolution of Operating Systems in the Context of Cloud Computing and Embedded Systems',
+      url: '/operating-system/overview/05-the-evolution-of-os-in-the-context-of-cloud-computing-and-embedded-systems'
+    },
+    {
+      title: 'Process Synchronization and Inter-Process Communication: From Theory to Practice',
+      url: '/operating-system/overview/06-process-synchronization-and-ipc'
+    },
+    {
+      title: 'Storage Systems in Operating Systems: Hierarchy, Organization, and Management',
+      url: '/operating-system/overview/07-storage-systems-in-os'
+    },
+  ]"
 />
 
 <Knowledge 
