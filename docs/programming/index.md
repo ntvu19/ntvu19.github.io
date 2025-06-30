@@ -6,15 +6,14 @@ sidebar: false
 
 <Knowledge 
   section-name="C/C++"
-/>
-<!-- Example -->
-<!-- :articles="[
+  :articles="[
     {
-      title: 'JavaScript Fundamentals',
-      image: '/images/hcmus-event-management.png',
-      url: '/programming/javascript/'
-    }, ...
-]" -->
+      'title': 'Named Return Value Optimization - NRVO',
+      'image': '',
+      'url': ''
+    }
+  ]"
+/>
 
 <Knowledge 
   section-name="Design Pattern"
