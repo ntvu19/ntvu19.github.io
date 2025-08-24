@@ -55,26 +55,26 @@ export default defineUserConfig({
         selectLanguageText: "English",
         selectLanguageName: "English",
         navbar: [
-          {
-            text: "Algorithm",
-            link: "/algorithm/",
-          },
-          {
-            text: "Programming",
-            link: "/programming/",
-          },
-          {
-            text: "Database",
-            link: "/database/",
-          },
-          {
-            text: "Networking",
-            link: "/networking/",
-          },
-          {
-            text: "Operating System",
-            link: "/operating-system/",
-          },
+          // {
+          //   text: "Algorithm",
+          //   link: "/algorithm/",
+          // },
+          // {
+          //   text: "Programming",
+          //   link: "/programming/",
+          // },
+          // {
+          //   text: "Database",
+          //   link: "/database/",
+          // },
+          // {
+          //   text: "Networking",
+          //   link: "/networking/",
+          // },
+          // {
+          //   text: "Operating System",
+          //   link: "/operating-system/",
+          // },
           {
             text: "Others",
             children: [
@@ -88,27 +88,26 @@ export default defineUserConfig({
         selectLanguageName: "Việt Nam",
         selectLanguageText: "Việt Nam",
         navbar: [
-          {
-            text: "Giải thuật",
-            link: "/vi/algorithm/",
-          },
-          {
-            text: "Lập trình",
-            link: "/vi/programming/",
-          },
-          {
-            text: "Cơ sở dữ liệu",
-            link: "/vi/database/",
-          },
-          {
-            text: "Mạng máy tính",
-            link: "/vi/networking/",
-          },
-          {
-            text: "Hệ điều hành",
-            link: "/vi/operating-system/",
-          },
-
+          // {
+          //   text: "Giải thuật",
+          //   link: "/vi/algorithm/",
+          // },
+          // {
+          //   text: "Lập trình",
+          //   link: "/vi/programming/",
+          // },
+          // {
+          //   text: "Cơ sở dữ liệu",
+          //   link: "/vi/database/",
+          // },
+          // {
+          //   text: "Mạng máy tính",
+          //   link: "/vi/networking/",
+          // },
+          // {
+          //   text: "Hệ điều hành",
+          //   link: "/vi/operating-system/",
+          // },
           {
             text: "Khác",
             children: [
