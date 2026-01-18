@@ -53,7 +53,11 @@ export default {
         ],
         careerDevs: [
           {
-            timeline: "01/2025 - Present",
+            timeline: "01/2026 - Present",
+            title: "Software Engineer II",
+          },
+          {
+            timeline: "01/2025 - 12/2025",
             title: "Software Engineer",
           },
           {
