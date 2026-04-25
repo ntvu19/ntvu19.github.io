@@ -66,9 +66,7 @@ export default function ProjectList({ projects }: ProjectListProps) {
                 >
                   {p.title}
                 </strong>
-                <span style={{ color: 'var(--ink-3)', marginLeft: 8 }}>
-                  {p.tagline}
-                </span>
+                <span style={{ color: 'var(--ink-3)', marginLeft: 8 }}>{p.tagline}</span>
               </span>
               <span aria-hidden="true">{isOpen ? '−' : '+'}</span>
             </button>

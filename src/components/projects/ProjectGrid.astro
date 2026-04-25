@@ -3,9 +3,7 @@ import { getCollection } from 'astro:content';
 import SectionHead from '../SectionHead.astro';
 import ExternalIcon from '../icons/ExternalIcon.astro';
 
-const projects = (await getCollection('project')).sort(
-  (a, b) => a.data.order - b.data.order,
-);
+const projects = (await getCollection('project')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <section id="projects" data-section class="section shell">
@@ -28,7 +26,9 @@ const projects = (await getCollection('project')).sort(
             <h3 class="proj-title">{p.data.title}</h3>
             <p class="proj-tagline">{p.data.tagline}</p>
             <div class="proj-skills">
-              {p.data.skills.map((s) => <span class="proj-skill">{s}</span>)}
+              {p.data.skills.map((s) => (
+                <span class="proj-skill">{s}</span>
+              ))}
             </div>
             <div class="proj-expand">
               <div class="proj-expand-inner">
@@ -36,7 +36,9 @@ const projects = (await getCollection('project')).sort(
                 <p>{p.data.problem}</p>
                 <h4>What I solved</h4>
                 <ul>
-                  {p.data.solved.map((s) => <li>{s}</li>)}
+                  {p.data.solved.map((s) => (
+                    <li>{s}</li>
+                  ))}
                 </ul>
                 <h4>Role</h4>
                 <p>{p.data.role}</p>
