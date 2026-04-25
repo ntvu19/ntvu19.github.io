@@ -13,6 +13,12 @@
       "@config/*": ["./src/config/*"]
     }
   },
-  "include": ["src/**/*", "scripts/**/*", ".astro/types.d.ts", "astro.config.mjs", "eslint.config.mjs"],
+  "include": [
+    "src/**/*",
+    "scripts/**/*",
+    ".astro/types.d.ts",
+    "astro.config.mjs",
+    "eslint.config.mjs"
+  ],
   "exclude": ["dist", "node_modules"]
 }
