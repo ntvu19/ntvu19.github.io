@@ -22,6 +22,9 @@ import { getCollection } from 'astro:content';
 import Skills from '../components/skills/Skills.astro';
 import OSS from '../components/oss/OSS.astro';
 
+import CommandPalette from '../components/palette/CommandPalette.tsx';
+import { buildPaletteItems } from '../scripts/palette-items';
+
 import identity from '../data/identity.json';
 
 const heroIsTerminal = site.heroVariant === 'terminal';
@@ -42,6 +45,10 @@ const projects = projectIsList
         links: p.data.links,
       }))
   : [];
+
+const allProjects = (await getCollection('project'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((p) => ({ id: p.data.id, title: p.data.title }));
 ---
 
 <BaseLayout>
@@ -81,6 +88,14 @@ const projects = projectIsList
 
   <Skills />
   <OSS />
+
+  <CommandPalette
+    client:idle
+    items={buildPaletteItems({
+      contacts: identity.contacts,
+      projects: allProjects,
+    })}
+  />
 
   <Footer />
 </BaseLayout>
