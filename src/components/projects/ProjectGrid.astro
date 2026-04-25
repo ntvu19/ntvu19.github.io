@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+import ExternalIcon from '../icons/ExternalIcon.astro';
+
+const projects = (await getCollection('project')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<section id="projects" data-section class="section shell">
+  <SectionHead
+    num="02"
+    label="↳ technical projects"
+    title="What I've built and the problems they solved."
+    meta={`${projects.length} ${projects.length === 1 ? 'project' : 'projects'}`}
+  />
+  <div class="proj-grid">
+    {
+      projects.map((p) => (
+        <article class="proj-card" tabindex="0">
+          <div class="proj-thumb">
+            <div class="proj-thumb-stripes" aria-hidden="true" />
+            <span class="proj-thumb-id">{p.data.id}</span>
+            <span class="proj-status">{p.data.status}</span>
+          </div>
+          <div class="proj-body">
+            <h3 class="proj-title">{p.data.title}</h3>
+            <p class="proj-tagline">{p.data.tagline}</p>
+            <div class="proj-skills">
+              {p.data.skills.map((s) => <span class="proj-skill">{s}</span>)}
+            </div>
+            <div class="proj-expand">
+              <div class="proj-expand-inner">
+                <h4>Problem</h4>
+                <p>{p.data.problem}</p>
+                <h4>What I solved</h4>
+                <ul>
+                  {p.data.solved.map((s) => <li>{s}</li>)}
+                </ul>
+                <h4>Role</h4>
+                <p>{p.data.role}</p>
+              </div>
+            </div>
+          </div>
+          <div class="proj-actions">
+            {p.data.links.demo && (
+              <a href={p.data.links.demo} rel="noopener" target="_blank">
+                Demo <ExternalIcon />
+              </a>
+            )}
+            {p.data.links.source && (
+              <a href={p.data.links.source} rel="noopener" target="_blank">
+                Source <ExternalIcon />
+              </a>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
