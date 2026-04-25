@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+import StackBadge from './StackBadge.astro';
+
+const companies = (await getCollection('company')).sort((a, b) => b.data.order - a.data.order);
+const allRoles = companies.flatMap((c) => c.data.roles.map((r) => ({ ...r, company: c.data.company })));
+---
+
+<section id="experience" data-section class="section shell">
+  <SectionHead num="01" label="↳ work history" title="Where I've shipped, and how the title moved." />
+  <div class="exp-cards">
+    {
+      allRoles.map((r) => (
+        <article class="exp-card">
+          <div class="exp-role-dates" style="margin-bottom: 8px;">{r.dates}</div>
+          <div class="exp-role-title">
+            {r.title}
+            {r.current && <span class="exp-role-pill">current</span>}
+            {r.promotion && !r.current && <span class="exp-role-pill">↑ promoted</span>}
+          </div>
+          <div class="exp-company-meta" style="margin: 4px 0 12px;">{r.company}</div>
+          <p class="exp-role-summary">{r.summary}</p>
+          <div class="exp-role-keywords">
+            {r.keywords.map((k) => <span class="exp-role-keyword">{k}</span>)}
+          </div>
+          <div class="exp-role-stack" style="margin-top: 12px;">
+            {r.stack.map((id) => <StackBadge id={id} />)}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
