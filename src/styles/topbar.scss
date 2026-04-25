@@ -36,13 +36,21 @@
 }
 
 @keyframes vtn-pulse {
-  0% { box-shadow: 0 0 0 0 var(--accent-soft); }
-  70% { box-shadow: 0 0 0 8px transparent; }
-  100% { box-shadow: 0 0 0 0 transparent; }
+  0% {
+    box-shadow: 0 0 0 0 var(--accent-soft);
+  }
+  70% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+  100% {
+    box-shadow: 0 0 0 0 transparent;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .topbar-pulse { animation: none; }
+  .topbar-pulse {
+    animation: none;
+  }
 }
 
 .topbar-nav {
@@ -78,5 +86,7 @@
 }
 
 @media (max-width: 900px) {
-  .topbar-nav { display: none; }
+  .topbar-nav {
+    display: none;
+  }
 }

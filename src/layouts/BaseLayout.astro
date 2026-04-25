@@ -56,7 +56,10 @@ const personSchema = {
 
     <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
 
-    <script is:inline define:vars={{ defaultTheme: site.defaultTheme, defaultAccent: site.defaultAccent }}>
+    <script
+      is:inline
+      define:vars={{ defaultTheme: site.defaultTheme, defaultAccent: site.defaultAccent }}
+    >
       const t =
         localStorage.getItem('vtn:theme') ??
         (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : defaultTheme);
