@@ -11,9 +11,9 @@ beforeEach(() => {
   </body></html>`,
     { url: 'http://localhost/' },
   );
-  // @ts-expect-error
+  // @ts-expect-error inject jsdom document into node global
   global.document = dom.window.document;
-  // @ts-expect-error
+  // @ts-expect-error inject jsdom window into node global
   global.window = dom.window;
 });
 
