@@ -35,7 +35,7 @@ export default function HelpOverlay() {
     }
   }, [open]);
 
-  if (!open) return null;
+  if (!open) return <div style={{ display: 'none' }} />;
 
   return (
     // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- backdrop dialog dismissal

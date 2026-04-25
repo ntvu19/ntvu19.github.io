@@ -60,7 +60,7 @@ export default function CommandPalette({ items }: CommandPaletteProps) {
     return Array.from(map.entries());
   }, [filtered]);
 
-  if (!open) return null;
+  if (!open) return <div style={{ display: 'none' }} />;
 
   const onKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'ArrowDown') {

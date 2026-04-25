@@ -5,6 +5,9 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://ntvu19.github.io',
+  server: {
+    host: '127.0.0.1',
+  },
   output: 'static',
   integrations: [react(), mdx(), sitemap()],
   build: {
@@ -14,7 +17,7 @@ export default defineConfig({
   vite: {
     css: {
       preprocessorOptions: {
-        scss: { quietDeps: true },
+        scss: { api: 'modern-compiler', quietDeps: true },
       },
     },
   },
