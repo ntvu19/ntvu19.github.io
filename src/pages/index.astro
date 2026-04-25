@@ -23,6 +23,7 @@ import Skills from '../components/skills/Skills.astro';
 import OSS from '../components/oss/OSS.astro';
 
 import CommandPalette from '../components/palette/CommandPalette.tsx';
+import HelpOverlay from '../components/help/HelpOverlay.tsx';
 import { buildPaletteItems } from '../scripts/palette-items';
 
 import identity from '../data/identity.json';
@@ -96,6 +97,7 @@ const allProjects = (await getCollection('project'))
       projects: allProjects,
     })}
   />
+  <HelpOverlay client:idle />
 
   <Footer />
 </BaseLayout>
