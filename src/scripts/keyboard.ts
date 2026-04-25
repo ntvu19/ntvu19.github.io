@@ -102,3 +102,34 @@ export function activateKeyboard(): void {
 
   window.addEventListener('keydown', (e) => handleKey(e, ctx));
 }
+
+export function activateSectionTracker(): void {
+  const links = Array.from(document.querySelectorAll<HTMLAnchorElement>('[data-section-link]'));
+  if (links.length === 0) return;
+  const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-section]'));
+  if (sections.length === 0) return;
+
+  let frame = 0;
+  const update = () => {
+    const y = window.scrollY + 120;
+    const active = sections.find((s, i) => {
+      const next = sections[i + 1];
+      return s.offsetTop <= y && (!next || next.offsetTop > y);
+    });
+    const id = active?.id ?? '';
+    for (const a of links) {
+      if (a.dataset.sectionLink === id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    }
+  };
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    },
+    { passive: true },
+  );
+  update();
+}
