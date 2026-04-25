@@ -136,11 +136,22 @@
 }
 
 @media (max-width: 900px) {
-  .exp-timeline { padding-left: 0; }
-  .exp-timeline::before { display: none; }
-  .exp-company-marker { position: static; margin-bottom: 12px; }
-  .exp-role { grid-template-columns: 1fr; }
-  .exp-role-marker { display: none; }
+  .exp-timeline {
+    padding-left: 0;
+  }
+  .exp-timeline::before {
+    display: none;
+  }
+  .exp-company-marker {
+    position: static;
+    margin-bottom: 12px;
+  }
+  .exp-role {
+    grid-template-columns: 1fr;
+  }
+  .exp-role-marker {
+    display: none;
+  }
 }
 
 /* Cards variant */

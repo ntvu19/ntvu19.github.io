@@ -47,7 +47,9 @@ const totalRoles = companies.reduce((sum, c) => sum + c.data.roles.length, 0);
                   ))}
                 </div>
                 <div class="exp-role-stack">
-                  {r.stack.map((id) => <StackBadge id={id} />)}
+                  {r.stack.map((id) => (
+                    <StackBadge id={id} />
+                  ))}
                 </div>
               </div>
             </div>
