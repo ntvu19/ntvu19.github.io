@@ -82,6 +82,7 @@ export default function CommandPalette({ items }: CommandPaletteProps) {
   };
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- backdrop dialog dismissal
     <div
       className="palette-backdrop"
       role="dialog"
@@ -112,6 +113,7 @@ export default function CommandPalette({ items }: CommandPaletteProps) {
                 {list.map((item) => {
                   const idx = filtered.indexOf(item);
                   return (
+                    // eslint-disable-next-line jsx-a11y/click-events-have-key-events -- keyboard handled at dialog level
                     <li
                       key={item.id}
                       role="option"

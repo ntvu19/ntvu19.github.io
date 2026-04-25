@@ -38,6 +38,7 @@ export default function HelpOverlay() {
   if (!open) return null;
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- backdrop dialog dismissal
     <div
       className="help-backdrop"
       role="dialog"
