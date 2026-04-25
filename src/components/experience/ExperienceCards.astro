@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import SectionHead from '../SectionHead.astro';
 import StackBadge from './StackBadge.astro';
 
-const companies = (await getCollection('company')).sort((a, b) => b.data.order - a.data.order);
+const companies = (await getCollection('companies')).sort((a, b) => b.data.order - a.data.order);
 const allRoles = companies.flatMap((c) =>
   c.data.roles.map((r) => ({ ...r, company: c.data.company })),
 );

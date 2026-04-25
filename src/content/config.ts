@@ -81,4 +81,4 @@ const oss = defineCollection({
   }),
 });
 
-export const collections = { company, project, skill, oss };
+export const collections = { companies: company, projects: project, skill, oss };

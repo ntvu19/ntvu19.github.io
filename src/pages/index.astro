@@ -1,14 +1,73 @@
 ---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopBar from '../components/TopBar.astro';
+import HeroSplit from '../components/hero/HeroSplit.astro';
+import Now from '../components/now/Now.astro';
+import ExperienceCards from '../components/experience/ExperienceCards.astro';
+import ProjectGrid from '../components/projects/ProjectGrid.astro';
+import Skills from '../components/skills/Skills.astro';
+import OSS from '../components/oss/OSS.astro';
+import Footer from '../components/Footer.astro';
+import CommandPalette from '../components/palette/CommandPalette';
+import HelpOverlay from '../components/help/HelpOverlay';
+import SectionHead from '../components/SectionHead.astro';
+import { buildPaletteItems } from '../scripts/palette-items';
+import identity from '../data/identity.json';
 
+const allProjects = (await getCollection('projects')).map((p) => ({
+  id: p.data.id,
+  title: p.data.title,
+}));
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Vu T. Nguyen — Backend Software Engineer</title>
-  </head>
-  <body>
-    <p>Migration in progress.</p>
-  </body>
-</html>
+<BaseLayout>
+  <TopBar />
+
+  <main id="main-content">
+    <section id="hero" class="container">
+      <HeroSplit />
+    </section>
+
+    <section id="now" class="container">
+      <SectionHead num="01" label="status" title="What I'm doing now" />
+      <Now />
+    </section>
+
+    <section id="experience" class="container">
+      <SectionHead num="02" label="work" title="Experience" />
+      <ExperienceCards />
+    </section>
+
+    <section id="projects" class="container">
+      <SectionHead num="03" label="showcase" title="Selected Projects" />
+      <ProjectGrid />
+    </section>
+
+    <section id="skills" class="container">
+      <SectionHead num="04" label="arsenal" title="Skills & Tools" />
+      <Skills />
+    </section>
+
+    <section id="oss" class="container">
+      <SectionHead num="05" label="contributions" title="Open Source" />
+      <OSS />
+    </section>
+  </main>
+
+  <Footer />
+
+  <CommandPalette
+    client:only="react"
+    items={buildPaletteItems({
+      contacts: identity.contacts,
+      projects: allProjects,
+    })}
+  />
+  <HelpOverlay client:only="react" />
+</BaseLayout>
+
+<script>
+  import '../scripts/theme.ts';
+  import '../scripts/keyboard.ts';
+</script>

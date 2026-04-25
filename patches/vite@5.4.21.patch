@@ -1,0 +1,16 @@
+diff --git a/dist/node/chunks/dep-BK3b2jBa.js b/dist/node/chunks/dep-BK3b2jBa.js
+index 7992b2f430e08577b7b4ae9e9d28c0d306707ca7..2582cce94711e25248b78956e81d56e0e0e5fbfb 100644
+--- a/dist/node/chunks/dep-BK3b2jBa.js
++++ b/dist/node/chunks/dep-BK3b2jBa.js
+@@ -254,9 +254,11 @@ const VITE_RUNTIME_SOURCEMAPPING_SOURCE = "//# sourceMappingSource=vite-runtime"
+ 
+ const isWindows$3 = typeof process !== "undefined" && process.platform === "win32";
+ function wrapId$1(id) {
++  if (typeof id !== 'string') id = String(id);
+   return id.startsWith(VALID_ID_PREFIX) ? id : VALID_ID_PREFIX + id.replace("\0", NULL_BYTE_PLACEHOLDER);
+ }
+ function unwrapId$1(id) {
++  if (typeof id !== 'string') id = String(id);
+   return id.startsWith(VALID_ID_PREFIX) ? id.slice(VALID_ID_PREFIX.length).replace(NULL_BYTE_PLACEHOLDER, "\0") : id;
+ }
+ const windowsSlashRE = /\\/g;
