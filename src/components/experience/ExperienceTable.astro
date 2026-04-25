@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+
+const companies = (await getCollection('company')).sort((a, b) => b.data.order - a.data.order);
+const rows = companies.flatMap((c) => c.data.roles.map((r) => ({ ...r, company: c.data.company })));
+---
+
+<section id="experience" data-section class="section shell">
+  <SectionHead num="01" label="↳ work history" title="Where I've shipped, and how the title moved." />
+  <table class="exp-table">
+    <thead>
+      <tr>
+        <th>Dates</th>
+        <th>Role</th>
+        <th>Company</th>
+        <th>Keywords</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((r) => (
+          <tr>
+            <td>{r.dates}</td>
+            <td>{r.title}</td>
+            <td>{r.company}</td>
+            <td>{r.keywords.join(', ')}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</section>
