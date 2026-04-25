@@ -1,1 +1,54 @@
-/* oss */
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+.oss-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.oss-repo {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.oss-desc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-2);
+  flex: 1;
+}
+
+.oss-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  color: var(--accent-ink);
+}
+
+.oss-lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.oss-empty {
+  border: 1px dashed var(--rule);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  color: var(--ink-3);
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 12px;
+}

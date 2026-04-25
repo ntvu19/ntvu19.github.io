@@ -1,0 +1,40 @@
+---
+import { getEntry } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+import StarIcon from '../icons/StarIcon.astro';
+
+const entry = await getEntry('oss', 'oss');
+const items = entry?.data.items ?? [];
+---
+
+<section id="oss" data-section class="section shell">
+  <SectionHead
+    num="04"
+    label="↳ open source"
+    title="Where I've contributed code in public."
+    meta={items.length === 0 ? 'coming soon' : `${items.length} repos`}
+  />
+  {
+    items.length === 0 ? (
+      <p class="oss-empty">// no public contributions worth listing yet — building in private.</p>
+    ) : (
+      <div class="oss-grid">
+        {items.map((r) => (
+          <a class="oss-card" href={r.url} rel="noopener" target="_blank">
+            <span class="oss-repo">
+              {r.org}/{r.repo}
+            </span>
+            <p class="oss-desc">{r.desc}</p>
+            <div class="oss-foot">
+              <span class="oss-lang-dot" aria-hidden="true" />
+              <span>{r.lang}</span>
+              <span style="margin-left: auto; display: inline-flex; align-items: center; gap: 4px;">
+                <StarIcon /> {r.stars}
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    )
+  }
+</section>
