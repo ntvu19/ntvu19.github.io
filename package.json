@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check && tsc --noEmit && tsx scripts/check-no-js.ts",
+    "check": "astro check && tsc --noEmit && tsx scripts/check-no-js.ts && tsx scripts/check-contrast.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
