@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+import StackBadge from './StackBadge.astro';
+
+const companies = (await getCollection('company')).sort((a, b) => b.data.order - a.data.order);
+const totalRoles = companies.reduce((sum, c) => sum + c.data.roles.length, 0);
+---
+
+<section id="experience" data-section class="section shell">
+  <SectionHead
+    num="01"
+    label="↳ work history"
+    title="Where I've shipped, and how the title moved."
+    meta={`${companies.length} ${companies.length === 1 ? 'company' : 'companies'} · ${totalRoles} ${totalRoles === 1 ? 'role' : 'roles'}`}
+  />
+  <div class="exp-timeline">
+    {
+      companies.map((c) => (
+        <div class="exp-company">
+          <div class="exp-company-marker">
+            {c.data.logoLight ? (
+              <img src={c.data.logoLight} alt={c.data.company} />
+            ) : (
+              c.data.company.slice(0, 2).toUpperCase()
+            )}
+          </div>
+          <h3 class="exp-company-name">{c.data.company}</h3>
+          <div class="exp-company-meta">{c.data.meta}</div>
+          {c.data.roles.map((r) => (
+            <div class:list={['exp-role', { 'is-current': r.current }]}>
+              <span class="exp-role-marker" />
+              <div class="exp-role-dates">
+                {r.dates}
+                <div style="color: var(--ink-4); margin-top: 2px;">{r.duration}</div>
+              </div>
+              <div>
+                <div class="exp-role-title">
+                  {r.title}
+                  {r.current && <span class="exp-role-pill">current</span>}
+                  {r.promotion && !r.current && <span class="exp-role-pill">↑ promoted</span>}
+                </div>
+                <p class="exp-role-summary">{r.summary}</p>
+                <div class="exp-role-keywords">
+                  {r.keywords.map((k) => (
+                    <span class="exp-role-keyword">{k}</span>
+                  ))}
+                </div>
+                <div class="exp-role-stack">
+                  {r.stack.map((id) => (
+                    <StackBadge id={id} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+</section>

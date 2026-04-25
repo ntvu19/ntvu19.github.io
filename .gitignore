@@ -1,8 +1,14 @@
-# Folder
-.vscode
 node_modules
-.worktrees
+dist
+.astro
+.env
+.env.production
+.DS_Store
 
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
-# Local-only planning docs
-docs/superpowers/
+# OS
+Thumbs.db

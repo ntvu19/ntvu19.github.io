@@ -1,0 +1,18 @@
+{
+  "building": {
+    "label": "MetaDefender ICAP Server scanning rule engine",
+    "sub": "OPSWAT · C++ / Qt"
+  },
+  "researching": {
+    "label": "io_uring vs epoll for high-concurrency request handling",
+    "sub": "evenings"
+  },
+  "reading": {
+    "label": "Designing Data-Intensive Applications · Martin Kleppmann",
+    "sub": "ch. 5 — replication"
+  },
+  "workingFrom": {
+    "label": "Ho Chi Minh City, Vietnam",
+    "sub": "GMT+7"
+  }
+}

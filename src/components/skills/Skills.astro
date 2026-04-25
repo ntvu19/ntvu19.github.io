@@ -1,0 +1,46 @@
+---
+import { getEntry } from 'astro:content';
+import SectionHead from '../SectionHead.astro';
+import { groupByTier, TIER_META, type SkillItem, type TierId } from '../../scripts/skills';
+
+const entry = await getEntry('skill', 'skills');
+const items = (entry?.data.items ?? []) as SkillItem[];
+const tiers = groupByTier(items);
+const ORDER: TierId[] = ['T5', 'T4', 'T3', 'T2'];
+---
+
+<section id="skills" data-section class="section shell">
+  <SectionHead
+    num="03"
+    label="↳ proficiency"
+    title="What I reach for, ranked by depth."
+    meta={`${items.length} skills`}
+  />
+  <div class="skills-stack">
+    {
+      ORDER.map(
+        (id) =>
+          tiers[id].length > 0 && (
+            <div class:list={['skill-tier', { 'is-expert': id === 'T5' }]}>
+              <div class="skill-tier-head">
+                <span class="skill-tier-badge">{id}</span>
+                <span class="skill-tier-label">{TIER_META[id].label}</span>
+                <span class="skill-tier-note">
+                  {TIER_META[id].note} · {tiers[id].length}
+                </span>
+              </div>
+              <ul class="skill-list">
+                {tiers[id].map((s) => (
+                  <li>
+                    <span class="skill-name">{s.name}</span>
+                    <span class="skill-cat">{s.category}</span>
+                    <span class="skill-years">{s.years}y</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ),
+      )
+    }
+  </div>
+</section>

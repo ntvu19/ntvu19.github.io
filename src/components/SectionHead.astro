@@ -1,0 +1,18 @@
+---
+export interface Props {
+  num: string;
+  label: string;
+  title: string;
+  meta?: string;
+}
+const { num, label, title, meta } = Astro.props;
+---
+
+<header class="section-head">
+  <span class="section-num">§{num}</span>
+  <div>
+    <p class="section-label">↳ {label}</p>
+    <h2 class="section-title">{title}</h2>
+  </div>
+  {meta && <span class="section-meta">{meta}</span>}
+</header>

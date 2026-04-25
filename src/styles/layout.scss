@@ -1,0 +1,110 @@
+.shell {
+  max-width: var(--shell-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  position: relative;
+  z-index: 2;
+}
+
+.section {
+  border-bottom: 1px solid var(--rule);
+  padding: 64px 0 80px;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 32px;
+}
+
+.section-num {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-4);
+}
+
+.section-label {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+  margin: 0 0 8px;
+}
+
+.section-title {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--ink);
+}
+
+.section-meta {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+  text-align: right;
+}
+
+.bg-grid,
+.bg-scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--rule) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--rule) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 90%);
+}
+
+.bg-scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    var(--ink) 3px,
+    var(--ink) 4px
+  );
+  opacity: 0.01;
+  z-index: 1;
+}
+
+:root[data-theme='light'] .bg-scanlines {
+  mix-blend-mode: multiply;
+}
+:root[data-theme='dark'] .bg-scanlines {
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    padding: 0 var(--gutter-mobile);
+  }
+  .section {
+    padding: 40px 0 56px;
+  }
+  .section-head {
+    grid-template-columns: 1fr auto;
+  }
+  .section-num {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-scanlines {
+    opacity: 0;
+  }
+}

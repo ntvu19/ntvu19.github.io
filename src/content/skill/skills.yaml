@@ -1,0 +1,26 @@
+items:
+  - { name: C++, category: Languages, level: 5, years: 3 }
+  - { name: TypeScript, category: Languages, level: 4, years: 3 }
+  - { name: Java, category: Languages, level: 3, years: 2 }
+  - { name: Python, category: Languages, level: 3, years: 2 }
+  - { name: Go, category: Languages, level: 2, years: 1 }
+
+  - { name: Qt, category: 'Systems & Performance', level: 4, years: 2 }
+  - { name: CMake, category: 'Systems & Performance', level: 4, years: 2 }
+  - { name: Linux, category: 'Systems & Performance', level: 4, years: 3 }
+  - { name: ICAP Protocol, category: 'Systems & Performance', level: 4, years: 2 }
+
+  - { name: PostgreSQL, category: 'Backend & Architecture', level: 5, years: 3 }
+  - { name: SQLite, category: 'Backend & Architecture', level: 4, years: 2 }
+  - { name: Redis, category: 'Backend & Architecture', level: 3, years: 2 }
+  - { name: NestJS, category: 'Backend & Architecture', level: 4, years: 2 }
+  - { name: Java Spring, category: 'Backend & Architecture', level: 3, years: 1 }
+  - { name: gRPC, category: 'Backend & Architecture', level: 3, years: 2 }
+  - { name: NATS Streaming, category: 'Backend & Architecture', level: 2, years: 1 }
+
+  - { name: Docker, category: 'Platform & Tooling', level: 4, years: 3 }
+  - { name: Kubernetes, category: 'Platform & Tooling', level: 3, years: 2 }
+  - { name: NGINX, category: 'Platform & Tooling', level: 3, years: 2 }
+  - { name: Jenkins, category: 'Platform & Tooling', level: 3, years: 2 }
+  - { name: Git, category: 'Platform & Tooling', level: 5, years: 4 }
+  - { name: AWS S3, category: 'Platform & Tooling', level: 2, years: 1 }

@@ -1,0 +1,16 @@
+{
+  "name": "Vu T. Nguyen",
+  "role": "Backend Software Engineer",
+  "tagline": "Software engineer with a passion for *building scalable systems*, *optimizing databases*, and *designing robust architectures*.",
+  "summary": "Software engineer focused on high-performance systems, low-level research, and finding/resolving problems in raw languages, runtimes and frameworks.",
+  "location": "Ho Chi Minh City, Vietnam",
+  "yearsShipping": 3,
+  "status": "Open to interesting problems",
+  "contacts": [
+    { "label": "email", "href": "mailto:msc.thanhvu@gmail.com" },
+    { "label": "github", "href": "https://github.com/ntvu19" },
+    { "label": "linkedin", "href": "https://linkedin.com/in/nguyenthanhvu" },
+    { "label": "telegram", "href": "https://t.me/ntvu19" },
+    { "label": "facebook", "href": "https://facebook.com/msc.thanhvu" }
+  ]
+}

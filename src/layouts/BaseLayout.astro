@@ -1,0 +1,76 @@
+---
+import { site } from '../config/site';
+import identity from '../data/identity.json';
+import '../styles/tokens.scss';
+import '../styles/base.scss';
+import '../styles/layout.scss';
+import '../styles/topbar.scss';
+import '../styles/hero.scss';
+import '../styles/now.scss';
+import '../styles/experience.scss';
+import '../styles/projects.scss';
+import '../styles/skills.scss';
+import '../styles/oss.scss';
+import '../styles/palette.scss';
+import '../styles/help.scss';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${identity.name} — ${identity.role}`,
+  description = identity.summary.replace(/\*([^*]+)\*/g, '$1'),
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: identity.name,
+  jobTitle: identity.role,
+  description,
+  url: canonical,
+  sameAs: identity.contacts.filter((c) => c.label !== 'email').map((c) => c.href),
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+
+    <script
+      is:inline
+      define:vars={{ defaultTheme: site.defaultTheme, defaultAccent: site.defaultAccent }}
+    >
+      const t =
+        localStorage.getItem('vtn:theme') ??
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : defaultTheme);
+      const a = localStorage.getItem('vtn:accent') ?? defaultAccent;
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('data-accent', a);
+    </script>
+  </head>
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-scanlines" aria-hidden="true"></div>
+    <slot />
+  </body>
+</html>
