@@ -1,6 +1,8 @@
 # Folder
 .vscode
 node_modules
+.worktrees
+
 
 # Local-only planning docs
 docs/superpowers/
