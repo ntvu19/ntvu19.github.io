@@ -15,6 +15,6 @@ const taglineHtml = identity.tagline.replace(/\*([^*]+)\*/g, '<em>$1</em>');
     <h1 class="hero-name" style="font-size: clamp(40px, 6vw, 64px);">
       {identity.name}<span class="accent">.</span>
     </h1>
-    <p class="hero-tagline" set:html={taglineHtml}></p>
+    <p class="hero-tagline" set:html={taglineHtml} />
   </div>
 </section>
