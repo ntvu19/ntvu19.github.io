@@ -1,0 +1,74 @@
+---
+import identity from '../data/identity.json';
+
+export interface Props {
+  size?: number;
+}
+
+const { size = 280 } = Astro.props;
+const tz = identity.location.split(', ').pop() ?? identity.location;
+---
+
+<div class="avatar-block" style={`--avatar-size: ${size}px`}>
+  <div class="avatar-frame">
+    <span class="avatar-label-tl mono-label">// portrait</span>
+    <span class="avatar-label-tr mono-label">v.2026</span>
+    <img
+      src="/avatar.jfif"
+      alt={`Portrait of ${identity.name}`}
+      width={size}
+      height={size}
+      loading="eager"
+    />
+  </div>
+  <div class="avatar-tag">
+    <span class="mono-label">@ntvu19</span>
+    <span style="display: inline-flex; align-items: center; gap: 6px;">
+      <span class="topbar-pulse" aria-hidden="true"></span>
+      <span class="mono-label">{identity.status}</span>
+    </span>
+    <span class="mono-label" style="color: var(--ink-3);">{tz}</span>
+  </div>
+</div>
+
+<style lang="scss">
+  .avatar-block {
+    display: grid;
+    gap: 16px;
+    width: 100%;
+  }
+  .avatar-frame {
+    position: relative;
+    width: var(--avatar-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--rule-strong);
+    background: var(--bg-card);
+  }
+  .avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .avatar-label-tl,
+  .avatar-label-tr {
+    position: absolute;
+    top: -22px;
+  }
+  .avatar-label-tl {
+    left: 0;
+  }
+  .avatar-label-tr {
+    right: 0;
+  }
+  .avatar-tag {
+    display: grid;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+  }
+</style>

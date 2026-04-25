@@ -1,0 +1,20 @@
+---
+import identity from '../data/identity.json';
+const year = new Date().getUTCFullYear();
+const githubLink = identity.contacts.find((c) => c.label === 'github')?.href;
+---
+
+<footer class="shell" style="padding: 32px 56px; border-top: 1px solid var(--rule);">
+  <div
+    style="display: flex; justify-content: space-between; gap: 16px; font-family: 'JetBrains Mono Variable', monospace; font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.16em;"
+  >
+    <span>© {year} {identity.name}</span>
+    {
+      githubLink && (
+        <a href={githubLink} rel="noopener" target="_blank">
+          source
+        </a>
+      )
+    }
+  </div>
+</footer>

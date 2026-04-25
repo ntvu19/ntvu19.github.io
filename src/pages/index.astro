@@ -1,0 +1,103 @@
+---
+import { site } from '../config/site';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TopBar from '../components/TopBar.astro';
+import Footer from '../components/Footer.astro';
+
+import HeroSplit from '../components/hero/HeroSplit.astro';
+import HeroCentered from '../components/hero/HeroCentered.astro';
+import HeroTerminal from '../components/hero/HeroTerminal.tsx';
+
+import Now from '../components/now/Now.astro';
+
+import ExperienceTimeline from '../components/experience/ExperienceTimeline.astro';
+import ExperienceCards from '../components/experience/ExperienceCards.astro';
+import ExperienceTable from '../components/experience/ExperienceTable.astro';
+
+import ProjectGrid from '../components/projects/ProjectGrid.astro';
+import ProjectExpanded from '../components/projects/ProjectExpanded.astro';
+import ProjectList from '../components/projects/ProjectList.tsx';
+import { getCollection } from 'astro:content';
+
+import Skills from '../components/skills/Skills.astro';
+import OSS from '../components/oss/OSS.astro';
+
+import CommandPalette from '../components/palette/CommandPalette.tsx';
+import HelpOverlay from '../components/help/HelpOverlay.tsx';
+import { buildPaletteItems } from '../scripts/palette-items';
+
+import identity from '../data/identity.json';
+
+const heroIsTerminal = site.heroVariant === 'terminal';
+const projectIsList = site.projectVariant === 'list';
+
+const projects = projectIsList
+  ? (await getCollection('project'))
+      .sort((a, b) => a.data.order - b.data.order)
+      .map((p) => ({
+        id: p.data.id,
+        title: p.data.title,
+        tagline: p.data.tagline,
+        status: p.data.status,
+        skills: p.data.skills,
+        problem: p.data.problem,
+        solved: p.data.solved,
+        role: p.data.role,
+        links: p.data.links,
+      }))
+  : [];
+
+const allProjects = (await getCollection('project'))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((p) => ({ id: p.data.id, title: p.data.title }));
+---
+
+<BaseLayout>
+  <TopBar />
+
+  {site.heroVariant === 'split' && <HeroSplit />}
+  {site.heroVariant === 'centered' && <HeroCentered />}
+  {
+    heroIsTerminal && (
+      <section id="hero" data-section class="hero shell">
+        <HeroTerminal
+          client:visible
+          name={identity.name}
+          role={identity.role}
+          location={identity.location}
+          summary={identity.summary.replace(/\*([^*]+)\*/g, '$1')}
+        />
+      </section>
+    )
+  }
+
+  <Now />
+
+  {site.experienceVariant === 'timeline' && <ExperienceTimeline />}
+  {site.experienceVariant === 'cards' && <ExperienceCards />}
+  {site.experienceVariant === 'table' && <ExperienceTable />}
+
+  {site.projectVariant === 'grid' && <ProjectGrid />}
+  {site.projectVariant === 'expanded' && <ProjectExpanded />}
+  {
+    projectIsList && (
+      <section id="projects" data-section class="section shell">
+        <ProjectList client:visible projects={projects} />
+      </section>
+    )
+  }
+
+  <Skills />
+  <OSS />
+
+  <CommandPalette
+    client:idle
+    items={buildPaletteItems({
+      contacts: identity.contacts,
+      projects: allProjects,
+    })}
+  />
+  <HelpOverlay client:idle />
+
+  <Footer />
+</BaseLayout>

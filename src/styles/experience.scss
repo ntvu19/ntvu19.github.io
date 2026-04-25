@@ -1,0 +1,191 @@
+.exp-timeline {
+  position: relative;
+  padding-left: 56px;
+}
+
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--rule);
+}
+
+.exp-company {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.exp-company-marker {
+  position: absolute;
+  left: -56px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--rule-strong);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  color: var(--ink-2);
+  overflow: hidden;
+}
+
+.exp-company-marker img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.exp-company-name {
+  font-family: 'IBM Plex Serif', Georgia, serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 4px;
+}
+
+.exp-company-meta {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+  margin-bottom: 24px;
+}
+
+.exp-role {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px dashed var(--rule);
+}
+
+.exp-role-marker {
+  position: absolute;
+  left: -45px;
+  top: 22px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid var(--rule-strong);
+  background: var(--bg);
+}
+
+.exp-role.is-current .exp-role-marker {
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.exp-role-dates {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.exp-role-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.exp-role-pill {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.exp-role-summary {
+  margin: 8px 0 12px;
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.exp-role-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.exp-role-keyword {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--ink-3);
+}
+
+.exp-role-stack {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .exp-timeline {
+    padding-left: 0;
+  }
+  .exp-timeline::before {
+    display: none;
+  }
+  .exp-company-marker {
+    position: static;
+    margin-bottom: 12px;
+  }
+  .exp-role {
+    grid-template-columns: 1fr;
+  }
+  .exp-role-marker {
+    display: none;
+  }
+}
+
+/* Cards variant */
+.exp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.exp-card {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: var(--bg-card);
+}
+
+/* Table variant */
+.exp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.exp-table th,
+.exp-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+
+.exp-table th {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-3);
+}

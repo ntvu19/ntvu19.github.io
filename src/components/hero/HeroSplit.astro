@@ -1,0 +1,62 @@
+---
+import identity from '../../data/identity.json';
+import AvatarBlock from '../AvatarBlock.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import LinkedinIcon from '../icons/LinkedinIcon.astro';
+
+const taglineHtml = identity.tagline.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+const mainContacts = identity.contacts.filter((c) =>
+  ['email', 'github', 'linkedin'].includes(c.label),
+);
+const iconFor = (label: string) =>
+  ({
+    email: MailIcon,
+    github: GithubIcon,
+    linkedin: LinkedinIcon,
+  })[label as 'email' | 'github' | 'linkedin'];
+---
+
+<section id="hero" data-section class="hero shell">
+  <div class="hero-split">
+    <div>
+      <div class="hero-eyebrow">§00 · whoami</div>
+      <h1 class="hero-name">
+        {identity.name}<span class="accent">.</span>
+      </h1>
+      <p class="hero-tagline" set:html={taglineHtml} />
+      <div class="hero-links">
+        {
+          mainContacts.map((c) => {
+            const Icon = iconFor(c.label);
+            return (
+              <a href={c.href} class="hero-link" rel="noopener" target="_blank">
+                {Icon && <Icon />}
+                <span>{c.label}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+      <dl class="hero-meta">
+        <div>
+          <dt>Role</dt>
+          <dd>{identity.role}</dd>
+        </div>
+        <div>
+          <dt>Based in</dt>
+          <dd>{identity.location}</dd>
+        </div>
+        <div>
+          <dt>Years shipping</dt>
+          <dd>{identity.yearsShipping}</dd>
+        </div>
+        <div>
+          <dt>Status</dt>
+          <dd>{identity.status}</dd>
+        </div>
+      </dl>
+    </div>
+    <AvatarBlock />
+  </div>
+</section>

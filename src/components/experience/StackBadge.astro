@@ -1,0 +1,27 @@
+---
+export interface Props {
+  id: string;
+  size?: number;
+}
+const { id, size = 22 } = Astro.props;
+const src = `/assets/${id}.svg`;
+---
+
+<span class="stack-badge" style={`width: ${size}px; height: ${size}px;`} title={id}>
+  <img src={src} alt={id} width={size} height={size} loading="lazy" />
+</span>
+
+<style lang="scss">
+  .stack-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+  }
+  .stack-badge img {
+    object-fit: contain;
+  }
+</style>

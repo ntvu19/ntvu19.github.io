@@ -1,0 +1,40 @@
+.help-backdrop {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+  display: grid;
+  place-items: center;
+}
+
+.help-modal {
+  width: min(560px, 92vw);
+  background: var(--bg-card);
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.help-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+  padding: 6px 0;
+  border-bottom: 1px dotted var(--rule);
+  align-items: center;
+  font-size: 14px;
+}
+
+.help-row:last-child {
+  border-bottom: 0;
+}
+
+.help-kbd {
+  font-family: 'JetBrains Mono Variable', monospace;
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}

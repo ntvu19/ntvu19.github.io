@@ -1,9 +1,0 @@
-services:
-  app:
-    # Run the Dockerfile to generate the image: ntvu19/git-vuepress:v1
-    image: ntvu19/git-vuepress:v1
-    ports:
-      - "8080:8080"
-    volumes:
-      - .:/app
-    restart: unless-stopped

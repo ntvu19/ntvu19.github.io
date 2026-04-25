@@ -1,0 +1,37 @@
+---
+import identity from '../data/identity.json';
+const sections = [
+  { id: 'experience', num: '01', label: 'Experience' },
+  { id: 'projects', num: '02', label: 'Projects' },
+  { id: 'skills', num: '03', label: 'Skills' },
+  { id: 'oss', num: '04', label: 'Open Source' },
+];
+const initials = identity.name
+  .split(' ')
+  .map((s) => s[0])
+  .join('');
+---
+
+<header class="topbar">
+  <div class="shell">
+    <a href="#hero" class="topbar-brand" aria-label="back to top">
+      <span class="topbar-pulse" aria-hidden="true"></span>
+      <span>{initials} ·· portfolio</span>
+    </a>
+    <nav class="topbar-nav" aria-label="sections">
+      {
+        sections.map((s) => (
+          <a href={`#${s.id}`} data-section-link={s.id}>
+            {s.num} · {s.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="topbar-actions">
+      <button type="button" data-palette-trigger aria-label="open command palette">
+        <span class="topbar-kbd">⌘K</span>
+      </button>
+      <button type="button" data-theme-toggle aria-label="toggle theme">◐</button>
+    </div>
+  </div>
+</header>

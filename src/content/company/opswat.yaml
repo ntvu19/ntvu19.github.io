@@ -1,0 +1,52 @@
+company: OPSWAT
+order: 1
+logoLight: /assets/opswat-light.svg
+logoDark: /assets/opswat-dark.svg
+meta: Critical infrastructure protection · Cybersecurity
+website: https://www.opswat.com
+roles:
+  - title: Software Engineer II
+    dates: Jan 2026 — Present
+    duration: current
+    current: true
+    promotion: true
+    summary: >
+      Working on MetaDefender ICAP Server, an ICAP server that integrates with
+      ICAP-supported proxies to inspect requests for malware and sensitive
+      data. Designing scalable architecture, enhancing scanning rules, and
+      optimizing database performance. Practising test-driven and
+      domain-driven development to minimize user-impacting issues.
+    keywords:
+      - Software Architecture
+      - Database Optimization
+      - ICAP Protocol
+      - High Concurrency
+      - RESTful API
+      - Security
+    stack:
+      [cpp, qt, cmake, windows11, linux, postgresql, sqlite, nginx, jenkins, docker, grpc, junit]
+  - title: Software Engineer
+    dates: Jan 2025 — Dec 2025
+    duration: 1 yr
+    promotion: true
+    summary: >
+      Continued MetaDefender ICAP work — central management integration,
+      AV-scan-server orchestration, scan-rule extensions (file type, request
+      info, encryption/decryption).
+    keywords:
+      - ICAP Protocol
+      - Central Management
+      - RESTful API
+      - Unit Testing
+    stack: [cpp, qt, cmake, linux, postgresql, sqlite, jenkins, docker, grpc, junit]
+  - title: Associate Software Engineer
+    dates: Jan 2024 — Dec 2024
+    duration: 1 yr
+    summary: >
+      Joined the MetaDefender ICAP team as an associate engineer. Picked up
+      C++/Qt, contributed to scanning-rule features and unit-test coverage.
+    keywords:
+      - C++
+      - Qt
+      - Unit Testing
+    stack: [cpp, qt, cmake, linux, junit]
