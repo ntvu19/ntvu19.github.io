@@ -1,6 +1,17 @@
-# Folder
-.vscode
 node_modules
+dist
+.astro
+.env
+.env.production
+.DS_Store
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS
+Thumbs.db
 
 # Planning artifacts (kept locally, not committed)
 docs/superpowers/
