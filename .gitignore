@@ -13,5 +13,6 @@ dist
 # OS
 Thumbs.db
 
-# Plans
-docs/superpowers/plans/
+# Plans & References
+docs/
+claude/
