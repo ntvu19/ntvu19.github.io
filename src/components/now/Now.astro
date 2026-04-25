@@ -9,7 +9,10 @@ const rows = [
 ] as const;
 
 const items = rows
-  .map((r) => ({ ...r, data: (nowData as Record<string, { label: string; sub?: string } | undefined>)[r.key] }))
+  .map((r) => ({
+    ...r,
+    data: (nowData as Record<string, { label: string; sub?: string } | undefined>)[r.key],
+  }))
   .filter((r): r is typeof r & { data: { label: string; sub?: string } } => Boolean(r.data));
 ---
 
