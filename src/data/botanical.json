@@ -1,200 +1,1364 @@
 [
-  { "id": "lavender", "name": "Lavender", "scientific": "Lavandula", "category": "flower", "family": "Lamiaceae" },
-  { "id": "jasmine", "name": "Jasmine", "scientific": "Jasminum", "category": "vine", "family": "Oleaceae" },
-  { "id": "orchid", "name": "Orchid", "scientific": "Orchidaceae", "category": "flower", "family": "Orchidaceae" },
-  { "id": "lotus", "name": "Lotus", "scientific": "Nelumbo", "category": "aquatic", "family": "Nelumbonaceae" },
-  { "id": "sakura", "name": "Sakura", "scientific": "Prunus serrulata", "category": "tree", "family": "Rosaceae" },
-  { "id": "cedar", "name": "Cedar", "scientific": "Cedrus", "category": "tree", "family": "Pinaceae" },
-  { "id": "willow", "name": "Willow", "scientific": "Salix", "category": "tree", "family": "Salicaceae" },
+  {
+    "id": "lavender",
+    "name": "Lavender",
+    "scientific": "Lavandula",
+    "category": "flower",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "jasmine",
+    "name": "Jasmine",
+    "scientific": "Jasminum",
+    "category": "vine",
+    "family": "Oleaceae"
+  },
+  {
+    "id": "orchid",
+    "name": "Orchid",
+    "scientific": "Orchidaceae",
+    "category": "flower",
+    "family": "Orchidaceae"
+  },
+  {
+    "id": "lotus",
+    "name": "Lotus",
+    "scientific": "Nelumbo",
+    "category": "aquatic",
+    "family": "Nelumbonaceae"
+  },
+  {
+    "id": "sakura",
+    "name": "Sakura",
+    "scientific": "Prunus serrulata",
+    "category": "tree",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "cedar",
+    "name": "Cedar",
+    "scientific": "Cedrus",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
+  {
+    "id": "willow",
+    "name": "Willow",
+    "scientific": "Salix",
+    "category": "tree",
+    "family": "Salicaceae"
+  },
   { "id": "oak", "name": "Oak", "scientific": "Quercus", "category": "tree", "family": "Fagaceae" },
-  { "id": "maple", "name": "Maple", "scientific": "Acer", "category": "tree", "family": "Sapindaceae" },
-  { "id": "birch", "name": "Birch", "scientific": "Betula", "category": "tree", "family": "Betulaceae" },
+  {
+    "id": "maple",
+    "name": "Maple",
+    "scientific": "Acer",
+    "category": "tree",
+    "family": "Sapindaceae"
+  },
+  {
+    "id": "birch",
+    "name": "Birch",
+    "scientific": "Betula",
+    "category": "tree",
+    "family": "Betulaceae"
+  },
   { "id": "pine", "name": "Pine", "scientific": "Pinus", "category": "tree", "family": "Pinaceae" },
-  { "id": "bamboo", "name": "Bamboo", "scientific": "Bambusoideae", "category": "grass", "family": "Poaceae" },
-  { "id": "basil", "name": "Basil", "scientific": "Ocimum basilicum", "category": "herb", "family": "Lamiaceae" },
-  { "id": "mint", "name": "Mint", "scientific": "Mentha", "category": "herb", "family": "Lamiaceae" },
-  { "id": "rosemary", "name": "Rosemary", "scientific": "Salvia rosmarinus", "category": "herb", "family": "Lamiaceae" },
-  { "id": "sage", "name": "Sage", "scientific": "Salvia", "category": "herb", "family": "Lamiaceae" },
-  { "id": "thyme", "name": "Thyme", "scientific": "Thymus", "category": "herb", "family": "Lamiaceae" },
-  { "id": "chamomile", "name": "Chamomile", "scientific": "Matricaria", "category": "flower", "family": "Asteraceae" },
-  { "id": "sunflower", "name": "Sunflower", "scientific": "Helianthus", "category": "flower", "family": "Asteraceae", "picked": true, "projectLink": "https://github.com/ntvu19/sunflower" },
-  { "id": "daisy", "name": "Daisy", "scientific": "Bellis", "category": "flower", "family": "Asteraceae" },
-  { "id": "peony", "name": "Peony", "scientific": "Paeonia", "category": "flower", "family": "Paeoniaceae" },
-  { "id": "iris", "name": "Iris", "scientific": "Iris", "category": "flower", "family": "Iridaceae" },
-  { "id": "tulip", "name": "Tulip", "scientific": "Tulipa", "category": "flower", "family": "Liliaceae", "picked": true, "projectLink": "https://github.com/ntvu19/tulip" },
-  { "id": "lily", "name": "Lily", "scientific": "Lilium", "category": "flower", "family": "Liliaceae" },
-  { "id": "rose", "name": "Rose", "scientific": "Rosa", "category": "flower", "family": "Rosaceae" },
-  { "id": "hibiscus", "name": "Hibiscus", "scientific": "Hibiscus", "category": "flower", "family": "Malvaceae" },
-  { "id": "magnolia", "name": "Magnolia", "scientific": "Magnolia", "category": "tree", "family": "Magnoliaceae" },
-  { "id": "ginkgo", "name": "Ginkgo", "scientific": "Ginkgo biloba", "category": "tree", "family": "Ginkgoaceae" },
-  { "id": "sequoia", "name": "Sequoia", "scientific": "Sequoiadendron", "category": "tree", "family": "Cupressaceae" },
-  { "id": "redwood", "name": "Redwood", "scientific": "Sequoia sempervirens", "category": "tree", "family": "Cupressaceae" },
-  { "id": "cypress", "name": "Cypress", "scientific": "Cupressus", "category": "tree", "family": "Cupressaceae" },
-  { "id": "palm", "name": "Palm", "scientific": "Arecaceae", "category": "palm", "family": "Arecaceae" },
-  { "id": "fern", "name": "Fern", "scientific": "Polypodiopsida", "category": "fern", "family": "Polypodiaceae", "picked": true, "projectLink": "https://github.com/ntvu19/fern" },
-  { "id": "moss", "name": "Moss", "scientific": "Bryophyta", "category": "moss", "family": "Bryophyta" },
-  { "id": "lichen", "name": "Lichen", "scientific": "Lichenes", "category": "lichen", "family": "Composite" },
-  { "id": "aloe", "name": "Aloe", "scientific": "Aloe vera", "category": "succulent", "family": "Asphodelaceae" },
-  { "id": "agave", "name": "Agave", "scientific": "Agave", "category": "succulent", "family": "Asparagaceae" },
-  { "id": "cactus", "name": "Cactus", "scientific": "Cactaceae", "category": "cactus", "family": "Cactaceae" },
-  { "id": "jade", "name": "Jade Plant", "scientific": "Crassula ovata", "category": "succulent", "family": "Crassulaceae" },
-  { "id": "echeveria", "name": "Echeveria", "scientific": "Echeveria", "category": "succulent", "family": "Crassulaceae" },
-  { "id": "ivy", "name": "Ivy", "scientific": "Hedera", "category": "vine", "family": "Araliaceae", "picked": true, "projectLink": "https://github.com/ntvu19/ivy" },
-  { "id": "wisteria", "name": "Wisteria", "scientific": "Wisteria", "category": "vine", "family": "Fabaceae" },
-  { "id": "grape", "name": "Grape", "scientific": "Vitis", "category": "vine", "family": "Vitaceae" },
-  { "id": "morning-glory", "name": "Morning Glory", "scientific": "Ipomoea", "category": "vine", "family": "Convolvulaceae" },
-  { "id": "water-lily", "name": "Water Lily", "scientific": "Nymphaea", "category": "aquatic", "family": "Nymphaeaceae" },
-  { "id": "duckweed", "name": "Duckweed", "scientific": "Lemna", "category": "aquatic", "family": "Araceae" },
-  { "id": "kelp", "name": "Kelp", "scientific": "Laminariales", "category": "aquatic", "family": "Laminariaceae" },
-  { "id": "seaweed", "name": "Seaweed", "scientific": "Phaeophyceae", "category": "aquatic", "family": "Phaeophyceae" },
-  { "id": "chanterelle", "name": "Chanterelle", "scientific": "Cantharellus", "category": "mushroom", "family": "Cantharellaceae" },
-  { "id": "morel", "name": "Morel", "scientific": "Morchella", "category": "mushroom", "family": "Morchellaceae" },
-  { "id": "shiitake", "name": "Shiitake", "scientific": "Lentinula edodes", "category": "mushroom", "family": "Omphalotaceae" },
-  { "id": "reishi", "name": "Reishi", "scientific": "Ganoderma", "category": "mushroom", "family": "Ganodermataceae" },
-  { "id": "amanita", "name": "Amanita", "scientific": "Amanita", "category": "mushroom", "family": "Amanitaceae" },
-  { "id": "bluebell", "name": "Bluebell", "scientific": "Hyacinthoides", "category": "flower", "family": "Asparagaceae" },
-  { "id": "foxglove", "name": "Foxglove", "scientific": "Digitalis", "category": "flower", "family": "Plantaginaceae" },
-  { "id": "poppy", "name": "Poppy", "scientific": "Papaver", "category": "flower", "family": "Papaveraceae" },
-  { "id": "violet", "name": "Violet", "scientific": "Viola", "category": "flower", "family": "Violaceae" },
-  { "id": "marigold", "name": "Marigold", "scientific": "Tagetes", "category": "flower", "family": "Asteraceae" },
-  { "id": "dahlia", "name": "Dahlia", "scientific": "Dahlia", "category": "flower", "family": "Asteraceae" },
-  { "id": "azalea", "name": "Azalea", "scientific": "Rhododendron", "category": "flower", "family": "Ericaceae" },
-  { "id": "camellia", "name": "Camellia", "scientific": "Camellia", "category": "flower", "family": "Theaceae" },
-  { "id": "gardenia", "name": "Gardenia", "scientific": "Gardenia", "category": "flower", "family": "Rubiaceae" },
-  { "id": "hydrangea", "name": "Hydrangea", "scientific": "Hydrangea", "category": "flower", "family": "Hydrangeaceae" },
-  { "id": "lavender-cotton", "name": "Cotton Lavender", "scientific": "Santolina", "category": "herb", "family": "Asteraceae" },
-  { "id": "elderberry", "name": "Elderberry", "scientific": "Sambucus", "category": "berry", "family": "Adoxaceae" },
-  { "id": "blackberry", "name": "Blackberry", "scientific": "Rubus", "category": "berry", "family": "Rosaceae" },
-  { "id": "cranberry", "name": "Cranberry", "scientific": "Vaccinium", "category": "berry", "family": "Ericaceae" },
-  { "id": "blueberry", "name": "Blueberry", "scientific": "Vaccinium corymbosum", "category": "berry", "family": "Ericaceae" },
-  { "id": "raspberry", "name": "Raspberry", "scientific": "Rubus idaeus", "category": "berry", "family": "Rosaceae" },
-  { "id": "strawberry", "name": "Strawberry", "scientific": "Fragaria", "category": "berry", "family": "Rosaceae" },
-  { "id": "wheat", "name": "Wheat", "scientific": "Triticum", "category": "grass", "family": "Poaceae", "picked": true, "projectLink": "https://github.com/ntvu19/wheat" },
+  {
+    "id": "bamboo",
+    "name": "Bamboo",
+    "scientific": "Bambusoideae",
+    "category": "grass",
+    "family": "Poaceae"
+  },
+  {
+    "id": "basil",
+    "name": "Basil",
+    "scientific": "Ocimum basilicum",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "mint",
+    "name": "Mint",
+    "scientific": "Mentha",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "rosemary",
+    "name": "Rosemary",
+    "scientific": "Salvia rosmarinus",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "scientific": "Salvia",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "thyme",
+    "name": "Thyme",
+    "scientific": "Thymus",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "chamomile",
+    "name": "Chamomile",
+    "scientific": "Matricaria",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "sunflower",
+    "name": "Sunflower",
+    "scientific": "Helianthus",
+    "category": "flower",
+    "family": "Asteraceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/sunflower"
+  },
+  {
+    "id": "daisy",
+    "name": "Daisy",
+    "scientific": "Bellis",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "peony",
+    "name": "Peony",
+    "scientific": "Paeonia",
+    "category": "flower",
+    "family": "Paeoniaceae"
+  },
+  {
+    "id": "iris",
+    "name": "Iris",
+    "scientific": "Iris",
+    "category": "flower",
+    "family": "Iridaceae"
+  },
+  {
+    "id": "tulip",
+    "name": "Tulip",
+    "scientific": "Tulipa",
+    "category": "flower",
+    "family": "Liliaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/tulip"
+  },
+  {
+    "id": "lily",
+    "name": "Lily",
+    "scientific": "Lilium",
+    "category": "flower",
+    "family": "Liliaceae"
+  },
+  {
+    "id": "rose",
+    "name": "Rose",
+    "scientific": "Rosa",
+    "category": "flower",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "hibiscus",
+    "name": "Hibiscus",
+    "scientific": "Hibiscus",
+    "category": "flower",
+    "family": "Malvaceae"
+  },
+  {
+    "id": "magnolia",
+    "name": "Magnolia",
+    "scientific": "Magnolia",
+    "category": "tree",
+    "family": "Magnoliaceae"
+  },
+  {
+    "id": "ginkgo",
+    "name": "Ginkgo",
+    "scientific": "Ginkgo biloba",
+    "category": "tree",
+    "family": "Ginkgoaceae"
+  },
+  {
+    "id": "sequoia",
+    "name": "Sequoia",
+    "scientific": "Sequoiadendron",
+    "category": "tree",
+    "family": "Cupressaceae"
+  },
+  {
+    "id": "redwood",
+    "name": "Redwood",
+    "scientific": "Sequoia sempervirens",
+    "category": "tree",
+    "family": "Cupressaceae"
+  },
+  {
+    "id": "cypress",
+    "name": "Cypress",
+    "scientific": "Cupressus",
+    "category": "tree",
+    "family": "Cupressaceae"
+  },
+  {
+    "id": "palm",
+    "name": "Palm",
+    "scientific": "Arecaceae",
+    "category": "palm",
+    "family": "Arecaceae"
+  },
+  {
+    "id": "fern",
+    "name": "Fern",
+    "scientific": "Polypodiopsida",
+    "category": "fern",
+    "family": "Polypodiaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/fern"
+  },
+  {
+    "id": "moss",
+    "name": "Moss",
+    "scientific": "Bryophyta",
+    "category": "moss",
+    "family": "Bryophyta"
+  },
+  {
+    "id": "lichen",
+    "name": "Lichen",
+    "scientific": "Lichenes",
+    "category": "lichen",
+    "family": "Composite"
+  },
+  {
+    "id": "aloe",
+    "name": "Aloe",
+    "scientific": "Aloe vera",
+    "category": "succulent",
+    "family": "Asphodelaceae"
+  },
+  {
+    "id": "agave",
+    "name": "Agave",
+    "scientific": "Agave",
+    "category": "succulent",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "cactus",
+    "name": "Cactus",
+    "scientific": "Cactaceae",
+    "category": "cactus",
+    "family": "Cactaceae"
+  },
+  {
+    "id": "jade",
+    "name": "Jade Plant",
+    "scientific": "Crassula ovata",
+    "category": "succulent",
+    "family": "Crassulaceae"
+  },
+  {
+    "id": "echeveria",
+    "name": "Echeveria",
+    "scientific": "Echeveria",
+    "category": "succulent",
+    "family": "Crassulaceae"
+  },
+  {
+    "id": "ivy",
+    "name": "Ivy",
+    "scientific": "Hedera",
+    "category": "vine",
+    "family": "Araliaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/ivy"
+  },
+  {
+    "id": "wisteria",
+    "name": "Wisteria",
+    "scientific": "Wisteria",
+    "category": "vine",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "grape",
+    "name": "Grape",
+    "scientific": "Vitis",
+    "category": "vine",
+    "family": "Vitaceae"
+  },
+  {
+    "id": "morning-glory",
+    "name": "Morning Glory",
+    "scientific": "Ipomoea",
+    "category": "vine",
+    "family": "Convolvulaceae"
+  },
+  {
+    "id": "water-lily",
+    "name": "Water Lily",
+    "scientific": "Nymphaea",
+    "category": "aquatic",
+    "family": "Nymphaeaceae"
+  },
+  {
+    "id": "duckweed",
+    "name": "Duckweed",
+    "scientific": "Lemna",
+    "category": "aquatic",
+    "family": "Araceae"
+  },
+  {
+    "id": "kelp",
+    "name": "Kelp",
+    "scientific": "Laminariales",
+    "category": "aquatic",
+    "family": "Laminariaceae"
+  },
+  {
+    "id": "seaweed",
+    "name": "Seaweed",
+    "scientific": "Phaeophyceae",
+    "category": "aquatic",
+    "family": "Phaeophyceae"
+  },
+  {
+    "id": "chanterelle",
+    "name": "Chanterelle",
+    "scientific": "Cantharellus",
+    "category": "mushroom",
+    "family": "Cantharellaceae"
+  },
+  {
+    "id": "morel",
+    "name": "Morel",
+    "scientific": "Morchella",
+    "category": "mushroom",
+    "family": "Morchellaceae"
+  },
+  {
+    "id": "shiitake",
+    "name": "Shiitake",
+    "scientific": "Lentinula edodes",
+    "category": "mushroom",
+    "family": "Omphalotaceae"
+  },
+  {
+    "id": "reishi",
+    "name": "Reishi",
+    "scientific": "Ganoderma",
+    "category": "mushroom",
+    "family": "Ganodermataceae"
+  },
+  {
+    "id": "amanita",
+    "name": "Amanita",
+    "scientific": "Amanita",
+    "category": "mushroom",
+    "family": "Amanitaceae"
+  },
+  {
+    "id": "bluebell",
+    "name": "Bluebell",
+    "scientific": "Hyacinthoides",
+    "category": "flower",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "foxglove",
+    "name": "Foxglove",
+    "scientific": "Digitalis",
+    "category": "flower",
+    "family": "Plantaginaceae"
+  },
+  {
+    "id": "poppy",
+    "name": "Poppy",
+    "scientific": "Papaver",
+    "category": "flower",
+    "family": "Papaveraceae"
+  },
+  {
+    "id": "violet",
+    "name": "Violet",
+    "scientific": "Viola",
+    "category": "flower",
+    "family": "Violaceae"
+  },
+  {
+    "id": "marigold",
+    "name": "Marigold",
+    "scientific": "Tagetes",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "dahlia",
+    "name": "Dahlia",
+    "scientific": "Dahlia",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "azalea",
+    "name": "Azalea",
+    "scientific": "Rhododendron",
+    "category": "flower",
+    "family": "Ericaceae"
+  },
+  {
+    "id": "camellia",
+    "name": "Camellia",
+    "scientific": "Camellia",
+    "category": "flower",
+    "family": "Theaceae"
+  },
+  {
+    "id": "gardenia",
+    "name": "Gardenia",
+    "scientific": "Gardenia",
+    "category": "flower",
+    "family": "Rubiaceae"
+  },
+  {
+    "id": "hydrangea",
+    "name": "Hydrangea",
+    "scientific": "Hydrangea",
+    "category": "flower",
+    "family": "Hydrangeaceae"
+  },
+  {
+    "id": "lavender-cotton",
+    "name": "Cotton Lavender",
+    "scientific": "Santolina",
+    "category": "herb",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "elderberry",
+    "name": "Elderberry",
+    "scientific": "Sambucus",
+    "category": "berry",
+    "family": "Adoxaceae"
+  },
+  {
+    "id": "blackberry",
+    "name": "Blackberry",
+    "scientific": "Rubus",
+    "category": "berry",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "cranberry",
+    "name": "Cranberry",
+    "scientific": "Vaccinium",
+    "category": "berry",
+    "family": "Ericaceae"
+  },
+  {
+    "id": "blueberry",
+    "name": "Blueberry",
+    "scientific": "Vaccinium corymbosum",
+    "category": "berry",
+    "family": "Ericaceae"
+  },
+  {
+    "id": "raspberry",
+    "name": "Raspberry",
+    "scientific": "Rubus idaeus",
+    "category": "berry",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "strawberry",
+    "name": "Strawberry",
+    "scientific": "Fragaria",
+    "category": "berry",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "wheat",
+    "name": "Wheat",
+    "scientific": "Triticum",
+    "category": "grass",
+    "family": "Poaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/wheat"
+  },
   { "id": "rice", "name": "Rice", "scientific": "Oryza", "category": "grass", "family": "Poaceae" },
-  { "id": "barley", "name": "Barley", "scientific": "Hordeum", "category": "grass", "family": "Poaceae" },
-  { "id": "pampas", "name": "Pampas Grass", "scientific": "Cortaderia", "category": "grass", "family": "Poaceae" },
-  { "id": "reed", "name": "Reed", "scientific": "Phragmites", "category": "grass", "family": "Poaceae" },
-  { "id": "sugarcane", "name": "Sugarcane", "scientific": "Saccharum", "category": "grass", "family": "Poaceae" },
-  { "id": "lemongrass", "name": "Lemongrass", "scientific": "Cymbopogon", "category": "herb", "family": "Poaceae" },
-  { "id": "coriander", "name": "Coriander", "scientific": "Coriandrum", "category": "herb", "family": "Apiaceae" },
-  { "id": "parsley", "name": "Parsley", "scientific": "Petroselinum", "category": "herb", "family": "Apiaceae" },
-  { "id": "dill", "name": "Dill", "scientific": "Anethum", "category": "herb", "family": "Apiaceae" },
-  { "id": "fennel", "name": "Fennel", "scientific": "Foeniculum", "category": "herb", "family": "Apiaceae" },
-  { "id": "tarragon", "name": "Tarragon", "scientific": "Artemisia dracunculus", "category": "herb", "family": "Asteraceae" },
-  { "id": "oregano", "name": "Oregano", "scientific": "Origanum", "category": "herb", "family": "Lamiaceae" },
-  { "id": "chives", "name": "Chives", "scientific": "Allium schoenoprasum", "category": "herb", "family": "Amaryllidaceae" },
-  { "id": "garlic", "name": "Garlic", "scientific": "Allium sativum", "category": "herb", "family": "Amaryllidaceae" },
-  { "id": "ginger", "name": "Ginger", "scientific": "Zingiber", "category": "herb", "family": "Zingiberaceae" },
-  { "id": "turmeric", "name": "Turmeric", "scientific": "Curcuma", "category": "herb", "family": "Zingiberaceae" },
-  { "id": "saffron", "name": "Saffron", "scientific": "Crocus sativus", "category": "flower", "family": "Iridaceae" },
-  { "id": "clover", "name": "Clover", "scientific": "Trifolium", "category": "flower", "family": "Fabaceae" },
-  { "id": "acacia", "name": "Acacia", "scientific": "Acacia", "category": "tree", "family": "Fabaceae" },
-  { "id": "baobab", "name": "Baobab", "scientific": "Adansonia", "category": "tree", "family": "Malvaceae" },
-  { "id": "banyan", "name": "Banyan", "scientific": "Ficus benghalensis", "category": "tree", "family": "Moraceae" },
-  { "id": "eucalyptus", "name": "Eucalyptus", "scientific": "Eucalyptus", "category": "tree", "family": "Myrtaceae" },
-  { "id": "olive", "name": "Olive", "scientific": "Olea europaea", "category": "tree", "family": "Oleaceae" },
-  { "id": "fig", "name": "Fig", "scientific": "Ficus carica", "category": "tree", "family": "Moraceae" },
-  { "id": "apple", "name": "Apple", "scientific": "Malus", "category": "tree", "family": "Rosaceae" },
-  { "id": "cherry", "name": "Cherry", "scientific": "Prunus avium", "category": "tree", "family": "Rosaceae" },
-  { "id": "plum", "name": "Plum", "scientific": "Prunus domestica", "category": "tree", "family": "Rosaceae" },
-  { "id": "coconut", "name": "Coconut", "scientific": "Cocos nucifera", "category": "palm", "family": "Arecaceae" },
-  { "id": "banana", "name": "Banana", "scientific": "Musa", "category": "herb", "family": "Musaceae", "picked": true, "projectLink": "https://github.com/ntvu19/banana" },
-  { "id": "bromeliad", "name": "Bromeliad", "scientific": "Bromeliaceae", "category": "flower", "family": "Bromeliaceae" },
-  { "id": "anthurium", "name": "Anthurium", "scientific": "Anthurium", "category": "flower", "family": "Araceae" },
-  { "id": "monstera", "name": "Monstera", "scientific": "Monstera deliciosa", "category": "vine", "family": "Araceae" },
-  { "id": "philodendron", "name": "Philodendron", "scientific": "Philodendron", "category": "vine", "family": "Araceae" },
-  { "id": "pothos", "name": "Pothos", "scientific": "Epipremnum", "category": "vine", "family": "Araceae" },
-  { "id": "calathea", "name": "Calathea", "scientific": "Calathea", "category": "herb", "family": "Marantaceae" },
-  { "id": "bird-of-paradise", "name": "Bird of Paradise", "scientific": "Strelitzia", "category": "flower", "family": "Strelitziaceae" },
-  { "id": "protea", "name": "Protea", "scientific": "Protea", "category": "flower", "family": "Proteaceae" },
-  { "id": "heather", "name": "Heather", "scientific": "Calluna", "category": "flower", "family": "Ericaceae" },
-  { "id": "yarrow", "name": "Yarrow", "scientific": "Achillea", "category": "flower", "family": "Asteraceae" },
-  { "id": "goldenrod", "name": "Goldenrod", "scientific": "Solidago", "category": "flower", "family": "Asteraceae" },
-  { "id": "aster", "name": "Aster", "scientific": "Symphyotrichum", "category": "flower", "family": "Asteraceae" },
-  { "id": "cosmos", "name": "Cosmos", "scientific": "Cosmos", "category": "flower", "family": "Asteraceae" },
-  { "id": "zinnia", "name": "Zinnia", "scientific": "Zinnia", "category": "flower", "family": "Asteraceae" },
-  { "id": "snapdragon", "name": "Snapdragon", "scientific": "Antirrhinum", "category": "flower", "family": "Plantaginaceae" },
-  { "id": "delphinium", "name": "Delphinium", "scientific": "Delphinium", "category": "flower", "family": "Ranunculaceae" },
-  { "id": "anemone", "name": "Anemone", "scientific": "Anemone", "category": "flower", "family": "Ranunculaceae" },
-  { "id": "columbine", "name": "Columbine", "scientific": "Aquilegia", "category": "flower", "family": "Ranunculaceae" },
-  { "id": "hellebore", "name": "Hellebore", "scientific": "Helleborus", "category": "flower", "family": "Ranunculaceae" },
-  { "id": "snowdrop", "name": "Snowdrop", "scientific": "Galanthus", "category": "flower", "family": "Amaryllidaceae" },
-  { "id": "daffodil", "name": "Daffodil", "scientific": "Narcissus", "category": "flower", "family": "Amaryllidaceae" },
-  { "id": "hyacinth", "name": "Hyacinth", "scientific": "Hyacinthus", "category": "flower", "family": "Asparagaceae" },
-  { "id": "allium", "name": "Allium", "scientific": "Allium", "category": "flower", "family": "Amaryllidaceae" },
-  { "id": "gladiolus", "name": "Gladiolus", "scientific": "Gladiolus", "category": "flower", "family": "Iridaceae" },
-  { "id": "freesia", "name": "Freesia", "scientific": "Freesia", "category": "flower", "family": "Iridaceae" },
-  { "id": "crocus", "name": "Crocus", "scientific": "Crocus", "category": "flower", "family": "Iridaceae" },
-  { "id": "amaryllis", "name": "Amaryllis", "scientific": "Hippeastrum", "category": "flower", "family": "Amaryllidaceae" },
-  { "id": "begonia", "name": "Begonia", "scientific": "Begonia", "category": "flower", "family": "Begoniaceae" },
-  { "id": "impatiens", "name": "Impatiens", "scientific": "Impatiens", "category": "flower", "family": "Balsaminaceae" },
-  { "id": "petunia", "name": "Petunia", "scientific": "Petunia", "category": "flower", "family": "Solanaceae" },
-  { "id": "nasturtium", "name": "Nasturtium", "scientific": "Tropaeolum", "category": "flower", "family": "Tropaeolaceae" },
-  { "id": "hollyhock", "name": "Hollyhock", "scientific": "Alcea", "category": "flower", "family": "Malvaceae" },
-  { "id": "lupine", "name": "Lupine", "scientific": "Lupinus", "category": "flower", "family": "Fabaceae" },
-  { "id": "wisteria-tree", "name": "Laburnum", "scientific": "Laburnum", "category": "tree", "family": "Fabaceae" },
-  { "id": "juniper", "name": "Juniper", "scientific": "Juniperus", "category": "tree", "family": "Cupressaceae" },
-  { "id": "spruce", "name": "Spruce", "scientific": "Picea", "category": "tree", "family": "Pinaceae" },
+  {
+    "id": "barley",
+    "name": "Barley",
+    "scientific": "Hordeum",
+    "category": "grass",
+    "family": "Poaceae"
+  },
+  {
+    "id": "pampas",
+    "name": "Pampas Grass",
+    "scientific": "Cortaderia",
+    "category": "grass",
+    "family": "Poaceae"
+  },
+  {
+    "id": "reed",
+    "name": "Reed",
+    "scientific": "Phragmites",
+    "category": "grass",
+    "family": "Poaceae"
+  },
+  {
+    "id": "sugarcane",
+    "name": "Sugarcane",
+    "scientific": "Saccharum",
+    "category": "grass",
+    "family": "Poaceae"
+  },
+  {
+    "id": "lemongrass",
+    "name": "Lemongrass",
+    "scientific": "Cymbopogon",
+    "category": "herb",
+    "family": "Poaceae"
+  },
+  {
+    "id": "coriander",
+    "name": "Coriander",
+    "scientific": "Coriandrum",
+    "category": "herb",
+    "family": "Apiaceae"
+  },
+  {
+    "id": "parsley",
+    "name": "Parsley",
+    "scientific": "Petroselinum",
+    "category": "herb",
+    "family": "Apiaceae"
+  },
+  {
+    "id": "dill",
+    "name": "Dill",
+    "scientific": "Anethum",
+    "category": "herb",
+    "family": "Apiaceae"
+  },
+  {
+    "id": "fennel",
+    "name": "Fennel",
+    "scientific": "Foeniculum",
+    "category": "herb",
+    "family": "Apiaceae"
+  },
+  {
+    "id": "tarragon",
+    "name": "Tarragon",
+    "scientific": "Artemisia dracunculus",
+    "category": "herb",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "oregano",
+    "name": "Oregano",
+    "scientific": "Origanum",
+    "category": "herb",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "chives",
+    "name": "Chives",
+    "scientific": "Allium schoenoprasum",
+    "category": "herb",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "scientific": "Allium sativum",
+    "category": "herb",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "ginger",
+    "name": "Ginger",
+    "scientific": "Zingiber",
+    "category": "herb",
+    "family": "Zingiberaceae"
+  },
+  {
+    "id": "turmeric",
+    "name": "Turmeric",
+    "scientific": "Curcuma",
+    "category": "herb",
+    "family": "Zingiberaceae"
+  },
+  {
+    "id": "saffron",
+    "name": "Saffron",
+    "scientific": "Crocus sativus",
+    "category": "flower",
+    "family": "Iridaceae"
+  },
+  {
+    "id": "clover",
+    "name": "Clover",
+    "scientific": "Trifolium",
+    "category": "flower",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "acacia",
+    "name": "Acacia",
+    "scientific": "Acacia",
+    "category": "tree",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "baobab",
+    "name": "Baobab",
+    "scientific": "Adansonia",
+    "category": "tree",
+    "family": "Malvaceae"
+  },
+  {
+    "id": "banyan",
+    "name": "Banyan",
+    "scientific": "Ficus benghalensis",
+    "category": "tree",
+    "family": "Moraceae"
+  },
+  {
+    "id": "eucalyptus",
+    "name": "Eucalyptus",
+    "scientific": "Eucalyptus",
+    "category": "tree",
+    "family": "Myrtaceae"
+  },
+  {
+    "id": "olive",
+    "name": "Olive",
+    "scientific": "Olea europaea",
+    "category": "tree",
+    "family": "Oleaceae"
+  },
+  {
+    "id": "fig",
+    "name": "Fig",
+    "scientific": "Ficus carica",
+    "category": "tree",
+    "family": "Moraceae"
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "scientific": "Malus",
+    "category": "tree",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "cherry",
+    "name": "Cherry",
+    "scientific": "Prunus avium",
+    "category": "tree",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "plum",
+    "name": "Plum",
+    "scientific": "Prunus domestica",
+    "category": "tree",
+    "family": "Rosaceae"
+  },
+  {
+    "id": "coconut",
+    "name": "Coconut",
+    "scientific": "Cocos nucifera",
+    "category": "palm",
+    "family": "Arecaceae"
+  },
+  {
+    "id": "banana",
+    "name": "Banana",
+    "scientific": "Musa",
+    "category": "herb",
+    "family": "Musaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/banana"
+  },
+  {
+    "id": "bromeliad",
+    "name": "Bromeliad",
+    "scientific": "Bromeliaceae",
+    "category": "flower",
+    "family": "Bromeliaceae"
+  },
+  {
+    "id": "anthurium",
+    "name": "Anthurium",
+    "scientific": "Anthurium",
+    "category": "flower",
+    "family": "Araceae"
+  },
+  {
+    "id": "monstera",
+    "name": "Monstera",
+    "scientific": "Monstera deliciosa",
+    "category": "vine",
+    "family": "Araceae"
+  },
+  {
+    "id": "philodendron",
+    "name": "Philodendron",
+    "scientific": "Philodendron",
+    "category": "vine",
+    "family": "Araceae"
+  },
+  {
+    "id": "pothos",
+    "name": "Pothos",
+    "scientific": "Epipremnum",
+    "category": "vine",
+    "family": "Araceae"
+  },
+  {
+    "id": "calathea",
+    "name": "Calathea",
+    "scientific": "Calathea",
+    "category": "herb",
+    "family": "Marantaceae"
+  },
+  {
+    "id": "bird-of-paradise",
+    "name": "Bird of Paradise",
+    "scientific": "Strelitzia",
+    "category": "flower",
+    "family": "Strelitziaceae"
+  },
+  {
+    "id": "protea",
+    "name": "Protea",
+    "scientific": "Protea",
+    "category": "flower",
+    "family": "Proteaceae"
+  },
+  {
+    "id": "heather",
+    "name": "Heather",
+    "scientific": "Calluna",
+    "category": "flower",
+    "family": "Ericaceae"
+  },
+  {
+    "id": "yarrow",
+    "name": "Yarrow",
+    "scientific": "Achillea",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "goldenrod",
+    "name": "Goldenrod",
+    "scientific": "Solidago",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "aster",
+    "name": "Aster",
+    "scientific": "Symphyotrichum",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "cosmos",
+    "name": "Cosmos",
+    "scientific": "Cosmos",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "zinnia",
+    "name": "Zinnia",
+    "scientific": "Zinnia",
+    "category": "flower",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "snapdragon",
+    "name": "Snapdragon",
+    "scientific": "Antirrhinum",
+    "category": "flower",
+    "family": "Plantaginaceae"
+  },
+  {
+    "id": "delphinium",
+    "name": "Delphinium",
+    "scientific": "Delphinium",
+    "category": "flower",
+    "family": "Ranunculaceae"
+  },
+  {
+    "id": "anemone",
+    "name": "Anemone",
+    "scientific": "Anemone",
+    "category": "flower",
+    "family": "Ranunculaceae"
+  },
+  {
+    "id": "columbine",
+    "name": "Columbine",
+    "scientific": "Aquilegia",
+    "category": "flower",
+    "family": "Ranunculaceae"
+  },
+  {
+    "id": "hellebore",
+    "name": "Hellebore",
+    "scientific": "Helleborus",
+    "category": "flower",
+    "family": "Ranunculaceae"
+  },
+  {
+    "id": "snowdrop",
+    "name": "Snowdrop",
+    "scientific": "Galanthus",
+    "category": "flower",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "daffodil",
+    "name": "Daffodil",
+    "scientific": "Narcissus",
+    "category": "flower",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "hyacinth",
+    "name": "Hyacinth",
+    "scientific": "Hyacinthus",
+    "category": "flower",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "allium",
+    "name": "Allium",
+    "scientific": "Allium",
+    "category": "flower",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "gladiolus",
+    "name": "Gladiolus",
+    "scientific": "Gladiolus",
+    "category": "flower",
+    "family": "Iridaceae"
+  },
+  {
+    "id": "freesia",
+    "name": "Freesia",
+    "scientific": "Freesia",
+    "category": "flower",
+    "family": "Iridaceae"
+  },
+  {
+    "id": "crocus",
+    "name": "Crocus",
+    "scientific": "Crocus",
+    "category": "flower",
+    "family": "Iridaceae"
+  },
+  {
+    "id": "amaryllis",
+    "name": "Amaryllis",
+    "scientific": "Hippeastrum",
+    "category": "flower",
+    "family": "Amaryllidaceae"
+  },
+  {
+    "id": "begonia",
+    "name": "Begonia",
+    "scientific": "Begonia",
+    "category": "flower",
+    "family": "Begoniaceae"
+  },
+  {
+    "id": "impatiens",
+    "name": "Impatiens",
+    "scientific": "Impatiens",
+    "category": "flower",
+    "family": "Balsaminaceae"
+  },
+  {
+    "id": "petunia",
+    "name": "Petunia",
+    "scientific": "Petunia",
+    "category": "flower",
+    "family": "Solanaceae"
+  },
+  {
+    "id": "nasturtium",
+    "name": "Nasturtium",
+    "scientific": "Tropaeolum",
+    "category": "flower",
+    "family": "Tropaeolaceae"
+  },
+  {
+    "id": "hollyhock",
+    "name": "Hollyhock",
+    "scientific": "Alcea",
+    "category": "flower",
+    "family": "Malvaceae"
+  },
+  {
+    "id": "lupine",
+    "name": "Lupine",
+    "scientific": "Lupinus",
+    "category": "flower",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "wisteria-tree",
+    "name": "Laburnum",
+    "scientific": "Laburnum",
+    "category": "tree",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "juniper",
+    "name": "Juniper",
+    "scientific": "Juniperus",
+    "category": "tree",
+    "family": "Cupressaceae"
+  },
+  {
+    "id": "spruce",
+    "name": "Spruce",
+    "scientific": "Picea",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
   { "id": "fir", "name": "Fir", "scientific": "Abies", "category": "tree", "family": "Pinaceae" },
-  { "id": "larch", "name": "Larch", "scientific": "Larix", "category": "tree", "family": "Pinaceae" },
-  { "id": "hemlock", "name": "Hemlock", "scientific": "Tsuga", "category": "tree", "family": "Pinaceae" },
-  { "id": "ash", "name": "Ash", "scientific": "Fraxinus", "category": "tree", "family": "Oleaceae" },
+  {
+    "id": "larch",
+    "name": "Larch",
+    "scientific": "Larix",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
+  {
+    "id": "hemlock",
+    "name": "Hemlock",
+    "scientific": "Tsuga",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
+  {
+    "id": "ash",
+    "name": "Ash",
+    "scientific": "Fraxinus",
+    "category": "tree",
+    "family": "Oleaceae"
+  },
   { "id": "elm", "name": "Elm", "scientific": "Ulmus", "category": "tree", "family": "Ulmaceae" },
-  { "id": "beech", "name": "Beech", "scientific": "Fagus", "category": "tree", "family": "Fagaceae" },
-  { "id": "sycamore", "name": "Sycamore", "scientific": "Platanus", "category": "tree", "family": "Platanaceae" },
-  { "id": "dogwood", "name": "Dogwood", "scientific": "Cornus", "category": "tree", "family": "Cornaceae" },
-  { "id": "hawthorn", "name": "Hawthorn", "scientific": "Crataegus", "category": "tree", "family": "Rosaceae" },
+  {
+    "id": "beech",
+    "name": "Beech",
+    "scientific": "Fagus",
+    "category": "tree",
+    "family": "Fagaceae"
+  },
+  {
+    "id": "sycamore",
+    "name": "Sycamore",
+    "scientific": "Platanus",
+    "category": "tree",
+    "family": "Platanaceae"
+  },
+  {
+    "id": "dogwood",
+    "name": "Dogwood",
+    "scientific": "Cornus",
+    "category": "tree",
+    "family": "Cornaceae"
+  },
+  {
+    "id": "hawthorn",
+    "name": "Hawthorn",
+    "scientific": "Crataegus",
+    "category": "tree",
+    "family": "Rosaceae"
+  },
   { "id": "yew", "name": "Yew", "scientific": "Taxus", "category": "tree", "family": "Taxaceae" },
-  { "id": "boxwood", "name": "Boxwood", "scientific": "Buxus", "category": "tree", "family": "Buxaceae" },
-  { "id": "holly", "name": "Holly", "scientific": "Ilex", "category": "tree", "family": "Aquifoliaceae" },
-  { "id": "laurel", "name": "Laurel", "scientific": "Laurus", "category": "tree", "family": "Lauraceae" },
-  { "id": "sandalwood", "name": "Sandalwood", "scientific": "Santalum", "category": "tree", "family": "Santalaceae" },
-  { "id": "teak", "name": "Teak", "scientific": "Tectona", "category": "tree", "family": "Lamiaceae" },
-  { "id": "mahogany", "name": "Mahogany", "scientific": "Swietenia", "category": "tree", "family": "Meliaceae" },
-  { "id": "ebony", "name": "Ebony", "scientific": "Diospyros", "category": "tree", "family": "Ebenaceae" },
-  { "id": "sassafras", "name": "Sassafras", "scientific": "Sassafras", "category": "tree", "family": "Lauraceae" },
-  { "id": "sycamore-fig", "name": "Sycamore Fig", "scientific": "Ficus sycomorus", "category": "tree", "family": "Moraceae" },
-  { "id": "dragon-tree", "name": "Dragon Tree", "scientific": "Dracaena draco", "category": "tree", "family": "Asparagaceae" },
-  { "id": "joshua-tree", "name": "Joshua Tree", "scientific": "Yucca brevifolia", "category": "cactus", "family": "Asparagaceae" },
-  { "id": "yucca", "name": "Yucca", "scientific": "Yucca", "category": "cactus", "family": "Asparagaceae" },
-  { "id": "prickly-pear", "name": "Prickly Pear", "scientific": "Opuntia", "category": "cactus", "family": "Cactaceae" },
-  { "id": "saguaro", "name": "Saguaro", "scientific": "Carnegiea gigantea", "category": "cactus", "family": "Cactaceae" },
-  { "id": "haworthia", "name": "Haworthia", "scientific": "Haworthia", "category": "succulent", "family": "Asphodelaceae" },
-  { "id": "sedum", "name": "Sedum", "scientific": "Sedum", "category": "succulent", "family": "Crassulaceae" },
-  { "id": "kalanchoe", "name": "Kalanchoe", "scientific": "Kalanchoe", "category": "succulent", "family": "Crassulaceae" },
-  { "id": "hen-and-chicks", "name": "Hen and Chicks", "scientific": "Sempervivum", "category": "succulent", "family": "Crassulaceae" },
-  { "id": "string-of-pearls", "name": "String of Pearls", "scientific": "Senecio rowleyanus", "category": "succulent", "family": "Asteraceae" },
-  { "id": "air-plant", "name": "Air Plant", "scientific": "Tillandsia", "category": "herb", "family": "Bromeliaceae" },
-  { "id": "pitcher-plant", "name": "Pitcher Plant", "scientific": "Nepenthes", "category": "herb", "family": "Nepenthaceae" },
-  { "id": "venus-flytrap", "name": "Venus Flytrap", "scientific": "Dionaea", "category": "herb", "family": "Droseraceae" },
-  { "id": "sundew", "name": "Sundew", "scientific": "Drosera", "category": "herb", "family": "Droseraceae" },
-  { "id": "clubmoss", "name": "Clubmoss", "scientific": "Lycopodium", "category": "fern", "family": "Lycopodiaceae" },
-  { "id": "horsetail", "name": "Horsetail", "scientific": "Equisetum", "category": "fern", "family": "Equisetaceae" },
-  { "id": "maidenhair", "name": "Maidenhair Fern", "scientific": "Adiantum", "category": "fern", "family": "Pteridaceae" },
-  { "id": "bracken", "name": "Bracken", "scientific": "Pteridium", "category": "fern", "family": "Dennstaedtiaceae" },
-  { "id": "tree-fern", "name": "Tree Fern", "scientific": "Cyathea", "category": "fern", "family": "Cyatheaceae" },
-  { "id": "sphagnum", "name": "Sphagnum", "scientific": "Sphagnum", "category": "moss", "family": "Sphagnaceae" },
-  { "id": "reindeer-moss", "name": "Reindeer Moss", "scientific": "Cladonia", "category": "lichen", "family": "Cladoniaceae" },
-  { "id": "truffle", "name": "Truffle", "scientific": "Tuber", "category": "mushroom", "family": "Tuberaceae" },
-  { "id": "porcini", "name": "Porcini", "scientific": "Boletus", "category": "mushroom", "family": "Boletaceae" },
-  { "id": "enoki", "name": "Enoki", "scientific": "Flammulina", "category": "mushroom", "family": "Physalacriaceae" },
-  { "id": "oyster-mushroom", "name": "Oyster Mushroom", "scientific": "Pleurotus", "category": "mushroom", "family": "Pleurotaceae" },
-  { "id": "lion-mane", "name": "Lion's Mane", "scientific": "Hericium", "category": "mushroom", "family": "Hericiaceae" },
-  { "id": "cordyceps", "name": "Cordyceps", "scientific": "Cordyceps", "category": "mushroom", "family": "Cordycipitaceae" },
-  { "id": "mycena", "name": "Mycena", "scientific": "Mycena", "category": "mushroom", "family": "Mycenaceae" },
-  { "id": "ink-cap", "name": "Ink Cap", "scientific": "Coprinopsis", "category": "mushroom", "family": "Psathyrellaceae" },
-  { "id": "puffball", "name": "Puffball", "scientific": "Lycoperdon", "category": "mushroom", "family": "Agaricaceae" },
-  { "id": "cattail", "name": "Cattail", "scientific": "Typha", "category": "aquatic", "family": "Typhaceae" },
-  { "id": "water-hyacinth", "name": "Water Hyacinth", "scientific": "Eichhornia", "category": "aquatic", "family": "Pontederiaceae" },
-  { "id": "algae", "name": "Algae", "scientific": "Chlorophyta", "category": "aquatic", "family": "Chlorophyta" },
-  { "id": "coral-plant", "name": "Coral Plant", "scientific": "Russelia", "category": "flower", "family": "Plantaginaceae" },
-  { "id": "passionflower", "name": "Passionflower", "scientific": "Passiflora", "category": "vine", "family": "Passifloraceae" },
-  { "id": "honeysuckle", "name": "Honeysuckle", "scientific": "Lonicera", "category": "vine", "family": "Caprifoliaceae" },
-  { "id": "clematis", "name": "Clematis", "scientific": "Clematis", "category": "vine", "family": "Ranunculaceae" },
-  { "id": "kudzu", "name": "Kudzu", "scientific": "Pueraria", "category": "vine", "family": "Fabaceae" },
-  { "id": "hops", "name": "Hops", "scientific": "Humulus", "category": "vine", "family": "Cannabaceae" },
-  { "id": "vanilla", "name": "Vanilla", "scientific": "Vanilla planifolia", "category": "vine", "family": "Orchidaceae" },
-  { "id": "bougainvillea", "name": "Bougainvillea", "scientific": "Bougainvillea", "category": "vine", "family": "Nyctaginaceae" },
-  { "id": "sweet-pea", "name": "Sweet Pea", "scientific": "Lathyrus", "category": "vine", "family": "Fabaceae" },
-  { "id": "trumpet-vine", "name": "Trumpet Vine", "scientific": "Campsis", "category": "vine", "family": "Bignoniaceae" }
+  {
+    "id": "boxwood",
+    "name": "Boxwood",
+    "scientific": "Buxus",
+    "category": "tree",
+    "family": "Buxaceae"
+  },
+  {
+    "id": "holly",
+    "name": "Holly",
+    "scientific": "Ilex",
+    "category": "tree",
+    "family": "Aquifoliaceae"
+  },
+  {
+    "id": "laurel",
+    "name": "Laurel",
+    "scientific": "Laurus",
+    "category": "tree",
+    "family": "Lauraceae"
+  },
+  {
+    "id": "sandalwood",
+    "name": "Sandalwood",
+    "scientific": "Santalum",
+    "category": "tree",
+    "family": "Santalaceae"
+  },
+  {
+    "id": "teak",
+    "name": "Teak",
+    "scientific": "Tectona",
+    "category": "tree",
+    "family": "Lamiaceae"
+  },
+  {
+    "id": "mahogany",
+    "name": "Mahogany",
+    "scientific": "Swietenia",
+    "category": "tree",
+    "family": "Meliaceae"
+  },
+  {
+    "id": "ebony",
+    "name": "Ebony",
+    "scientific": "Diospyros",
+    "category": "tree",
+    "family": "Ebenaceae"
+  },
+  {
+    "id": "sassafras",
+    "name": "Sassafras",
+    "scientific": "Sassafras",
+    "category": "tree",
+    "family": "Lauraceae"
+  },
+  {
+    "id": "sycamore-fig",
+    "name": "Sycamore Fig",
+    "scientific": "Ficus sycomorus",
+    "category": "tree",
+    "family": "Moraceae"
+  },
+  {
+    "id": "dragon-tree",
+    "name": "Dragon Tree",
+    "scientific": "Dracaena draco",
+    "category": "tree",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "joshua-tree",
+    "name": "Joshua Tree",
+    "scientific": "Yucca brevifolia",
+    "category": "cactus",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "yucca",
+    "name": "Yucca",
+    "scientific": "Yucca",
+    "category": "cactus",
+    "family": "Asparagaceae"
+  },
+  {
+    "id": "prickly-pear",
+    "name": "Prickly Pear",
+    "scientific": "Opuntia",
+    "category": "cactus",
+    "family": "Cactaceae"
+  },
+  {
+    "id": "saguaro",
+    "name": "Saguaro",
+    "scientific": "Carnegiea gigantea",
+    "category": "cactus",
+    "family": "Cactaceae"
+  },
+  {
+    "id": "haworthia",
+    "name": "Haworthia",
+    "scientific": "Haworthia",
+    "category": "succulent",
+    "family": "Asphodelaceae"
+  },
+  {
+    "id": "sedum",
+    "name": "Sedum",
+    "scientific": "Sedum",
+    "category": "succulent",
+    "family": "Crassulaceae"
+  },
+  {
+    "id": "kalanchoe",
+    "name": "Kalanchoe",
+    "scientific": "Kalanchoe",
+    "category": "succulent",
+    "family": "Crassulaceae"
+  },
+  {
+    "id": "hen-and-chicks",
+    "name": "Hen and Chicks",
+    "scientific": "Sempervivum",
+    "category": "succulent",
+    "family": "Crassulaceae"
+  },
+  {
+    "id": "string-of-pearls",
+    "name": "String of Pearls",
+    "scientific": "Senecio rowleyanus",
+    "category": "succulent",
+    "family": "Asteraceae"
+  },
+  {
+    "id": "air-plant",
+    "name": "Air Plant",
+    "scientific": "Tillandsia",
+    "category": "herb",
+    "family": "Bromeliaceae"
+  },
+  {
+    "id": "pitcher-plant",
+    "name": "Pitcher Plant",
+    "scientific": "Nepenthes",
+    "category": "herb",
+    "family": "Nepenthaceae"
+  },
+  {
+    "id": "venus-flytrap",
+    "name": "Venus Flytrap",
+    "scientific": "Dionaea",
+    "category": "herb",
+    "family": "Droseraceae"
+  },
+  {
+    "id": "sundew",
+    "name": "Sundew",
+    "scientific": "Drosera",
+    "category": "herb",
+    "family": "Droseraceae"
+  },
+  {
+    "id": "clubmoss",
+    "name": "Clubmoss",
+    "scientific": "Lycopodium",
+    "category": "fern",
+    "family": "Lycopodiaceae"
+  },
+  {
+    "id": "horsetail",
+    "name": "Horsetail",
+    "scientific": "Equisetum",
+    "category": "fern",
+    "family": "Equisetaceae"
+  },
+  {
+    "id": "maidenhair",
+    "name": "Maidenhair Fern",
+    "scientific": "Adiantum",
+    "category": "fern",
+    "family": "Pteridaceae"
+  },
+  {
+    "id": "bracken",
+    "name": "Bracken",
+    "scientific": "Pteridium",
+    "category": "fern",
+    "family": "Dennstaedtiaceae"
+  },
+  {
+    "id": "tree-fern",
+    "name": "Tree Fern",
+    "scientific": "Cyathea",
+    "category": "fern",
+    "family": "Cyatheaceae"
+  },
+  {
+    "id": "sphagnum",
+    "name": "Sphagnum",
+    "scientific": "Sphagnum",
+    "category": "moss",
+    "family": "Sphagnaceae"
+  },
+  {
+    "id": "reindeer-moss",
+    "name": "Reindeer Moss",
+    "scientific": "Cladonia",
+    "category": "lichen",
+    "family": "Cladoniaceae"
+  },
+  {
+    "id": "truffle",
+    "name": "Truffle",
+    "scientific": "Tuber",
+    "category": "mushroom",
+    "family": "Tuberaceae"
+  },
+  {
+    "id": "porcini",
+    "name": "Porcini",
+    "scientific": "Boletus",
+    "category": "mushroom",
+    "family": "Boletaceae"
+  },
+  {
+    "id": "enoki",
+    "name": "Enoki",
+    "scientific": "Flammulina",
+    "category": "mushroom",
+    "family": "Physalacriaceae"
+  },
+  {
+    "id": "oyster-mushroom",
+    "name": "Oyster Mushroom",
+    "scientific": "Pleurotus",
+    "category": "mushroom",
+    "family": "Pleurotaceae"
+  },
+  {
+    "id": "lion-mane",
+    "name": "Lion's Mane",
+    "scientific": "Hericium",
+    "category": "mushroom",
+    "family": "Hericiaceae"
+  },
+  {
+    "id": "cordyceps",
+    "name": "Cordyceps",
+    "scientific": "Cordyceps",
+    "category": "mushroom",
+    "family": "Cordycipitaceae"
+  },
+  {
+    "id": "mycena",
+    "name": "Mycena",
+    "scientific": "Mycena",
+    "category": "mushroom",
+    "family": "Mycenaceae"
+  },
+  {
+    "id": "ink-cap",
+    "name": "Ink Cap",
+    "scientific": "Coprinopsis",
+    "category": "mushroom",
+    "family": "Psathyrellaceae"
+  },
+  {
+    "id": "puffball",
+    "name": "Puffball",
+    "scientific": "Lycoperdon",
+    "category": "mushroom",
+    "family": "Agaricaceae"
+  },
+  {
+    "id": "cattail",
+    "name": "Cattail",
+    "scientific": "Typha",
+    "category": "aquatic",
+    "family": "Typhaceae"
+  },
+  {
+    "id": "water-hyacinth",
+    "name": "Water Hyacinth",
+    "scientific": "Eichhornia",
+    "category": "aquatic",
+    "family": "Pontederiaceae"
+  },
+  {
+    "id": "algae",
+    "name": "Algae",
+    "scientific": "Chlorophyta",
+    "category": "aquatic",
+    "family": "Chlorophyta"
+  },
+  {
+    "id": "coral-plant",
+    "name": "Coral Plant",
+    "scientific": "Russelia",
+    "category": "flower",
+    "family": "Plantaginaceae"
+  },
+  {
+    "id": "passionflower",
+    "name": "Passionflower",
+    "scientific": "Passiflora",
+    "category": "vine",
+    "family": "Passifloraceae"
+  },
+  {
+    "id": "honeysuckle",
+    "name": "Honeysuckle",
+    "scientific": "Lonicera",
+    "category": "vine",
+    "family": "Caprifoliaceae"
+  },
+  {
+    "id": "clematis",
+    "name": "Clematis",
+    "scientific": "Clematis",
+    "category": "vine",
+    "family": "Ranunculaceae"
+  },
+  {
+    "id": "kudzu",
+    "name": "Kudzu",
+    "scientific": "Pueraria",
+    "category": "vine",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "hops",
+    "name": "Hops",
+    "scientific": "Humulus",
+    "category": "vine",
+    "family": "Cannabaceae"
+  },
+  {
+    "id": "vanilla",
+    "name": "Vanilla",
+    "scientific": "Vanilla planifolia",
+    "category": "vine",
+    "family": "Orchidaceae"
+  },
+  {
+    "id": "bougainvillea",
+    "name": "Bougainvillea",
+    "scientific": "Bougainvillea",
+    "category": "vine",
+    "family": "Nyctaginaceae"
+  },
+  {
+    "id": "sweet-pea",
+    "name": "Sweet Pea",
+    "scientific": "Lathyrus",
+    "category": "vine",
+    "family": "Fabaceae"
+  },
+  {
+    "id": "trumpet-vine",
+    "name": "Trumpet Vine",
+    "scientific": "Campsis",
+    "category": "vine",
+    "family": "Bignoniaceae"
+  }
 ]

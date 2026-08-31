@@ -101,7 +101,9 @@
   border-radius: var(--radius-sm);
   background: var(--bg-card);
   overflow: hidden;
-  transition: border-color 120ms ease, transform 120ms ease;
+  transition:
+    border-color 120ms ease,
+    transform 120ms ease;
   text-decoration: none;
   color: inherit;
 }
