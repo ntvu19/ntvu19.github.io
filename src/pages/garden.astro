@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import GardenTopBar from '../components/garden/GardenTopBar.astro';
+import GardenGrid from '../components/garden/GardenGrid.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Garden — Botanical Codenames"
+  description="A grid of botanical names reserved for future project codenames."
+>
+  <GardenTopBar />
+  <main>
+    <GardenGrid />
+  </main>
+  <Footer />
+</BaseLayout>

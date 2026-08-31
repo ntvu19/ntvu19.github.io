@@ -1,0 +1,62 @@
+---
+import BotanicalIllustration from './BotanicalIllustration.astro';
+import ExternalIcon from '../icons/ExternalIcon.astro';
+
+export interface BotanicalEntry {
+  id: string;
+  name: string;
+  scientific: string;
+  category: string;
+  family: string;
+  image?: string;
+  picked?: boolean;
+  projectLink?: string;
+}
+
+export interface Props {
+  plant: BotanicalEntry;
+  picked?: boolean;
+}
+
+const { plant, picked = false } = Astro.props;
+
+const Tag = picked && plant.projectLink ? 'a' : 'article';
+const linkProps =
+  picked && plant.projectLink
+    ? {
+        href: plant.projectLink,
+        ...(plant.projectLink.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {}),
+      }
+    : {};
+---
+
+<Tag
+  class:list={['garden-card', { 'is-picked': picked }]}
+  data-category={plant.category}
+  tabindex="0"
+  {...linkProps}
+>
+  <div class="garden-thumb">
+    {
+      plant.image ? (
+        <img src={plant.image} alt="" loading="lazy" width="64" height="64" />
+      ) : (
+        <BotanicalIllustration id={plant.id} category={plant.category} />
+      )
+    }
+    {picked && <span class="garden-picked-badge">picked</span>}
+  </div>
+  <div class="garden-body">
+    <h3 class="garden-name">{plant.name}</h3>
+    <p class="garden-scientific" lang="la">{plant.scientific}</p>
+    <span class="garden-category">{plant.category}</span>
+    {
+      picked && plant.projectLink && (
+        <span class="garden-project-link">
+          view project
+          {plant.projectLink.startsWith('http') && <ExternalIcon />}
+        </span>
+      )
+    }
+  </div>
+</Tag>

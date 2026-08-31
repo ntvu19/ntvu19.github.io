@@ -1,0 +1,321 @@
+---
+export interface Props {
+  id: string;
+  category: string;
+}
+
+const { id, category } = Astro.props;
+
+function hash(s: string): number {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
+
+const seed = hash(id);
+const hue = (seed % 60) - 30;
+const petalCount = 5 + (seed % 4);
+const variant = seed % 3;
+---
+
+<svg
+  class="garden-illus"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-hidden="true"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id={`bg-${id}`} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="var(--bg-alt)" />
+      <stop offset="100%" stop-color="var(--bg-card)" />
+    </linearGradient>
+    <linearGradient id={`leaf-${id}`} x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color={`oklch(from var(--accent) l c calc(h + ${hue}))`} />
+      <stop offset="100%" stop-color={`oklch(from var(--accent) calc(l - 0.12) c calc(h + ${hue + 15}))`} />
+    </linearGradient>
+    <linearGradient id={`petal-${id}`} x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color={`oklch(from var(--accent) calc(l + 0.08) c calc(h + ${hue}))`} />
+      <stop offset="100%" stop-color={`oklch(from var(--accent) l c calc(h + ${hue - 10}))`} />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" fill={`url(#bg-${id})`} />
+
+  {
+    category === 'flower' && (
+      <>
+        <line x1="32" y1="44" x2="32" y2="58" stroke={`url(#leaf-${id})`} stroke-width="2" />
+        <ellipse cx="26" cy="48" rx="5" ry="2.5" fill={`url(#leaf-${id})`} transform="rotate(-30 26 48)" />
+        <ellipse cx="38" cy="48" rx="5" ry="2.5" fill={`url(#leaf-${id})`} transform="rotate(30 38 48)" />
+        {Array.from({ length: petalCount }).map((_, i) => {
+          const angle = (360 / petalCount) * i;
+          return (
+            <ellipse
+              cx="32"
+              cy="28"
+              rx="7"
+              ry="12"
+              fill={`url(#petal-${id})`}
+              transform={`rotate(${angle} 32 32)`}
+            />
+          );
+        })}
+        <circle cx="32" cy="32" r="5" fill={`oklch(from var(--accent) calc(l - 0.05) c calc(h + ${hue + 20}))`} />
+      </>
+    )
+  }
+
+  {
+    category === 'tree' && (
+      <>
+        <rect x="29" y="40" width="6" height="18" rx="1" fill={`oklch(from var(--accent) calc(l - 0.2) c calc(h + ${hue}))`} />
+        <ellipse cx="32" cy="28" rx="22" ry="20" fill={`url(#leaf-${id})`} />
+        {variant > 0 && <ellipse cx="32" cy="22" rx="16" ry="14" fill={`url(#petal-${id})`} opacity="0.7" />}
+        {variant > 1 && <circle cx="22" cy="30" r="6" fill={`url(#petal-${id})`} opacity="0.5" />}
+      </>
+    )
+  }
+
+  {
+    category === 'herb' && (
+      <>
+        <line x1="32" y1="56" x2="32" y2="18" stroke={`oklch(from var(--accent) calc(l - 0.15) c calc(h + ${hue}))`} stroke-width="2" />
+        {[14, 22, 30, 38].map((y, i) => (
+          <>
+            <ellipse
+              cx={i % 2 === 0 ? 24 : 40}
+              cy={y}
+              rx="8"
+              ry="4"
+              fill={`url(#leaf-${id})`}
+              transform={`rotate(${i % 2 === 0 ? -35 : 35} ${i % 2 === 0 ? 24 : 40} ${y})`}
+            />
+          </>
+        ))}
+        {variant > 0 && (
+          <circle cx="32" cy="14" r="4" fill={`url(#petal-${id})`} />
+        )}
+      </>
+    )
+  }
+
+  {
+    category === 'fern' && (
+      <>
+        <path
+          d="M32 58 Q28 40 32 20 Q36 40 32 58"
+          fill="none"
+          stroke={`oklch(from var(--accent) calc(l - 0.15) c calc(h + ${hue}))`}
+          stroke-width="1.5"
+        />
+        {[22, 28, 34, 40, 46].map((y, i) => (
+          <>
+            <ellipse cx={24 - i} cy={y} rx="6" ry="2.5" fill={`url(#leaf-${id})`} transform={`rotate(-50 24 22)`} />
+            <ellipse cx={40 + i} cy={y} rx="6" ry="2.5" fill={`url(#leaf-${id})`} transform={`rotate(50 40 22)`} />
+          </>
+        ))}
+      </>
+    )
+  }
+
+  {
+    category === 'vine' && (
+      <>
+        <path
+          d="M16 56 C20 44 28 36 32 28 C36 20 44 12 48 8"
+          fill="none"
+          stroke={`oklch(from var(--accent) calc(l - 0.15) c calc(h + ${hue}))`}
+          stroke-width="2"
+        />
+        {[40, 32, 24, 16].map((y, i) => (
+          <ellipse
+            cx={20 + i * 4}
+            cy={y}
+            rx="6"
+            ry="4"
+            fill={`url(#leaf-${id})`}
+            transform={`rotate(${-20 + i * 15} ${20 + i * 4} ${y})`}
+          />
+        ))}
+        {variant > 0 && (
+          <circle cx="48" cy="8" r="4" fill={`url(#petal-${id})`} />
+        )}
+      </>
+    )
+  }
+
+  {
+    category === 'mushroom' && (
+      <>
+        <rect x="28" y="36" width="8" height="18" rx="2" fill={`oklch(from var(--accent) calc(l + 0.15) c calc(h + ${hue}))`} />
+        <ellipse cx="32" cy="32" rx="18" ry="14" fill={`url(#petal-${id})`} />
+        <ellipse cx="32" cy="28" rx="14" ry="8" fill={`oklch(from var(--accent) calc(l + 0.05) c calc(h + ${hue}))`} opacity="0.6" />
+        {Array.from({ length: 5 + variant }).map((_, i) => (
+          <circle cx={20 + i * 6} cy={26 + (i % 2)} r="1.5" fill="var(--bg-card)" opacity="0.5" />
+        ))}
+      </>
+    )
+  }
+
+  {
+    category === 'succulent' && (
+      <>
+        {Array.from({ length: 8 }).map((_, i) => {
+          const angle = (360 / 8) * i + variant * 10;
+          return (
+            <ellipse
+              cx="32"
+              cy="32"
+              rx="5"
+              ry="14"
+              fill={`url(#leaf-${id})`}
+              transform={`rotate(${angle} 32 32)`}
+            />
+          );
+        })}
+        <circle cx="32" cy="32" r="4" fill={`url(#petal-${id})`} />
+      </>
+    )
+  }
+
+  {
+    category === 'grass' && (
+      <>
+        {Array.from({ length: 7 + variant }).map((_, i) => {
+          const x = 12 + i * 7;
+          const lean = (i % 3 - 1) * 8;
+          return (
+            <path
+              d={`M${x} 58 Q${x + lean} 36 ${x + lean / 2} 14`}
+              fill="none"
+              stroke={`url(#leaf-${id})`}
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          );
+        })}
+      </>
+    )
+  }
+
+  {
+    category === 'aquatic' && (
+      <>
+        <ellipse cx="32" cy="40" rx="22" ry="8" fill={`url(#leaf-${id})`} />
+        <path d="M32 40 Q32 28 32 18" fill="none" stroke={`oklch(from var(--accent) calc(l - 0.15) c calc(h + ${hue}))`} stroke-width="1.5" />
+        {Array.from({ length: petalCount }).map((_, i) => {
+          const angle = (360 / petalCount) * i;
+          return (
+            <ellipse
+              cx="32"
+              cy="16"
+              rx="4"
+              ry="8"
+              fill={`url(#petal-${id})`}
+              transform={`rotate(${angle} 32 18)`}
+            />
+          );
+        })}
+        <circle cx="32" cy="18" r="3" fill={`oklch(from var(--accent) calc(l - 0.05) c calc(h + ${hue + 20}))`} />
+      </>
+    )
+  }
+
+  {
+    category === 'cactus' && (
+      <>
+        <ellipse cx="32" cy="38" rx="10" ry="20" fill={`url(#leaf-${id})`} />
+        {variant > 0 && (
+          <>
+            <ellipse cx="18" cy="30" rx="6" ry="10" fill={`url(#leaf-${id})`} transform="rotate(-30 18 30)" />
+            <ellipse cx="46" cy="26" rx="5" ry="8" fill={`url(#leaf-${id})`} transform="rotate(25 46 26)" />
+          </>
+        )}
+        {Array.from({ length: 4 }).map((_, i) => (
+          <line
+            x1={28 + i * 3}
+            y1={28 + i * 4}
+            x2={30 + i * 3}
+            y2={30 + i * 4}
+            stroke="var(--ink-4)"
+            stroke-width="0.5"
+          />
+        ))}
+      </>
+    )
+  }
+
+  {
+    category === 'palm' && (
+      <>
+        <rect x="30" y="36" width="4" height="22" rx="1" fill={`oklch(from var(--accent) calc(l - 0.2) c calc(h + ${hue}))`} />
+        {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
+          <path
+            d="M32 36 Q32 20 32 8"
+            fill="none"
+            stroke={`url(#leaf-${id})`}
+            stroke-width="3"
+            stroke-linecap="round"
+            transform={`rotate(${angle} 32 36)`}
+          />
+        ))}
+      </>
+    )
+  }
+
+  {
+    category === 'berry' && (
+      <>
+        <line x1="32" y1="52" x2="32" y2="28" stroke={`oklch(from var(--accent) calc(l - 0.15) c calc(h + ${hue}))`} stroke-width="2" />
+        <ellipse cx="28" cy="44" rx="6" ry="3" fill={`url(#leaf-${id})`} transform="rotate(-25 28 44)" />
+        <ellipse cx="36" cy="44" rx="6" ry="3" fill={`url(#leaf-${id})`} transform="rotate(25 36 44)" />
+        {[
+          [26, 22], [32, 18], [38, 22], [29, 28], [35, 28], [32, 24],
+        ].slice(0, 4 + variant).map(([cx, cy]) => (
+          <circle cx={cx} cy={cy} r="4" fill={`url(#petal-${id})`} />
+        ))}
+      </>
+    )
+  }
+
+  {
+    category === 'moss' && (
+      <>
+        {Array.from({ length: 12 }).map((_, i) => {
+          const x = 8 + (i % 6) * 9;
+          const y = 36 + Math.floor(i / 6) * 10;
+          return (
+            <ellipse cx={x} cy={y} rx="5" ry="3" fill={`url(#leaf-${id})`} opacity={0.6 + (i % 3) * 0.1} />
+          );
+        })}
+      </>
+    )
+  }
+
+  {
+    category === 'lichen' && (
+      <>
+        <path
+          d="M12 40 Q20 28 32 32 Q44 36 52 24 Q48 44 32 48 Q16 52 12 40"
+          fill={`url(#leaf-${id})`}
+          opacity="0.8"
+        />
+        <path
+          d="M18 36 Q28 30 38 34 Q32 42 22 38 Q16 36 18 36"
+          fill={`url(#petal-${id})`}
+          opacity="0.5"
+        />
+      </>
+    )
+  }
+
+  {
+    !['flower', 'tree', 'herb', 'fern', 'vine', 'mushroom', 'succulent', 'grass', 'aquatic', 'cactus', 'palm', 'berry', 'moss', 'lichen'].includes(category) && (
+      <>
+        <circle cx="32" cy="32" r="16" fill={`url(#leaf-${id})`} opacity="0.3" />
+        <circle cx="32" cy="32" r="8" fill={`url(#petal-${id})`} />
+      </>
+    )
+  }
+</svg>

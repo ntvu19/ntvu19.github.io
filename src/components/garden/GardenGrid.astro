@@ -1,0 +1,80 @@
+---
+import botanical from '../../data/botanical.json';
+import SectionHead from '../SectionHead.astro';
+import GardenCard, { type BotanicalEntry } from './GardenCard.astro';
+
+const plants = botanical as BotanicalEntry[];
+const picked = plants.filter((p) => p.picked);
+const available = plants.filter((p) => !p.picked);
+const categories = [...new Set(available.map((p) => p.category))].sort();
+---
+
+<section class="section shell garden-section">
+  <SectionHead
+    num="§"
+    label="↳ botanical codenames"
+    title="A garden of names for future projects."
+    meta={`${picked.length} planted · ${available.length} available`}
+  />
+
+  <p class="garden-intro">
+    Codenames already in use link to their project. The rest are free to pick when you start
+    something new.
+  </p>
+
+  <div class="garden-block" id="garden-picked">
+    <header class="garden-block-head">
+      <h2 class="garden-block-title">Planted</h2>
+      <span class="garden-block-meta">{picked.length}</span>
+    </header>
+    {
+      picked.length > 0 ? (
+        <div class="garden-grid garden-grid--picked">
+          {picked.map((plant) => (
+            <GardenCard plant={plant} picked />
+          ))}
+        </div>
+      ) : (
+        <p class="garden-empty">No codenames planted yet — mark one as picked in botanical.json.</p>
+      )
+    }
+  </div>
+
+  <div class="garden-block" id="garden-available">
+    <header class="garden-block-head">
+      <h2 class="garden-block-title">Available</h2>
+      <span class="garden-block-meta">{available.length}</span>
+    </header>
+
+    <div class="garden-filters" aria-label="Filter available by category">
+      <button type="button" class="garden-filter is-active" data-filter="all">All</button>
+      {
+        categories.map((cat) => (
+          <button type="button" class="garden-filter" data-filter={cat}>
+            {cat}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="garden-grid" data-garden-available>
+      {available.map((plant) => <GardenCard plant={plant} />)}
+    </div>
+  </div>
+</section>
+
+<script>
+  const filters = document.querySelectorAll<HTMLButtonElement>('.garden-filter');
+  const cards = document.querySelectorAll<HTMLElement>('[data-garden-available] .garden-card');
+
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.filter ?? 'all';
+      filters.forEach((b) => b.classList.toggle('is-active', b === btn));
+      cards.forEach((card) => {
+        const match = category === 'all' || card.dataset.category === category;
+        card.hidden = !match;
+      });
+    });
+  });
+</script>

@@ -23,6 +23,15 @@ export function buildPaletteItems(ctx: PaletteContext): PaletteItem[] {
       action: () => scrollTo(id),
     });
   }
+  items.push({
+    id: 'nav:garden',
+    group: 'Navigate',
+    label: 'Garden',
+    hint: 'botanical codenames',
+    action: () => {
+      window.location.href = '/garden/';
+    },
+  });
   items.push(
     { id: 'theme:light', group: 'Theme', label: 'Light', action: () => applyTheme('light') },
     { id: 'theme:dark', group: 'Theme', label: 'Dark', action: () => applyTheme('dark') },

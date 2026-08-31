@@ -1,0 +1,22 @@
+---
+import identity from '../../data/identity.json';
+const initials = identity.name
+  .split(' ')
+  .map((s) => s[0])
+  .join('');
+---
+
+<header class="topbar">
+  <div class="shell">
+    <a href="/" class="topbar-brand" aria-label="back to portfolio">
+      <span class="topbar-pulse" aria-hidden="true"></span>
+      <span>{initials} ·· garden</span>
+    </a>
+    <nav class="topbar-nav" aria-label="garden navigation">
+      <a href="/">← Portfolio</a>
+    </nav>
+    <div class="topbar-actions">
+      <button type="button" data-theme-toggle aria-label="toggle theme">◐</button>
+    </div>
+  </div>
+</header>
