@@ -1,0 +1,54 @@
+name: pick plant
+
+on:
+  workflow_dispatch:
+    inputs:
+      plant_id:
+        description: Plant id from botanical.json (e.g. lavender, daisy)
+        required: true
+        type: string
+      project_url:
+        description: Project URL (e.g. https://github.com/ntvu19/my-project)
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pick-plant
+  cancel-in-progress: false
+
+jobs:
+  pick:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: List available plants
+        run: pnpm exec tsx -e "import botanical from './src/data/botanical.json' with { type: 'json' }; const available = botanical.filter((p) => !p.picked); console.log(available.length + ' available plants'); for (const p of available.slice(0, 20)) console.log('  ' + p.id + ' — ' + p.name); if (available.length > 20) console.log('  …');"
+
+      - name: Pick plant in botanical.json
+        run: pnpm exec tsx scripts/pick-plant.ts "${{ inputs.plant_id }}" "${{ inputs.project_url }}"
+
+      - run: pnpm exec prettier --write src/data/botanical.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/botanical.json
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "garden: pick ${{ inputs.plant_id }}"
+          git push
