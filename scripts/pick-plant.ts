@@ -34,7 +34,8 @@ export function pickPlant(
   validateProjectUrl(projectLink);
 
   const index = plants.findIndex((p) => p.id === plantId);
-  if (index === -1) {
+  const plant = index === -1 ? undefined : plants[index];
+  if (!plant) {
     const available = plants
       .filter((p) => !p.picked)
       .slice(0, 8)
@@ -43,12 +44,11 @@ export function pickPlant(
     throw new Error(`Plant not found: "${plantId}". Example available ids: ${available}…`);
   }
 
-  const plant = plants[index];
   if (plant.picked) {
     throw new Error(`Plant "${plantId}" is already picked (${plant.projectLink ?? 'no link'}).`);
   }
 
-  const updatedPlant: BotanicalEntry = { ...plant, picked: true, projectLink };
+  const updatedPlant = { ...plant, picked: true as const, projectLink };
   const updatedPlants = [...plants];
   updatedPlants[index] = updatedPlant;
 
