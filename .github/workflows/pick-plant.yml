@@ -37,7 +37,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - name: List available plants
-        run: pnpm exec tsx -e "import botanical from './src/data/botanical.json' with { type: 'json' }; const available = botanical.filter((p) => !p.picked); console.log(available.length + ' available plants'); for (const p of available.slice(0, 20)) console.log('  ' + p.id + ' — ' + p.name); if (available.length > 20) console.log('  …');"
+        run: pnpm exec tsx scripts/pick-plant.ts --list
 
       - name: Pick plant in botanical.json
         run: pnpm exec tsx scripts/pick-plant.ts "${{ inputs.plant_id }}" "${{ inputs.project_url }}"

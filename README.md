@@ -33,6 +33,7 @@ The workflow sets `picked: true` and `projectLink` on that entry, commits to `ma
 Locally:
 
 ```bash
+pnpm exec tsx scripts/pick-plant.ts --list
 pnpm exec tsx scripts/pick-plant.ts lavender https://github.com/ntvu19/lavender
 ```
 
