@@ -28,7 +28,9 @@ When a project gets a botanical codename, run the **pick plant** workflow in Git
 2. **plant_id** — id from `src/data/botanical.json` (e.g. `lavender`, `daisy`)
 3. **project_url** — link to the repo or site (e.g. `https://github.com/ntvu19/lavender`)
 
-The workflow sets `picked: true` and `projectLink` on that entry, commits to `main`, and the deploy workflow publishes the update.
+The workflow sets `picked: true` and `projectLink` on that entry, commits to `main`, and triggers the **deploy** workflow to publish the update.
+
+Note: commits pushed by GitHub Actions do not fire `on: push` workflows (GitHub prevents bot-triggered loops). Deploy also runs when **pick plant** completes successfully.
 
 Locally:
 
