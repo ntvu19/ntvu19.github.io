@@ -48,7 +48,13 @@
     "category": "tree",
     "family": "Salicaceae"
   },
-  { "id": "oak", "name": "Oak", "scientific": "Quercus", "category": "tree", "family": "Fagaceae" },
+  {
+    "id": "oak",
+    "name": "Oak",
+    "scientific": "Quercus",
+    "category": "tree",
+    "family": "Fagaceae"
+  },
   {
     "id": "maple",
     "name": "Maple",
@@ -63,7 +69,13 @@
     "category": "tree",
     "family": "Betulaceae"
   },
-  { "id": "pine", "name": "Pine", "scientific": "Pinus", "category": "tree", "family": "Pinaceae" },
+  {
+    "id": "pine",
+    "name": "Pine",
+    "scientific": "Pinus",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
   {
     "id": "bamboo",
     "name": "Bamboo",
@@ -494,7 +506,13 @@
     "picked": true,
     "projectLink": "https://github.com/ntvu19/wheat"
   },
-  { "id": "rice", "name": "Rice", "scientific": "Oryza", "category": "grass", "family": "Poaceae" },
+  {
+    "id": "rice",
+    "name": "Rice",
+    "scientific": "Oryza",
+    "category": "grass",
+    "family": "Poaceae"
+  },
   {
     "id": "barley",
     "name": "Barley",
@@ -654,7 +672,9 @@
     "name": "Fig",
     "scientific": "Ficus carica",
     "category": "tree",
-    "family": "Moraceae"
+    "family": "Moraceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/fig"
   },
   {
     "id": "apple",
@@ -945,7 +965,13 @@
     "category": "tree",
     "family": "Pinaceae"
   },
-  { "id": "fir", "name": "Fir", "scientific": "Abies", "category": "tree", "family": "Pinaceae" },
+  {
+    "id": "fir",
+    "name": "Fir",
+    "scientific": "Abies",
+    "category": "tree",
+    "family": "Pinaceae"
+  },
   {
     "id": "larch",
     "name": "Larch",
@@ -967,7 +993,13 @@
     "category": "tree",
     "family": "Oleaceae"
   },
-  { "id": "elm", "name": "Elm", "scientific": "Ulmus", "category": "tree", "family": "Ulmaceae" },
+  {
+    "id": "elm",
+    "name": "Elm",
+    "scientific": "Ulmus",
+    "category": "tree",
+    "family": "Ulmaceae"
+  },
   {
     "id": "beech",
     "name": "Beech",
@@ -996,7 +1028,13 @@
     "category": "tree",
     "family": "Rosaceae"
   },
-  { "id": "yew", "name": "Yew", "scientific": "Taxus", "category": "tree", "family": "Taxaceae" },
+  {
+    "id": "yew",
+    "name": "Yew",
+    "scientific": "Taxus",
+    "category": "tree",
+    "family": "Taxaceae"
+  },
   {
     "id": "boxwood",
     "name": "Boxwood",
