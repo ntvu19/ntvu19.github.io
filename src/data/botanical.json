@@ -60,7 +60,9 @@
     "name": "Maple",
     "scientific": "Acer",
     "category": "tree",
-    "family": "Sapindaceae"
+    "family": "Sapindaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/maple"
   },
   {
     "id": "birch",
