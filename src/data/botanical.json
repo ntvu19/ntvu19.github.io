@@ -1357,7 +1357,9 @@
     "name": "Clematis",
     "scientific": "Clematis",
     "category": "vine",
-    "family": "Ranunculaceae"
+    "family": "Ranunculaceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/clematis"
   },
   {
     "id": "kudzu",
