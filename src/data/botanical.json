@@ -373,7 +373,9 @@
     "name": "Reishi",
     "scientific": "Ganoderma",
     "category": "mushroom",
-    "family": "Ganodermataceae"
+    "family": "Ganodermataceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/reishi"
   },
   {
     "id": "amanita",
