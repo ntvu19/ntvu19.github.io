@@ -657,7 +657,9 @@
     "name": "Banyan",
     "scientific": "Ficus benghalensis",
     "category": "tree",
-    "family": "Moraceae"
+    "family": "Moraceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/banyan"
   },
   {
     "id": "eucalyptus",
