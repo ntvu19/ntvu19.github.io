@@ -803,7 +803,9 @@
     "name": "Aster",
     "scientific": "Symphyotrichum",
     "category": "flower",
-    "family": "Asteraceae"
+    "family": "Asteraceae",
+    "picked": true,
+    "projectLink": "https://github.com/ntvu19/aster"
   },
   {
     "id": "cosmos",
